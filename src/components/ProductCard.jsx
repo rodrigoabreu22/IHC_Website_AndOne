@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
-import './ProductCard.css'; // Import the CSS file for styling
+import './ProductCard.css';
 import Card from 'react-bootstrap/Card';
 
 const ProductCard = ({ product }) => {
