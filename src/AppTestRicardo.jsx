@@ -9,6 +9,7 @@ function AppTestRicardo() {
   return (
     <>
     <VerticalFilterBar/>
+    {/*
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
         <ProductCard product={product}/>
         <ProductCard product={product2} />
@@ -17,6 +18,7 @@ function AppTestRicardo() {
         <ProductCard product={product}/>
         <ProductCard product={product2} />
     </div>
+    */}
     </>
   )
 }
