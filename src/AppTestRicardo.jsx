@@ -2,12 +2,17 @@ import { useState } from 'react'
 import ProductCard from './components/ProductCard';
 
 function AppTestRicardo() {
-  const [count, setCount] = useState(0)
   const product = {"name": "Sapatilha Fixe", "image": "src/assets/transferir.jpg", "brand": "Nike", "price":"99.99"}
+  const product2 = {"name": "Sapatilha Feia", "image": "src/assets/react.svg", "brand": "Puma", "price":"109.99"}
 
   return (
-    <div>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
         <ProductCard product={product}/>
+        <ProductCard product={product2} />
+        <ProductCard product={product}/>
+        <ProductCard product={product2} />
+        <ProductCard product={product}/>
+        <ProductCard product={product2} />
     </div>
   )
 }
