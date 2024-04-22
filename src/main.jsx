@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import AppTestRicardo from './AppTestRicardo.jsx'
+import AppTestRodrigo from './AppTestRodrigo.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AppTestRicardo />
+    <AppTestRodrigo/>
   </React.StrictMode>,
 )
