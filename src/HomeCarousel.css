@@ -1,0 +1,9 @@
+.carousel-image {
+    height: 600px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.carousel-caption-h1 {
+    color: black;
+}
