@@ -1,3 +1,6 @@
+npm i react-router-dom
+npm install react-bootstrap bootstrap
+npm install bootstrap
 npm i --save bootstrap @popperjs/core
 npm i --save-dev sass
 npm install --save @fortawesome/fontawesome-svg-core
