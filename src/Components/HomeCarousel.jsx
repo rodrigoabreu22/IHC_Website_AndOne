@@ -13,8 +13,8 @@ function HomeCarousel() {
         alt="Sapatilhas"
         />
         <Carousel.Caption>
-          <h3>Sapatilhas</h3>
-          <p>Clica aqui para ver os nossos modelos! </p>
+          <h3 className="carousel-text">Sapatilhas</h3>
+          <h5 className="carousel-text">Clica aqui para ver os nossos modelos! </h5>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -23,8 +23,8 @@ function HomeCarousel() {
         alt="Sapatilhas"
         />
         <Carousel.Caption>
-          <h3>Equipamento</h3>
-          <p>Clica aqui para ver os nosso equipamento! </p>
+          <h3 className="carousel-text">Equipamento</h3>
+          <h5 className="carousel-text">Clica aqui para ver os nosso equipamento! </h5>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -33,8 +33,8 @@ function HomeCarousel() {
         alt="Sapatilhas"
         />
         <Carousel.Caption>
-          <h3>Acessórios</h3>
-          <p>Clica aqui para ver os nossos acessórios! </p>
+          <h3 className="carousel-text">Acessórios</h3>
+          <h5 className="carousel-text">Clica aqui para ver os nossos acessórios! </h5>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -43,8 +43,8 @@ function HomeCarousel() {
         alt="Sapatilhas"
         />
         <Carousel.Caption>
-          <h3>Conjuntos</h3>
-          <p>Clica aqui para ver os nossos conjuntos! </p>
+          <h3 className="carousel-text">Conjuntos</h3>
+          <h5 className="carousel-text">Clica aqui para ver os nossos conjuntos! </h5>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -53,13 +53,12 @@ function HomeCarousel() {
         alt="Sapatilhas"
         />
         <Carousel.Caption>
-          <h3>material</h3>
-          <p>Clica aqui para ver o nosso material! </p>
+          <h3 className="carousel-text">Material</h3>
+          <h5 className="carousel-text">Clica aqui para ver o nosso material! </h5>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );
 }
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 export default HomeCarousel;
