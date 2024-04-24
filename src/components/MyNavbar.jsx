@@ -8,13 +8,14 @@ import React from 'react';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function MyNavbar() {
   return (
     <header style={{ paddingTop: 125 }}>
       <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
         <Container fluid>
-          <Navbar.Brand href="#" eventKey="#"><img src="src/assets/And_ONE.png" style={{ height: 100 }}/></Navbar.Brand>
+          <Navbar.Brand as={Link} to="/"><img src="src/assets/And_ONE.png" style={{ height: 100 }}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
               <Nav

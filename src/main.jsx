@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import AppTesteEdu from './AppTesteEdu.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App.jsx'
-import './index.css'
-import AppTestRodrigo from './AppTestRodrigo.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AppTestRodrigo/>
-  </React.StrictMode>,
+    <App/>
+  </React.StrictMode>
 )
