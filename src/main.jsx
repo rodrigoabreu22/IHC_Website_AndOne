@@ -9,3 +9,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AppTestRicardo/>
   </React.StrictMode>,
 )
+
+import 'bootstrap/dist/css/bootstrap.min.css';
