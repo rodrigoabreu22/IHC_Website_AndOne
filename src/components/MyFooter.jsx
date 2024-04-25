@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function MyFooter() {
   return (
@@ -9,22 +10,22 @@ function MyFooter() {
           <Col className="text-center">
             <h5>Contactos</h5>
             <Nav className="flex-column">
-              <Nav.Link href="#link1">Link 1</Nav.Link>
-              <Nav.Link href="#link2">Link 2</Nav.Link>
-              <Nav.Link href="#link3">Link 3</Nav.Link>
+              <p>rodrigo.abreu@ua.pt</p>
+              <p>ricardo.alexandre.antunes@ua.pt</p>
+              <p>eduardolplopes@ua.pt</p>
             </Nav>
           </Col>
           <Col className="text-center">
             <h5>Redes Sociais</h5>
             <Nav className="flex-column">
-              <Nav.Link href="#link4">Link 4</Nav.Link>
-              <Nav.Link href="#link5">Link 5</Nav.Link>
-              <Nav.Link href="#link6">Link 6</Nav.Link>
+              <p>Link 4</p>
+              <p>Link 5</p>
+              <p>Link 6</p>
             </Nav>
           </Col>
           <Col className="text-center">
             <Nav className="flex-column">
-              <Nav.Link href="#link6"><h5>Ajuda</h5></Nav.Link>
+              <Nav.Link as={ Link } to="/help"><h5>Ajuda</h5></Nav.Link>
             </Nav>
           </Col>
         </Row>
