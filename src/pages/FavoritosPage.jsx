@@ -5,7 +5,7 @@ import MyFooter from "../components/MyFooter";
 function FavoritosPage() {
     return (
         <>
-        <MyNavbar />
+        <MyNavbar activeID={7} />
         <h1>Favoritos</h1>
         <MyFooter />
         </>

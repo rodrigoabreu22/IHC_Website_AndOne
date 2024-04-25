@@ -5,7 +5,7 @@ import MyFooter from "../components/MyFooter";
 function CarrinhoPage() {
     return (
         <>
-        <MyNavbar />
+        <MyNavbar activeID={8} />
         <h1>Carrinho</h1>
         <MyFooter />
         </>

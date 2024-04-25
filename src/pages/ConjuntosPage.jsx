@@ -5,7 +5,7 @@ import MyFooter from "../components/MyFooter";
 function ConjuntosPage() {
     return (
         <>
-        <MyNavbar />
+        <MyNavbar activeID={4} />
         <h1>Conjuntos</h1>
         <MyFooter />
         </>

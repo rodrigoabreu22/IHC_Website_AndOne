@@ -5,7 +5,7 @@ import MyFooter from "../components/MyFooter";
 function MaterialPage() {
     return (
         <>
-        <MyNavbar />
+        <MyNavbar activeID={5} />
         <h1>Material</h1>
         <MyFooter />
         </>

@@ -5,7 +5,7 @@ import MyFooter from "../components/MyFooter";
 function PerfilPage() {
     return (
         <>
-        <MyNavbar />
+        <MyNavbar activeID={6} />
         <h1>Perfil</h1>
         <MyFooter />
         </>
