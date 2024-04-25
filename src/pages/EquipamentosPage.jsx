@@ -5,7 +5,7 @@ import MyFooter from "../components/MyFooter";
 function EquipamentosPage() {
     return (
         <>
-        <MyNavbar />
+        <MyNavbar activeID={2} />
         <h1>Equipamentos</h1>
         <MyFooter />
         </>

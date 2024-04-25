@@ -11,7 +11,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
-function MyNavbar() {
+function MyNavbar({ activeID }) {
   return (
     <header style={{ paddingTop: 125 }}>
       <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
@@ -24,16 +24,16 @@ function MyNavbar() {
                   style={{ maxHeight: '100px' }}
                   navbarScroll
               >
-                  <Nav.Link as={ Link } to="/sapatilhas" ><h5>Sapatilhas</h5></Nav.Link>
-                  <Nav.Link as={ Link } to="/equipamentos"><h5>Equipamentos</h5></Nav.Link>
-                  <Nav.Link as={ Link } to="/acessorios"><h5>Acessórios</h5></Nav.Link>
-                  <Nav.Link as={ Link } to="/conjuntos"><h5>Conjuntos</h5></Nav.Link>
-                  <Nav.Link as={ Link } to="/material"><h5>Material</h5></Nav.Link>
+                  <Nav.Link as={ Link } to="/sapatilhas" className={activeID === 1? 'active' : ''}><h5>Sapatilhas</h5></Nav.Link>
+                  <Nav.Link as={ Link } to="/equipamentos" className={activeID === 2? 'active' : ''}><h5>Equipamentos</h5></Nav.Link>
+                  <Nav.Link as={ Link } to="/acessorios" className={activeID === 3? 'active' : ''}><h5>Acessórios</h5></Nav.Link>
+                  <Nav.Link as={ Link } to="/conjuntos" className={activeID === 4? 'active' : ''}><h5>Conjuntos</h5></Nav.Link>
+                  <Nav.Link as={ Link } to="/material" className={activeID === 5? 'active' : ''}><h5>Material</h5></Nav.Link>
               </Nav>
               <Nav className="justify-content-end">
-                  <Nav.Link as={ Link } to="/perfil"><FontAwesomeIcon icon={faUser} size="2xl" /></Nav.Link>
-                  <Nav.Link as={ Link } to="/favoritos"><FontAwesomeIcon icon={faHeart} size="2xl" /></Nav.Link>
-                  <Nav.Link as={ Link } to="/carrinho"><FontAwesomeIcon icon={faCartShopping} size="2xl" /></Nav.Link>
+                  <Nav.Link as={ Link } to="/perfil" className={activeID === 6? 'active' : ''}><FontAwesomeIcon icon={faUser} size="2xl" /></Nav.Link>
+                  <Nav.Link as={ Link } to="/favoritos" className={activeID === 7? 'active' : ''}><FontAwesomeIcon icon={faHeart} size="2xl" /></Nav.Link>
+                  <Nav.Link as={ Link } to="/carrinho" className={activeID === 8? 'active' : ''}><FontAwesomeIcon icon={faCartShopping} size="2xl" /></Nav.Link>
                   <Form className="d-flex" >
                       <Form.Control
                       type="search"
