@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 import './ProductCard.css';
 import Card from 'react-bootstrap/Card';
 
@@ -30,7 +31,7 @@ const ProductCard = ({ product }) => {
             state: {product: product}
         }}>
             <Card className="ProductCard" style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={product.image_link[0]} style={{ height: '80%', objectFit: 'cover' }}/>
+                <Card.Img variant="top" src={product.image_links[0]} style={{ height: '80%', objectFit: 'cover' }}/>
                 <FontAwesomeIcon icon={isFavorite ? fasHeart : farHeart} size="xl" style={{ position: 'absolute', top: '10px', right: '10px', color: isFavorite ? 'red' : 'black' }} />
                 <hr style={{ margin: 0 }} />
                 <Card.Body>
