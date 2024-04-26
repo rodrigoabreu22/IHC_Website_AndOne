@@ -6,7 +6,6 @@ import Slider from 'rc-slider';
 import './VerticalFilterBar.css';
 
 const VerticalFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, setSelectedPrices, selectedSizes, setSelectedSizes, isFilterActive, setIsFilterActive }) => {
-    const [show, setShow] = useState(false);
     const [brandOpen, setBrandOpen] = useState(true); // Set initial state to true
     const [sizeOpen, setSizeOpen] = useState(true); // Set initial state to true
     const [priceOpen, setPriceOpen] = useState(true);
@@ -34,11 +33,8 @@ const VerticalFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, 
         setSelectedSizes(prevSizes => prevSizes.includes(size) ? prevSizes.filter(s => s !== size) : [...prevSizes, size]);
       };
     return (
-        <>
-            <button onClick={handleToggle} className={`toggle-button ${show ? 'show' : ''}`}>
-                <FontAwesomeIcon icon={show ? faArrowLeft : faArrowRight} />
-            </button>
-            <div className={`filter-bar ${show ? 'show' : ''}`}>
+        <div className='container'>
+            <div className={`filter-bar`}>
                 <h2 className='unselectable'>Filters</h2>
                 <div onClick={(event) => {
                 if (event.target.type !== 'checkbox') {
@@ -116,7 +112,7 @@ const VerticalFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, 
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

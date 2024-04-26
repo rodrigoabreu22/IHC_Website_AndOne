@@ -1,25 +1,11 @@
-.toggle-button {
-  position: fixed;
-  top: 0;
-  left: 0;
+.container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* span the entire screen height */
-  width: 0px; /* adjust as needed */
-  background-color: #f0f0f0; /* adjust as needed */
-  border: 1px solid black; /* add a border around the toggle button */
-  transition: left 0.5s ease; /* animate the left property */
-}
-
-.toggle-button.show {
-  left: 200px; /* move with the filter bar */
 }
 
 .filter-bar {
-  position: fixed;
-  left: -200px; /* start off the screen */
-  top: 0;
+  order: 1;
+  left: 0; /* start off the screen */
+  top: 0px;
   height: 100%;
   width: 200px; /* adjust as needed */
   background-color: #f0f0f0; /* adjust as needed */
@@ -30,9 +16,6 @@
   transition: left 0.5s ease; /* animate the left property */
 }
 
-.filter-bar.show {
-  left: 0; /* slide in */
-}
 
 .small-input {
   width: 150px; /* Adjust as needed */

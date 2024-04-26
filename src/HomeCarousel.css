@@ -1,0 +1,12 @@
+.carousel-image {
+    max-height: 800px;
+    width: 100%;
+}
+
+.carousel-caption-h1 {
+    color: black;
+}
+
+.carousel-text {
+    color: orangered;
+}
