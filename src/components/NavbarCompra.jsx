@@ -8,8 +8,8 @@ import Col from "react-bootstrap/Col";
 function NavbarCompra() {
     return (
         <header style={{ paddingTop: 125 }}>
-            <Navbar variant="underline" expand="lg" className="bg-body-tertiary" fixed="top">
-                <Navbar.Brand href="#" eventKey="#"><img src="src/assets/And_ONE.png" style={{ height: 100 }}/></Navbar.Brand>
+            <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
+                <Navbar.Brand ><img src="src/assets/And_ONE.png" style={{ height: 100 }}/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Container className="justify-content-center">
