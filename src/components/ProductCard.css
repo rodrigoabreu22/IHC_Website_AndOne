@@ -1,6 +1,6 @@
 .ProductCard {
     /* Your existing styles for the card */
-
+    width: 250px;
     /* Add a transition for smooth animation */
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;;
 }
