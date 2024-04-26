@@ -1,0 +1,16 @@
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  
+  .shoe-search {
+    flex-grow: 1;
+    margin-bottom: auto; /* change this line */
+  }
+
+  .footer {
+    margin-top: auto;
+  }
+  
