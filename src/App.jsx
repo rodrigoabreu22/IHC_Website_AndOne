@@ -28,6 +28,7 @@ function App() {
           <Route path="/perfil" Component={PerfilPage} />
           <Route path="/favoritos" Component={FavoritosPage} />
           <Route path="/carrinho" Component={CarrinhoPage} />
+          {/*<Route path="/singleProduct/:id" Component={SingleProductPage} />*/}
         </Routes>
       </BrowserRouter>
     </>

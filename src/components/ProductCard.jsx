@@ -37,7 +37,7 @@ const ProductCard = ({ product, favorites, setFavorites }) => {
                 <hr style={{ margin: 0 }} />
                 <Card.Body>
                     <Link to = {{
-                        pathname: `/SingleProduct/${product.id}`,
+                        pathname: `/singleProduct/${product.id}`,
                         state: {product: product}
                     }} className="link-no-color">
                         <Card.Text style={{ textAlign: 'left' }}>
