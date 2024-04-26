@@ -1,0 +1,23 @@
+.app-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100vh; /* This will make the container fill the height of the viewport */
+}
+  
+  .product-list {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+  .product-list > * {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  
+  .product-list > *:hover {
+    --scale: scale(1.1); /* Update the scale variable when hovered */
+  }
