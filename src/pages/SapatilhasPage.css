@@ -4,13 +4,27 @@
     min-height: 100vh;
   }
 
+  .navbar {
+    height: 120px;
+  }
+
   
   .shoe-search {
-    flex-grow: 1;
-    margin-bottom: auto; /* change this line */
+    height: 1%;
+    padding-bottom: 130px;
+    padding-top: 15px;
   }
 
   .footer {
-    margin-top: auto;
+    height: 120px;
+  }
+
+  .parent-container {
+    display: table;
+    width: 100%; 
+  }
+  
+  .parent-container > .footer {
+     display: table-row;
   }
   

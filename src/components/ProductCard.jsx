@@ -32,14 +32,14 @@ const ProductCard = ({product, favorites, setFavorites }) => {
     return (
 
             <Card className="ProductCard" style={{ height: '400px' }}>
-                <Card.Img variant="top" src={product.image_links[0]} style={{ height: '70%', objectFit: 'cover', userSelect: 'none' }} />
+                <Card.Img variant="top" src={product.image_links[0]} style={{ height: '60%', objectFit: 'cover', userSelect: 'none' }} />
                 <FontAwesomeIcon icon={isFavorite ? fasHeart : farHeart} size="xl" style={{ position: 'absolute', top: '10px', right: '10px', color: isFavorite ? 'red' : 'black' }} onClick={toggleFavorite} />
                 <hr style={{ margin: 0 }} />
                 <Card.Body>
                     <Link to = {{
                         pathname: `/produtoDetalhado/${product.id}`
                     }} className="link-no-color">
-                        <Card.Text style={{ textAlign: 'left' }}>
+                        <Card.Text style={{ textAlign: 'left', height: 80}}>
                             {product.brand} <br/>
                             {product.name}
                         </Card.Text>
