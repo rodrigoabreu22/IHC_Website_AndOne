@@ -18,7 +18,7 @@ function DetalhesPedido(props) {
                             <li key={product.id}>
                                 <Row  className="d-flex p-1">
                                     <Col style={{ maxWidth: 100 }}>
-                                        <img src={product.image_link[0]} alt={product.name} style={{ width: '60px' }} />
+                                        <img src={product.image_links[0]} alt={product.name} style={{ width: '60px' }} />
                                     </Col>
                                     <Col>
                                         <p>{product.name}</p>
