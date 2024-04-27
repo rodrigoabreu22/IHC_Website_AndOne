@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MyNavbar from "../components/MyNavbar";
 import MyFooter from "../components/MyFooter";
-import CartProductCard from '../components/ProductCard';
+import CartProductCard from '../components/CartProductCard';
 import ProductList from '../data/Products.json';
 import '../AppTestRicardo.css'; // Import the CSS file
 
@@ -10,6 +10,7 @@ const CarrinhoPage = () => {
 
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cartProds));
+        setCartProducts(cartProds);
     }, [cartProds]);
 
     return (
@@ -17,8 +18,8 @@ const CarrinhoPage = () => {
             <MyNavbar activeID={7} />
             <h1>Carrinho de Compras</h1>
             <div className="cart-products">
-                {cartProds.map(productId => {
-                    const product = ProductList.products.find(prod => prod.id === productId);
+                {cartProds.map(productCard => {
+                    const product = ProductList.products.find(prod => prod.id === productCard.id);
                     return (
                         <CartProductCard
                             key={product.id}
