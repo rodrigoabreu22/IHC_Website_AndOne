@@ -5,10 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 import './ProductCard.css';
-import Card from 'react-bootstrap/Card';
+import { Card, Modal, Button } from 'react-bootstrap';
 
-const ProductCard = ({product, favorites, setFavorites }) => {
+const ProductCard = ({product, favorites, setFavorites, toggleModal }) => {
     const [isFavorite, setIsFavorite] = useState(favorites.includes(product.id));
+    const [showModal, setShowModal] = useState(false);
+
     useEffect(() => {
         localStorage.setItem('favorites', JSON.stringify(favorites));
         setIsFavorite(favorites.includes(product.id));
@@ -17,20 +19,28 @@ const ProductCard = ({product, favorites, setFavorites }) => {
     const toggleFavorite = (event) => {
         let newFavorites;
         if (isFavorite) {
-            console.log('removing favorite');
-            newFavorites = favorites.filter(favId => favId !== product.id);
-            setFavorites(newFavorites);
+          if (toggleModal) {
+            console.log("showing modal");
+            setShowModal(true);
+          } else {
+            removeFavorite();
+          }
         } else {
-            console.log('adding favorite');
-            newFavorites = [...favorites, product.id];
-            setFavorites(newFavorites);
+          console.log('adding favorite');
+          newFavorites = [...favorites, product.id];
+          setFavorites(newFavorites);
         }
+      };
+    
+      const removeFavorite = () => {
+        console.log('removing favorite');
+        const newFavorites = favorites.filter(favId => favId !== product.id);
         setFavorites(newFavorites);
-        console.log(favorites);
-    };
+        setShowModal(false);
+      };
 
     return (
-
+        <>
             <Card className="ProductCard" style={{ height: '400px' }}>
                 <Card.Img variant="top" src={product.image_links[0]} style={{ height: '60%', objectFit: 'cover', userSelect: 'none' }} />
                 <FontAwesomeIcon icon={isFavorite ? fasHeart : farHeart} size="xl" style={{ position: 'absolute', top: '10px', right: '10px', color: isFavorite ? 'red' : 'black' }} onClick={toggleFavorite} />
@@ -49,6 +59,23 @@ const ProductCard = ({product, favorites, setFavorites }) => {
                     </Link>
                 </Card.Body>
             </Card>
+            {showRemoveFavoriteModal && (
+                <Modal show={showModal} onHide={() => setShowModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Remove Favorite</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Are you sure you want to remove this product from your favorites?</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowModal(false)}>
+                    Cancel
+                    </Button>
+                    <Button variant="primary" onClick={removeFavorite}>
+                    Remove
+                    </Button>
+                </Modal.Footer>
+                </Modal>
+            )}
+        </>
     );
 };
 
