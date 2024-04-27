@@ -6,18 +6,28 @@ import ProductList from '../data/Products.json';
 import '../AppTestRicardo.css'; // Import the CSS file
 
 const FavoritosPage = () => {
-    const [ favoriteProds, setFavoriteProducts ] = useState(localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')) : []);
-    
-    const favoriteProd = ProductList.products.filter(product => favoriteProds.includes(product.id));
+    const [favoriteProds, setFavoriteProducts] = useState(localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')) : []);
+
+    useEffect(() => {
+        localStorage.setItem('favorites', JSON.stringify(favoriteProds));
+    }, [favoriteProds]);
 
     return (
         <div>
             <MyNavbar activeID={7} />
             <h1>Favorites</h1>
             <div className="favorite-products">
-                {favoriteProd.map(product => (
-                    <ProductCard product={product} favorites={favoriteProds} setFavorites={setFavoriteProducts}  />
-                ))}
+                {favoriteProds.map(productId => {
+                    const product = ProductList.products.find(prod => prod.id === productId);
+                    return (
+                        <ProductCard
+                            key={product.id}
+                            product={product}
+                            favorites={favoriteProds}
+                            setFavorites={setFavoriteProducts}
+                        />
+                    );
+                })}
             </div>
             <MyFooter />
         </div>
