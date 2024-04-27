@@ -7,7 +7,7 @@ import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 import './ProductCard.css';
 import Card from 'react-bootstrap/Card';
 
-const ProductCard = ({ product, favorites, setFavorites }) => {
+const ProductCard = ({product, favorites, setFavorites }) => {
     const [isFavorite, setIsFavorite] = useState(favorites.includes(product.id));
     useEffect(() => {
         localStorage.setItem('favorites', JSON.stringify(favorites));
@@ -37,8 +37,7 @@ const ProductCard = ({ product, favorites, setFavorites }) => {
                 <hr style={{ margin: 0 }} />
                 <Card.Body>
                     <Link to = {{
-                        pathname: `/SingleProduct/${product.id}`,
-                        state: {product: product}
+                        pathname: `/produtoDetalhado/${product.id}`
                     }} className="link-no-color">
                         <Card.Text style={{ textAlign: 'left' }}>
                             {product.brand} <br/>

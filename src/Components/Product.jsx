@@ -5,8 +5,17 @@ import ProductSizes from '../components/ProductSizes.jsx';
 import ProductCarousel from '../components/ProductCarousel.jsx';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import ProductList from '../data/Products.json';
+import { useParams } from 'react-router-dom';
 
-const Product=({ product }) => {
+const Product=() => {
+    const product = ProductList.products[useParams().id - 1];
+    console.log(product);
+    console.log(useParams().id);
+
+    if (!product) {
+        return <h1>404 Not Found</h1>;
+    }
     //Adicionar função para adicionar ao carrinho e função para adicionar aos favoritos
 
     const [ quantity, setQuantity ] = useState(1);
@@ -26,7 +35,7 @@ const Product=({ product }) => {
         <div wholeContainer>
         <div className="product">
             <div className='product-carousel'>
-                <ProductCarousel images={product.image_links} />
+                <ProductCarousel images={product.image_links}/>
             </div>
             <div className="main-information">
                 <h2>{product.brand} - {product.name}</h2>
@@ -34,7 +43,7 @@ const Product=({ product }) => {
                 <p><span>Description:</span> {product.short_description}</p>
                 <span>Tamanhos</span>
                 <div className="sizes">
-                    <ProductSizes sizes={productsData.products[0].size}></ProductSizes>
+                    <ProductSizes sizes={product.size}></ProductSizes>
                 </div>
                 <div className="buttons">
                     <div className="quantity-buttons">

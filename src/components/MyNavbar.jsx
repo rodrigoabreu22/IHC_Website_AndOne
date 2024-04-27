@@ -16,7 +16,7 @@ function MyNavbar({ activeID }) {
     <header style={{ paddingTop: 125 }}>
       <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
         <Container fluid>
-          <Navbar.Brand as={Link} to="/"><img src="src/assets/And_ONE.png" style={{ height: 100 }}/></Navbar.Brand>
+          <Navbar.Brand as={Link} to="/"><img src="/src/assets/And_ONE.png" style={{ height: 100 }}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
               <Nav
