@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+}
+
+.filter-bar {
+  order: 1;
+  left: 0; /* start off the screen */
+  top: 0px;
+  height: 100%;
+  width: 200px; /* adjust as needed */
+  background-color: #f0f0f0; /* adjust as needed */
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid black; /* add a border around the filter area */
+  transition: left 0.5s ease; /* animate the left property */
+}
+
+
+.small-input {
+  width: 150px; /* Adjust as needed */
+}
+
+.unselectable {
+  user-select: none; /* Prevent text selection */
+}

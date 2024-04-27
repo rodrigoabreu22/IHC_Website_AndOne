@@ -5,8 +5,8 @@
         "name": "JA 1'White/Black'",
         "brand": "Nike",
         "price": 119.99,
-        "size": [38.5, 39, 40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47, 47.5],
-        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png",
+        "size": [40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47, 47.5],
+        "image_links": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png",
                         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3b29bcfd-a356-44b5-984c-2819238313cc/ja-1-white-black-basketball-shoes-8gZzJ3.png",
                         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c2a1a901-68c6-476b-8abd-0629ebc0a873/ja-1-white-black-basketball-shoes-8gZzJ3.png",
                         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0732544d-2ff7-49b4-865d-6ad233562efe/ja-1-white-black-basketball-shoes-8gZzJ3.png",
@@ -20,93 +20,103 @@
       },
       {
         "id": 2,
-        "name": "Sneakers",
-        "brand": "Adidas",
-        "price": 59.99,
-        "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
-        "short_description": "Classic sneakers for everyday wear.",
-        "big_description": "These sneakers offer timeless style and comfort for your everyday adventures."
+        "name": "Jordan 1 Retro High 'Black/Red'",
+        "brand": "Nike",
+        "price": 170.00,
+        "size": [41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47, 47.5, 48],
+        "image_links": ["https://cdn.shopify.com/s/files/1/0062/4024/8491/products/554724-069_03-06_3000x.jpg?v=1606353635",
+                        "https://cdn.shopify.com/s/files/1/0062/4024/8491/products/554724-069_01-06_3000x.jpg?v=1606353635",
+                        "https://cdn.shopify.com/s/files/1/0062/4024/8491/products/554724-069_02-06_3000x.jpg?v=1606353635",
+                        "https://cdn.shopify.com/s/files/1/0062/4024/8491/products/554724-069_05-06_3000x.jpg?v=1606353635",
+                        "https://cdn.shopify.com/s/files/1/0062/4024/8491/products/554724-069_04-06_3000x.jpg?v=1606353635"],
+        "short_description": "The Air Jordan 1 Retro High OG 'Bred' 2016 brings back the original 'Bred' colorway of the iconic silhouette. The high-top features a black and Varsity Red leather upper with a white midsole and red outsole. Nike Air branding on the tongue completes the classic look.",
+        "big_description": "The Air Jordan 1 Retro High OG 'Bred' 2016 brings back the original 'Bred' colorway of the iconic silhouette. The high-top features a black and Varsity Red leather upper with a white midsole and red outsole. Nike Air branding on the tongue completes the classic look.\n\nMore benefits\n- Full-grain leather upper for durability\n- PU midsole with Air-Sole unit in heel for cushioning\n- Rubber outsole with deep flex grooves for traction and flexibility\n- Colour Shown: Black/Varsity Red/White\n- Style: 555088-001"
       },
       {
         "id": 3,
-        "name": "Casual Shoes",
-        "brand": "Puma",
-        "price": 39.99,
-        "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
-        "short_description": "Versatile shoes perfect for casual outings.",
-        "big_description": "These casual shoes are perfect for everyday wear, offering both style and comfort."
+        "name": "Adidas Ultraboost 21 'Core Black/Signal Green'",
+        "brand": "Adidas",
+        "price": 180.00,
+        "size": [40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47],
+        "image_links": ["https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/2b8d5cf0d77547cfba6baa610131c15c_9366/Ultraboost_21_Shoes_Black_GY4917_01_standard.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/8d0702a0fd25425485d1aa610131c221_9366/Ultraboost_21_Shoes_Black_GY4917_02_standard.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/6b0a25f4254f4c71a1ffaa610131c232_9366/Ultraboost_21_Shoes_Black_GY4917_03_standard.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/09f317f4d6514858a214aa610131c2a8_9366/Ultraboost_21_Shoes_Black_GY4917_04_standard.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/e51b7d9fc13a44ac9f29aa610131c2b0_9366/Ultraboost_21_Shoes_Black_GY4917_05_standard.jpg"],
+        "short_description": "The Adidas Ultraboost 21 in 'Core Black/Signal Green' features a sleek design and responsive cushioning. The Primeknit upper provides a snug, supportive fit, while Boost cushioning delivers energy return with every step. A Continental™ rubber outsole offers durable traction on a variety of surfaces.",
+        "big_description": "The Adidas Ultraboost 21 in 'Core Black/Signal Green' features a sleek design and responsive cushioning. The Primeknit upper provides a snug, supportive fit, while Boost cushioning delivers energy return with every step. A Continental™ rubber outsole offers durable traction on a variety of surfaces.\n\nMore benefits\n- Primeknit upper wraps the foot in adaptive support and ultralight comfort\n- Boost cushioning delivers responsive energy return\n- Stretchweb outsole flexes naturally for an energized ride\n- Continental™ Rubber gives you superior traction\n- Colour Shown: Core Black/Signal Green\n- Style: GY4917"
       },
       {
         "id": 4,
-        "name": "Sports Shoes",
-        "brand": "Reebok",
-        "price": 69.99,
-        "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
-        "short_description": "High-performance sports shoes for athletes.",
-        "big_description": "Designed for athletes, these sports shoes provide the support and cushioning you need for intense workouts."
+        "name": "Nike Air Force 1 '07 LV8 'White/Black'",
+        "brand": "Nike",
+        "price": 110.00,
+        "size": [40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47],
+        "image_links": ["https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/w7zi1xqqpvbgdz6i7wmq/air-force-1-07-lv8-shoe-fJqBpN.jpg",
+                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/denf8ac1rhil3mwrnoxi/air-force-1-07-lv8-shoe-fJqBpN.jpg",
+                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/dwxd9o1lbu1hhaezf8t9/air-force-1-07-lv8-shoe-fJqBpN.jpg",
+                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ohegctmhphlsrdxjpchd/air-force-1-07-lv8-shoe-fJqBpN.jpg",
+                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/umlxrqvzudbkbkfcwd8s/air-force-1-07-lv8-shoe-fJqBpN.jpg"],
+        "short_description": "The Nike Air Force 1 '07 LV8 'White/Black' puts a fresh spin on the classic hoops silhouette. The leather upper features stitched overlays for added durability and support, while Air-Sole cushioning provides all-day comfort. A rubber outsole delivers traction and durability.",
+        "big_description": "The Nike Air Force 1 '07 LV8 'White/Black' puts a fresh spin on the classic hoops silhouette. The leather upper features stitched overlays for added durability and support, while Air-Sole cushioning provides all-day comfort. A rubber outsole delivers traction and durability.\n\nMore benefits\n- Leather upper for premium comfort and durability\n- Perforations enhance ventilation\n- Air-Sole unit in heel provides cushioning and impact protection\n- Rubber outsole for durability and traction\n- Colour Shown: White/Black\n- Style: CT2299-100"
       },
       {
         "id": 5,
-        "name": "Formal Shoes",
-        "brand": "Cole Haan",
-        "price": 79.99,
-        "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
-        "short_description": "Elegant formal shoes for special occasions.",
-        "big_description": "Make a statement with these elegant formal shoes, perfect for weddings, parties, and other special occasions."
+        "name": "Adidas Stan Smith 'White/Green'",
+        "brand": "Adidas",
+        "price": 80.00,
+        "size": [38, 38.5, 39, 40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45],
+        "image_links": ["https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/f1f88b4404ec4905aa20ab9e00aa075d_9366/Stan_Smith_Shoes_White_M20605_01_standard.jpg",
+                        "https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/c5b1fb3ab14041f6bb65ab9e00aa07b5_9366/Stan_Smith_Shoes_White_M20605_02_standard.jpg",
+                        "https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/cd77e2b32f704d8aaac7ab9e00aa07e1_9366/Stan_Smith_Shoes_White_M20605_03_standard.jpg",
+                        "https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/26151bba1dc046a2b482ab9e00aa081d_9366/Stan_Smith_Shoes_White_M20605_04_standard.jpg",
+                        "https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/98e7d5f86cdd4a24b482ab9e00aa0853_9366/Stan_Smith_Shoes_White_M20605_HM1.jpg"]
       },
       {
         "id": 6,
-        "name": "Hiking Boots",
-        "brand": "Timberland",
-        "price": 89.99,
-        "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
-        "short_description": "Sturdy hiking boots for outdoor adventures.",
-        "big_description": "Conquer any terrain with these sturdy hiking boots, designed for comfort and durability on the trail."
+        "name": "Nike Air Max 270 'Black/White'",
+        "brand": "Nike",
+        "price": 150.00,
+        "size": [40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47],
+        "image_links": ["https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/80e8b52a-bc49-47e8-981b-989fc9ee17b2/air-max-270-shoe-fGgvgT.jpg",
+                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/25ec4e05-7322-4031-b254-5b9b49d0a4da/air-max-270-shoe-fGgvgT.jpg",
+                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/161145b3-80d5-4396-aeed-1cc6d8d4dbf7/air-max-270-shoe-fGgvgT.jpg",
+                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/2e795032-e7eb-4e68-89ab-07f05f61962a/air-max-270-shoe-fGgvgT.jpg",
+                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/4c225e4f-d94f-4b83-8653-62a300a897b1/air-max-270-shoe-fGgvgT.jpg"]
       },
       {
         "id": 7,
-        "name": "Slip-on Shoes",
-        "brand": "Vans",
-        "price": 44.99,
-        "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
-        "short_description": "Convenient slip-on shoes for easy wear.",
-        "big_description": "Experience convenience and style with these slip-on shoes, perfect for everyday activities."
+        "name": "Converse Chuck Taylor All Star Low 'Black'",
+        "brand": "Converse",
+        "price": 55.00,
+        "size": [35, 36, 36.5, 37, 37.5, 38, 39, 39.5, 40, 41, 42, 42.5],
+        "image_links": ["https://www.converse.com/dw/image/v2/ABAW_PRD/on/demandware.static/-/Sites-ConverseMaster/default/dw5b0043d6/images/a_107/167041C_A_107X1.jpg?sw=758&sh=758&sm=fit",
+                        "https://www.converse.com/dw/image/v2/ABAW_PRD/on/demandware.static/-/Sites-ConverseMaster/default/dw7fc43e7e/images/a_107/167041C_A_107X1.jpg?sw=758&sh=758&sm=fit",
+                        "https://www.converse.com/dw/image/v2/ABAW_PRD/on/demandware.static/-/Sites-ConverseMaster/default/dw3c79873e/images/a_107/167041C_A_107X1.jpg?sw=758&sh=758&sm=fit",
+                        "https://www.converse.com/dw/image/v2/ABAW_PRD/on/demandware.static/-/Sites-ConverseMaster/default/dw7fc43e7e/images/a_107/167041C_A_107X1.jpg?sw=758&sh=758&sm=fit",
+                        "https://www.converse.com/dw/image/v2/ABAW_PRD/on/demandware.static/-/Sites-ConverseMaster/default/dw7fc43e7e/images/a_107/167041C_A_107X1.jpg?sw=758&sh=758&sm=fit"]
       },
       {
         "id": 8,
-        "name": "Leather Shoes",
-        "brand": "Clarks",
-        "price": 99.99,
-        "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
-        "short_description": "Luxurious leather shoes for a sophisticated look.",
-        "big_description": "Step out in style with these luxurious leather shoes, crafted with attention to detail for a sophisticated look."
-      },
-      {
-        "id": 9,
-        "name": "Trainers",
-        "brand": "New Balance",
-        "price": 54.99,
-        "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
-        "short_description": "Training shoes designed for comfort and performance.",
-        "big_description": "Achieve your fitness goals with these training shoes, designed to provide comfort and support during workouts."
-      },
-      {
-        "id": 10,
-        "name": "Flip-flops",
-        "brand": "Havaianas",
-        "price": 19.99,
-        "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
-        "short_description": "Casual flip-flops for laid-back days.",
-        "big_description": "Relax in style with these casual flip-flops, perfect for laid-back days at the beach or pool."
+        "name": "Vans Old Skool 'Classic Black/White'",
+        "brand": "Vans",
+        "price": 60.00,
+        "size": [36, 36.5, 37, 38, 38.5, 39, 40, 41, 42, 42.5, 43, 44],
+        "image_links": ["https://images.vans.com/is/image/VansEU/8G1NRI-HERO",
+                        "https://images.vans.com/is/image/VansEU/8G1NRI-HERO",
+                        "https://images.vans.com/is/image/VansEU/8G1NRI-HERO",
+                        "https://images.vans.com/is/image/VansEU/8G1NRI-HERO",
+                        "https://images.vans.com/is/image/VansEU/8G1NRI-HERO"]
       }
+      
+
+      
+      
+
+      
+      
+      
+      
+      
     ]
   }

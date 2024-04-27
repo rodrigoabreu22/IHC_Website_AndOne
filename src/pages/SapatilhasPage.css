@@ -1,0 +1,30 @@
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .navbar {
+    height: 120px;
+  }
+
+  
+  .shoe-search {
+    height: 1%;
+    padding-bottom: 130px;
+    padding-top: 15px;
+  }
+
+  .footer {
+    height: 120px;
+  }
+
+  .parent-container {
+    display: table;
+    width: 100%; 
+  }
+  
+  .parent-container > .footer {
+     display: table-row;
+  }
+  

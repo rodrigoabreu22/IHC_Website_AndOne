@@ -1,11 +1,13 @@
 import React from 'react';
 
-const ProductSizes = ({ sizes }) => {
+const ProductSizes = ({ sizes, currentSize, setCurrentSize }) => {
   return (
-    <div className="product-sizes">
-      {sizes.map((size) => (
+    <div>
+      {sizes.map((size, index) => (
         <button
-          key={size}
+          key={index}
+          onClick={() => setCurrentSize(currentSize === size ? null : size)}
+          className={currentSize === size ? 'selected' : ''}
         >
           {size}
         </button>

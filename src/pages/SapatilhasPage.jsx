@@ -1,16 +1,23 @@
 import React from "react";
 import Navbar from "../components/MyNavbar";
 import MyFooter from "../components/MyFooter";
+import ShoeSearch from "../components/ShoeSearch";
+import './SapatilhasPage.css';
 
 function SapatilhasPage() {
     return (
         <>
-            <Navbar activeID={1}/>
-            <div className="text-center">
-                <h1 className="p-4">Sapatilhas</h1>
-                <h5>As melhores sapatilhas do mercado!!!</h5>
+            <div className="parent-container">
+                <div className="navbar">
+                    <Navbar activeID={1}/>
+                </div>
+                <div className="shoe-search">
+                    <ShoeSearch />
+                </div>
+                <div className="footer">
+                    <MyFooter />
+                </div>
             </div>
-            <MyFooter />
         </>
     );
 }

@@ -1,6 +1,6 @@
 .ProductCard {
     /* Your existing styles for the card */
-
+    width: 250px;
     /* Add a transition for smooth animation */
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;;
 }
@@ -9,4 +9,9 @@
     /* Add a glowing effect using box-shadow */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
+}
+
+.link-no-color {
+    color: inherit;
+    text-decoration: none;
 }

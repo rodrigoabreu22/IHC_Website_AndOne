@@ -1,0 +1,42 @@
+.app-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  height: 100vh; /* This will make the container fill the height of the viewport */
+}
+  
+  .filter {
+    transition: width 0.2s ease-out;
+    overflow: hidden;
+    width: 0;
+    min-width: 0;
+  }
+  
+  .filter.open {
+    width: 200px;
+  }
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    transition: padding-left 0.5s ease; /* Add this line */
+  }
+  
+  .product-list.with-filter {
+    padding-left: 240px; /* Adjust this value to account for the width of the filter bar */
+  }
+  
+  .product-list > * {
+    margin: 10px;
+    padding-top: 10px;
+    transition: margin-left 0.5s ease;
+  }
+
+  .product-list.with-filter > * {
+    margin-left: 10px; /* Adjust this value to the width of the filter bar */
+    transition: margin-left 0.5s ease;
+  }
+  
+  .product-list > *:hover {
+    --scale: scale(1.1); /* Update the scale variable when hovered */
+  }

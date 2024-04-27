@@ -10,6 +10,7 @@ import MaterialPage from './pages/MaterialPage'
 import PerfilPage from './pages/PerfilPage'
 import FavoritosPage from './pages/FavoritosPage'
 import CarrinhoPage from './pages/CarrinhoPage'
+import ProductPage from './pages/ProductPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,6 +29,7 @@ function App() {
           <Route path="/perfil" Component={PerfilPage} />
           <Route path="/favoritos" Component={FavoritosPage} />
           <Route path="/carrinho" Component={CarrinhoPage} />
+          <Route path="/produtoDetalhado/:id" Component={ProductPage} />
         </Routes>
       </BrowserRouter>
     </>
