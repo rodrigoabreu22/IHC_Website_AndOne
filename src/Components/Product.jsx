@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import productsData from '../data/Products.json';
+import React, {useState, useEffect} from 'react';
 import '../SingleProduct.css';
 import ProductSizes from '../components/ProductSizes.jsx';
 import ProductCarousel from '../components/ProductCarousel.jsx';
@@ -9,9 +8,42 @@ import ProductList from '../data/Products.json';
 import { useParams } from 'react-router-dom';
 
 const Product=() => {
+    const [favorites, setFavorites] = useState(localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')) : []);
+    const [cart, setCart] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []);
+    const [currentSize, setCurrentSize] = useState(null);
+
+    const sizeSelected = () => {console.log(currentSize); console.log(currentSize === null); return currentSize === null;};
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
+
+    const addToCart = (id, quantity, size) => {
+        console.log(id, quantity, size);
+        const existingItem = cart.find((item) => item.id === id && item.size === size);
+    
+        if (existingItem) {
+          // If the item with the same id and size already exists in the cart, update its quantity
+          setCart(cart.map((item) => item === existingItem ? { ...item, quantity: item.quantity + quantity } : item));
+        } else {
+          // If the item does not exist in the cart, add it
+          setCart([...cart, { id, quantity, size }]);
+        }
+    };
+
+    const favTest = (id) => {if (favorites.includes(id)) return "Adicionar aos favoritos"; else return "Remover dos favoritos";};
     const product = ProductList.products[useParams().id - 1];
     console.log(product);
     console.log(useParams().id);
+
+    const handleFavorites = (id) => {
+        if (favorites.includes(id)) {
+          setFavorites(favorites.filter((favorite) => favorite !== id));
+        } else {
+          setFavorites([...favorites, id]);
+        }
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+      };
 
     if (!product) {
         return <h1>404 Not Found</h1>;
@@ -32,7 +64,7 @@ const Product=() => {
     }
 
     return (
-        <div wholeContainer>
+        <div>
         <div className="product">
             <div className='product-carousel'>
                 <ProductCarousel images={product.image_links}/>
@@ -43,7 +75,7 @@ const Product=() => {
                 <p><span>Description:</span> {product.short_description}</p>
                 <span>Tamanhos</span>
                 <div className="sizes">
-                    <ProductSizes sizes={product.size}></ProductSizes>
+                    <ProductSizes sizes={product.size} currentSize={currentSize} setCurrentSize={setCurrentSize}></ProductSizes>
                 </div>
                 <div className="buttons">
                     <div className="quantity-buttons">
@@ -51,8 +83,10 @@ const Product=() => {
                         <span>{quantity}</span>
                         <button className="btn btn-sm btn-dark quantity-button" onClick={incrementQuantity}>+</button>
                     </div>
-                    <button>Adicionar ao carrinho</button>
-                    <button>Adicionar aos favoritos</button>
+                    <button disabled={sizeSelected()} onClick={() => addToCart(product.id, quantity, currentSize)}>Adicionar ao carrinho</button>
+                    <button onClick={() => handleFavorites(product.id)}>
+                        {favTest(product.id)}
+                    </button>
                 </div>
             </div>
         </div>

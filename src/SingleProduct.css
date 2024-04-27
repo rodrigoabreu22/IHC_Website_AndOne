@@ -9,7 +9,7 @@
   }
   
   .product-carousel {
-    flex: 0 0 750px; /* Adjust the width of the carousel */
+    flex: 0 0 900px; /* Adjust the width of the carousel */
   }
   
   .product-carousel img {
@@ -31,6 +31,8 @@
     font-size:large;
   }
 
+
+
   
   button {
     padding: 10px 20px;
@@ -38,6 +40,23 @@
     color: #000000;
     border: solid 1px black;
     cursor: pointer;
+  }
+
+  button:disabled {
+    background-color: #d2d2d2;
+    color: #666666;
+    cursor: not-allowed;
+  }
+
+  button.selected {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  button:disabled:hover {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
   }
   
   button:hover {
