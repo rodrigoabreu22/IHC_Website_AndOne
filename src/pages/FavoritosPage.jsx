@@ -25,6 +25,7 @@ const FavoritosPage = () => {
                             product={product}
                             favorites={favoriteProds}
                             setFavorites={setFavoriteProducts}
+                            toggleModal={true}
                         />
                     );
                 })}
