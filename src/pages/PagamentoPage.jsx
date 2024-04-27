@@ -7,13 +7,32 @@ import Pagamentos from "../components/Pagamentos";
 import { Col, Row, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 // adicionar o MyFooter na versão final
 
 function PagamentoPage() {
+    const navigate = useNavigate();
     const [selectedPaying, setSelectedPaying] = useState('');
     const [phoneNumber, setPhoneNumber] = useState(''); 
     const [selectedBilling, setSelectedBilling] = useState('');
+
+    const checkIfChecked = () => {
+        console.log(selectedPaying !== '');
+        console.log(phoneNumber) !== '';
+        console.log(selectedBilling !== '') ;
+        return selectedPaying !== '' && selectedBilling !== '';
+    }
+
+    const handleClick = (event) => {
+        if (!checkIfChecked()) {
+            event.preventDefault();
+            alert("Por favor, preencha todos os campos.\nCampos que faltam: \n" + (selectedPaying === '' ? "\t Método de pagamento" : "") + (phoneNumber === '' ? "\n\t Número de telefone" : ""));
+        } else {
+            navigate("/confirmacao");
+        }
+    };
 
     return (
         <>
@@ -25,10 +44,12 @@ function PagamentoPage() {
                                 selectedBilling={selectedBilling} setSelectedBilling={setSelectedBilling} />
                     <Row className="p-3">
                         <Col>
-                            <Button variant="primary" size="lg" block><FontAwesomeIcon icon={faArrowLeft} /> Retroceder</Button>
+                            <Link to="/checkout">                       
+                                <Button variant="primary" size="lg" block="true"><FontAwesomeIcon icon={faArrowLeft} /> Retroceder</Button>
+                            </Link>
                         </Col>
                         <Col className="d-flex justify-content-end">
-                            <Button variant="success" size="lg" block>Pagar <FontAwesomeIcon icon={faArrowRight} /></Button>
+                            <Button variant="success" size="lg" block="true" onClick={handleClick} >Pagar <FontAwesomeIcon icon={faArrowRight} /></Button>
                         </Col>
                     </Row>
                 </Col>

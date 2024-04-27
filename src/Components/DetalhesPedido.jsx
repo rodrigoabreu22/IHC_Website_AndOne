@@ -6,6 +6,11 @@ import ProductList from '../data/Products.json';
 // talvez remover o container daqui para a pagina da entrega
 
 function DetalhesPedido(props) {
+    const CartList = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []; 
+    const getProductByID = (id) => {
+        const product = ProductList.products.find((product) => product.id === id);
+        return product;
+    }  
     return (
         <Container fluid className="d-flex justify-content-end p-3"> 
             <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
@@ -14,19 +19,22 @@ function DetalhesPedido(props) {
                 </Row>
                 <Row>
                     <ul style={{ paddingLeft: 2 }}>
-                        {ProductList && ProductList.products.map(product => (
-                            <li key={product.id}>
-                                <Row  className="d-flex p-1">
-                                    <Col style={{ maxWidth: 100 }}>
-                                        <img src={product.image_links[0]} alt={product.name} style={{ width: '60px' }} />
-                                    </Col>
-                                    <Col>
-                                        <p>{product.name}</p>
-                                        <p>{product.price}</p>
-                                    </Col>
-                                </Row>
-                            </li>
-                        ))}
+                        {CartList.map(cartItem => {
+                            const product = getProductByID(cartItem.id);
+                            return (
+                                <li key={cartItem.id}>
+                                    <Row  className="d-flex p-1">
+                                        <Col style={{ maxWidth: 100 }}>
+                                            <img src={product.image_links[0]} alt={product.name} style={{ width: '60px' }} />
+                                        </Col>
+                                        <Col>
+                                            <p>{product.name} ({cartItem.size}): {cartItem.quantity}x</p>
+                                            <p>{product.price * cartItem.quantity}€</p>
+                                        </Col>
+                                    </Row>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </Row>
             </div>
