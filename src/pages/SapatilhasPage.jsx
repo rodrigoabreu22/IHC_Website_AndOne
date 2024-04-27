@@ -9,7 +9,7 @@ function SapatilhasPage() {
         <>
             <div className="parent-container">
                 <div className="navbar">
-                    <Navbar />
+                    <Navbar activeID={1}/>
                 </div>
                 <div className="shoe-search">
                     <ShoeSearch />
