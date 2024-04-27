@@ -40,16 +40,12 @@ function ShoeSearch() {
           selectedSizes={selectedSizes}
           setSelectedSizes={setSelectedSizes}
         />
-        <Routes>
-        <Route path="/" element={
           <div className={`product-list`} style={{ height: '100%' }}>
             {filteredProducts.map(product => (
               <ProductCard product={product} favorites={favorites} setFavorites={setFavorites}/>
             ))}
           </div>
-        } />
           {/* other routes... */}
-        </Routes>
       </div>
   )
 }
