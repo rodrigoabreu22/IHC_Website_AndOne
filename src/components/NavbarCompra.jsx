@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function NavbarCompra() {
+function NavbarCompra({ currentStep }) {
     return (
         <header style={{ paddingTop: 125 }}>
             <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
@@ -17,15 +17,23 @@ function NavbarCompra() {
                             <Col className="text-center g-0">
                                 <Nav.Link href="/home"><h5>Entrega</h5></Nav.Link>
                                 <div style={{ height: '1px', backgroundColor: 'black', margin: '0' }} />
-                                <div style={{ height: '4px', backgroundColor: 'black', margin: '0' }} />
+                                {currentStep === "Entrega" && (
+                                    <div style={{ height: '4px', backgroundColor: 'black', margin: '0' }} />
+                                )}
                             </Col>
                             <Col className="text-center g-0">
                                 <Nav.Link><h5>Pagamento</h5></Nav.Link>
                                 <div className="h-px bottom-0"  style={{ height: '1px', backgroundColor: 'black', margin: '0' }} />
+                                {currentStep === "Pagamento" && (
+                                    <div style={{ height: '4px', backgroundColor: 'black', margin: '0' }} />
+                                )}
                             </Col>
                             <Col className="text-center g-0">
                                 <Nav.Link><h5>Confirmação</h5></Nav.Link>
                                 <div style={{ height: '1px', backgroundColor: 'black', margin: '0' }} />
+                                {currentStep === "Confirmação" && (
+                                    <div style={{ height: '4px', backgroundColor: 'black', margin: '0' }} />
+                                )}
                             </Col>
                         </Row>
                     </Container>
