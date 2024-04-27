@@ -6,7 +6,7 @@ function MyFooter() {
   return (
     <footer className="bg-body-tertiary text-dark py-4">
       <Container>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center" style={{ width: '100%' }}>
           <Col className="text-center" md={4}>
             <h5>Contactos</h5>
             <Nav className="flex-column">
