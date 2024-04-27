@@ -6,7 +6,7 @@
         "brand": "Nike",
         "price": 119.99,
         "size": [38.5, 39, 40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47, 47.5],
-        "image_links": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png",
+        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png",
                         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3b29bcfd-a356-44b5-984c-2819238313cc/ja-1-white-black-basketball-shoes-8gZzJ3.png",
                         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c2a1a901-68c6-476b-8abd-0629ebc0a873/ja-1-white-black-basketball-shoes-8gZzJ3.png",
                         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0732544d-2ff7-49b4-865d-6ad233562efe/ja-1-white-black-basketball-shoes-8gZzJ3.png",
@@ -24,7 +24,7 @@
         "brand": "Adidas",
         "price": 59.99,
         "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": "",
+        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
         "short_description": "Classic sneakers for everyday wear.",
         "big_description": "These sneakers offer timeless style and comfort for your everyday adventures."
       },
@@ -34,7 +34,7 @@
         "brand": "Puma",
         "price": 39.99,
         "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": "",
+        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
         "short_description": "Versatile shoes perfect for casual outings.",
         "big_description": "These casual shoes are perfect for everyday wear, offering both style and comfort."
       },
@@ -44,7 +44,7 @@
         "brand": "Reebok",
         "price": 69.99,
         "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": "",
+        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
         "short_description": "High-performance sports shoes for athletes.",
         "big_description": "Designed for athletes, these sports shoes provide the support and cushioning you need for intense workouts."
       },
@@ -54,7 +54,7 @@
         "brand": "Cole Haan",
         "price": 79.99,
         "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": "",
+        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
         "short_description": "Elegant formal shoes for special occasions.",
         "big_description": "Make a statement with these elegant formal shoes, perfect for weddings, parties, and other special occasions."
       },
@@ -64,7 +64,7 @@
         "brand": "Timberland",
         "price": 89.99,
         "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": "",
+        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
         "short_description": "Sturdy hiking boots for outdoor adventures.",
         "big_description": "Conquer any terrain with these sturdy hiking boots, designed for comfort and durability on the trail."
       },
@@ -74,7 +74,7 @@
         "brand": "Vans",
         "price": 44.99,
         "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": "",
+        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
         "short_description": "Convenient slip-on shoes for easy wear.",
         "big_description": "Experience convenience and style with these slip-on shoes, perfect for everyday activities."
       },
@@ -84,7 +84,7 @@
         "brand": "Clarks",
         "price": 99.99,
         "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": "",
+        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
         "short_description": "Luxurious leather shoes for a sophisticated look.",
         "big_description": "Step out in style with these luxurious leather shoes, crafted with attention to detail for a sophisticated look."
       },
@@ -94,7 +94,7 @@
         "brand": "New Balance",
         "price": 54.99,
         "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": "",
+        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
         "short_description": "Training shoes designed for comfort and performance.",
         "big_description": "Achieve your fitness goals with these training shoes, designed to provide comfort and support during workouts."
       },
@@ -104,7 +104,7 @@
         "brand": "Havaianas",
         "price": 19.99,
         "size": [38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "image_link": "",
+        "image_link": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/902e2363-fc5a-4ae5-963a-fa907a5d626d/ja-1-white-black-basketball-shoes-8gZzJ3.png"],
         "short_description": "Casual flip-flops for laid-back days.",
         "big_description": "Relax in style with these casual flip-flops, perfect for laid-back days at the beach or pool."
       }

@@ -3,11 +3,12 @@ import { Col, Container, Row } from 'react-bootstrap';
 import ProductList from '../data/Products.json';
 
 // alterar para utilizar o array passado por props
+// talvez remover o container daqui para a pagina da entrega
 
 function DetalhesPedido(props) {
     return (
         <Container fluid className="d-flex justify-content-end p-3"> 
-            <div style={{ width: '25%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+            <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
                 <Row>
                     <h3>Detalhes do Pedido</h3>
                 </Row>
