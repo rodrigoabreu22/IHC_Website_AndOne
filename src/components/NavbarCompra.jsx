@@ -1,15 +1,20 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useNavigate } from "react-router-dom";
 
 function NavbarCompra({ currentStep }) {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate("/");
+    };
     return (
         <header style={{ paddingTop: 125 }}>
             <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
-                <Navbar.Brand ><img src="src/assets/And_ONE.png" style={{ height: 100 }}/></Navbar.Brand>
+                <Navbar.Brand ><img src="src/assets/And_ONE.png" onClick={handleClick} style={{ height: 100, cursor: "pointer", paddingLeft: "12px" }}/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Container className="justify-content-center" style={{width: '100%'}}>

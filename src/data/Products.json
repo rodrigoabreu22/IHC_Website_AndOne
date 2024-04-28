@@ -123,16 +123,44 @@
                         "https://images.footlocker.com/is/image/FLEU/314207610404_03",
                         "https://images.footlocker.com/is/image/FLEU/314207610404_04",
                         "https://images.footlocker.com/is/image/FLEU/314207610404_05"]
+      },
+      {
+        "id": 10,
+        "name": "Under Armour Curry 4 Low Flotro 'Curry Jam'",
+        "brand": "Under Armour",
+        "price": 150.00,
+        "size": [40, 40.5, 41, 42, 42.5, 43, 44, 44.5],
+        "image_links": ["https://i0.wp.com/xipastore.pt/wp-content/uploads/2024/02/under-armour-curry-4-low-flotro-curry-jam-3026620-400-01.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2024/02/under-armour-curry-4-low-flotro-curry-jam-3026620-400-02.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2024/02/under-armour-curry-4-low-flotro-curry-jam-3026620-400-03.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2024/02/under-armour-curry-4-low-flotro-curry-jam-3026620-400-04.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2024/02/under-armour-curry-4-low-flotro-curry-jam-3026620-400-05.jpg"]
+      },
+      {
+        "id": 11,
+        "name": "Under Armour Curry 11 'Champion Mindset'",
+        "brand": "Under Armour",
+        "price": 169.99,
+        "size": [40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5],
+        "image_links": ["https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/12/under-armour-curry-11-champion-mindset-3026617-300-01.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/12/under-armour-curry-11-champion-mindset-3026617-300-02.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/12/under-armour-curry-11-champion-mindset-3026617-300-03.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/12/under-armour-curry-11-champion-mindset-3026617-300-04.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/12/under-armour-curry-11-champion-mindset-3026617-300-05.jpg"]
+      },
+      {
+        "id": 12,
+        "name": "Adidas Trae 3 'Game Is Yours'",
+        "brand": "Adidas",
+        "price": 149.99,
+        "size": [38, 38.5, 39.5, 40, 40.5, 41.5, 42, 42.5, 43.5, 44, 44.5, 45.5, 46, 46.6, 47.5],
+        "image_links": ["https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-01.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-02.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-03.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-04.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-05.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-06.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-07.jpg"]
       }
-      
-
-      
-      
-
-      
-      
-      
-      
-      
     ]
   }
