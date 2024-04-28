@@ -26,7 +26,7 @@
   }
   
   .product-cart-name {
-    margin-right: 16%;
+    margin-right: 14%;
     font-size: 16px;
     width:160px;
   }
@@ -35,21 +35,20 @@
     font-size: 18px;
     width:40px;
     text-align:right;
-    margin-right: 21%; /* Espaçamento entre o tamanho e os botões de quantidade */
+    margin-right: 23%; /* Espaçamento entre o tamanho e os botões de quantidade */
   }
   
   .product-cart-quantity-buttons {
     display: flex;
     align-items: center;
-    margin-right: 20%;
+    margin-right: 22%;
+    font-size: 18;
   }
-  
+
   .product-cart-quantity-buttons span {
-    margin: 0 5px; /* Espaçamento entre os elementos */
-  }
-  
-  .product-cart-quantity-buttons button {
-    margin: 0 2px; /* Espaçamento entre os botões */
+    display: flex;
+    margin:10%;
+    font-style: normal;
   }
   
   .product-card button {

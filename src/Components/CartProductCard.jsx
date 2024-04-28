@@ -24,7 +24,7 @@ function CartProductCard({ product, item, cart, setCart }) {
     };
   
     const removeFromCart = () => {
-      const newCart = cart.filter(cartProduct => cartProduct.id !== product.id);
+      const newCart = cart.filter(cartProduct => (cartProduct.id !== product.id || cartProduct.size !== item.size));
       setCart(newCart);
     };
   
@@ -53,10 +53,9 @@ function CartProductCard({ product, item, cart, setCart }) {
                                 <div className="product-cart-name">{product.brand} - {product.name}</div>
                                 <div className="product-cart-size">{curItem["size"]}</div>
                                 <div className="product-cart-quantity-buttons">
-                                    Quantidade   
-                                        <Button variant="dark" size="sm" onClick={decrementQuantity}>-</Button>
-                                            {item.quantity}
-                                        <Button variant="dark" size="sm" onClick={incrementQuantity}>+</Button>
+                                        <Button className='quantity-button' variant="secondary" size="sm" onClick={decrementQuantity}>-</Button>
+                                            <span>{item.quantity}</span>
+                                        <Button className='quantity-button' variant="secondary" size="sm" onClick={incrementQuantity}>+</Button>
                                 </div>
                                 <div className="product-cart-price">{product.price} €</div>
                                 <Button variant="danger" size="sm" onClick={toggleModal}>X</Button>

@@ -46,14 +46,15 @@ const CarrinhoPage = () => {
     return (
         <div>
             <MyNavbar activeID={7} />
-            <h1>Carrinho de Compras</h1>
-            <Row className="header">
+            <h1 className="page-title">Carrinho de Compras</h1>
+            
+            <div className="cart-products">
+                <Row className="header">
                 <h2 className="header-name">Produto</h2>
-                <h2 className="header-size">Size</h2>
+                <h2 className="header-size">Tamanho</h2>
                 <h2 className="header-quantity">Quantidade</h2>
                 <h2 className="header-price">Preço</h2>
             </Row>
-            <div className="cart-products">
                 {cartProds.map(productCard => {
                     const product = ProductList.products.find(prod => prod.id === productCard.id);
                     return (
@@ -67,14 +68,14 @@ const CarrinhoPage = () => {
                     );
                 })}
             </div>
-            <div className="total-price">
-                <h2>Total: €{cartProds.reduce((total, prod) => total + ProductList.products.find(p => p.id === prod.id).price * prod.quantity, 0).toFixed(2)}</h2>
+            <div className='checkout-div'>
+                    <h2>Total: {cartProds.reduce((total, prod) => total + ProductList.products.find(p => p.id === prod.id).price * prod.quantity, 0).toFixed(2)}€</h2>
+                <Link to="/checkout">
+                    <div className="checkout">
+                        <button>Finalizar Compra</button>
+                    </div>
+                </Link>
             </div>
-            <Link to="/checkout">
-                <div className="checkout">
-                    <button>Finalizar Compra</button>
-                </div>
-            </Link>
             <MyFooter />
         </div>
     );
