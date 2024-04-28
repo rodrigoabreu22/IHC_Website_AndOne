@@ -31,13 +31,16 @@ function ShoeSearch() {
       (!searchTerm || product.name.toLowerCase().includes(searchTerm.toLowerCase()))
     );
     setFilteredProducts(newFilteredProducts);
-  }, [searchTerm]);
+  }, [searchTerm, selectedBrands, selectedPrices, selectedSizes]);
   console.log(selectedSizes);
   console.log(Math.abs(38 - 38.5) <= 0.5);
   console.log(filteredProducts);
 
   return (
+    <>
+    {searchTerm && <h2 style={{ fontSize: '2em', textAlign: "center" }}>Searching for: {searchTerm}</h2>}
     <div style={{ display: 'grid', gridTemplateColumns: 'auto auto', height: '100%', alignItems: 'start' }}>
+
       <VerticalFilterBar
         className={`filter`}
         selectedBrands={selectedBrands}
@@ -47,6 +50,7 @@ function ShoeSearch() {
         selectedSizes={selectedSizes}
         setSelectedSizes={setSelectedSizes}
       />
+      
       <div className={`product-list`} style={{ height: '100%', padding: '0', margin: '0', boxSizing: 'border-box' }}>
         {filteredProducts.map(product => (
           <ProductCard product={product} favorites={favorites} setFavorites={setFavorites}/>
@@ -54,6 +58,7 @@ function ShoeSearch() {
       </div>
       {/* other routes... */}
     </div>
+    </>
   )
 }
 
