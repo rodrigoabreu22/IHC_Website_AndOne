@@ -74,7 +74,7 @@ const ProductCard = ({product, favorites, setFavorites, toggleModal }) => {
                     <Button variant="secondary" onClick={() => setShowModal(false)}>
                     Cancelar
                     </Button>
-                    <Button variant="primary" onClick={removeFavorite}>
+                    <Button variant="danger" onClick={removeFavorite}>
                     Remover
                     </Button>
                 </Modal.Footer>

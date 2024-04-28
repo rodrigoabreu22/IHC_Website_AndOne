@@ -5,6 +5,9 @@ import CartProductCard from '../components/CartProductCard';
 import ProductList from '../data/Products.json';
 import { Link } from 'react-router-dom';
 import '../AppTestRicardo.css'; // Import the CSS file
+import '../CarrinhoPage.css'; // Import the CSS file
+import Row from 'react-bootstrap/Row';
+
 
 const CarrinhoPage = () => {
     const [cartProds, setCartProducts] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []);
@@ -18,7 +21,7 @@ const CarrinhoPage = () => {
         return (
             <div>
                 <MyNavbar activeID={7} />
-                <h1>Carrinho de Compras</h1>
+                <h1 className="page-title">Carrinho de Compras</h1>
                 <h2>O carrinho está vazio.</h2>
                 <Link to="/sapatilhas">
                     <button style={{marginRight: '10px'}}>Ver Sapatilhas</button>
@@ -44,6 +47,12 @@ const CarrinhoPage = () => {
         <div>
             <MyNavbar activeID={7} />
             <h1>Carrinho de Compras</h1>
+            <Row className="header">
+                <h2 className="header-name">Produto</h2>
+                <h2 className="header-size">Size</h2>
+                <h2 className="header-quantity">Quantidade</h2>
+                <h2 className="header-price">Preço</h2>
+            </Row>
             <div className="cart-products">
                 {cartProds.map(productCard => {
                     const product = ProductList.products.find(prod => prod.id === productCard.id);

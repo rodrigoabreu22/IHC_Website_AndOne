@@ -40,7 +40,7 @@ const Product = () => {
     const addToCart = (id, quantity, size) => {
         console.log(id, quantity, size);
         const existingItem = cart.find((item) => item.id === id && item.size === size);
-    
+        
         if (existingItem) {
           // If the item with the same id and size already exists in the cart, update its quantity
           setCart(cart.map((item) => item === existingItem ? { ...item, quantity: item.quantity + quantity } : item));
@@ -48,20 +48,14 @@ const Product = () => {
           // If the item does not exist in the cart, add it
           setCart([...cart, { id, quantity, size }]);
         }
+
+        toggleShowToast();
     };
 
     const favTest = (id) => {if (!favorites.includes(id)) return "Adicionar aos favoritos"; else return "Remover dos favoritos";};
     const product = ProductList.products[useParams().id - 1];
     console.log(product);
     console.log(useParams().id);
-
-    if (existingItem) {
-      // If the item with the same id and size already exists in the cart, update its quantity
-      setCart(cart.map((item) => (item === existingItem ? { ...item, quantity: item.quantity + quantity } : item)));
-    } else {
-      // If the item does not exist in the cart, add it
-      setCart([...cart, { id, quantity, size }]);
-    };
 
     const handleFavorites = (id) => {
       if (favorites.includes(id)) {
@@ -119,7 +113,7 @@ const Product = () => {
                   +
                 </button>
               </div>
-              <button disabled={sizeSelected()} onClick={() => { addToCart(product.id, quantity, currentSize); toggleShowA(); }}>
+              <button disabled={sizeSelected()} onClick={() => { addToCart(product.id, quantity, currentSize)}}>
                 Adicionar ao carrinho
               </button>
               <button onClick={() => handleFavorites(product.id)}>{favTest(product.id)}</button>
