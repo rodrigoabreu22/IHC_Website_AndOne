@@ -10,7 +10,7 @@ const VerticalFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, 
     const [sizeOpen, setSizeOpen] = useState(true); // Set initial state to true
     const [priceOpen, setPriceOpen] = useState(true);
     
-    const brands = ['Nike', 'Puma', 'Rebook']; // Define your brands here
+    const brands = ['Nike', 'Puma', 'Reebok']; // Define your brands here
     const sizes = [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48];; // Define your sizes here
     
     const handleToggle = () => {setShow(!show); setIsFilterActive(!isFilterActive);};
@@ -35,13 +35,13 @@ const VerticalFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, 
     return (
         <div className='container'>
             <div className={`filter-bar`}>
-                <h2 className='unselectable'>Filters</h2>
+                <h2 className='unselectable'>Filtros</h2>
                 <div onClick={(event) => {
                 if (event.target.type !== 'checkbox') {
                     setBrandOpen(!brandOpen);
                 }
                 }} className="accordion">
-                    <h3 className='unselectable'>Brand <FontAwesomeIcon icon={brandOpen ? faChevronUp : faChevronDown} /></h3>
+                    <h3 className='unselectable'>Marca <FontAwesomeIcon icon={brandOpen ? faChevronUp : faChevronDown} /></h3>
                     {brandOpen && (brands || []).map(brand => (
                         <div key={brand}>
                             <input
@@ -62,7 +62,7 @@ const VerticalFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, 
                     setPriceOpen(!priceOpen);
                 }
                 }} className="accordion">
-                    <h3 className='unselectable'>Price <FontAwesomeIcon icon={priceOpen ? faChevronUp : faChevronDown} /></h3>
+                    <h3 className='unselectable'>Preço <FontAwesomeIcon icon={priceOpen ? faChevronUp : faChevronDown} /></h3>
                     {priceOpen && (
                         <div>
                             <input
@@ -95,7 +95,7 @@ const VerticalFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, 
                     setSizeOpen(!sizeOpen);
                 }
                 }} className="accordion">
-                    <h3 className='unselectable'>Size <FontAwesomeIcon icon={sizeOpen ? faChevronUp : faChevronDown} /></h3>
+                    <h3 className='unselectable'>Tamanhos <FontAwesomeIcon icon={sizeOpen ? faChevronUp : faChevronDown} /></h3>
                     {sizeOpen && (sizes || []).map(size => (
                         <div key={size}>
                         <input

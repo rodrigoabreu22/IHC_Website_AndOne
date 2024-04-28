@@ -1,5 +1,9 @@
 .container {
   display: flex;
+  position: sticky;
+  top: 0;
+  height: 100%;
+  margin: 0;
 }
 
 .filter-bar {
@@ -9,13 +13,12 @@
   height: 100%;
   width: 200px; /* adjust as needed */
   background-color: #f0f0f0; /* adjust as needed */
-  overflow: auto;
+  overflow: auto; /* add a scrollbar when the content is too large to fit */
   padding: 20px;
   box-sizing: border-box;
   border: 1px solid black; /* add a border around the filter area */
   transition: left 0.5s ease; /* animate the left property */
 }
-
 
 .small-input {
   width: 150px; /* Adjust as needed */

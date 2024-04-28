@@ -41,7 +41,7 @@ const ProductCard = ({product, favorites, setFavorites, toggleModal }) => {
     return (
         <>
             <Card className="ProductCard" style={{ height: '400px' }}>
-                <Card.Img variant="top" src={product.image_links[0]} style={{ height: '60%', objectFit: 'cover', userSelect: 'none' }} />
+                <Card.Img variant="top" src={product.image_links[0]} style={{ height: '60%', objectFit: 'scale-down', userSelect: 'none' }} />
                 <FontAwesomeIcon icon={isFavorite ? fasHeart : farHeart} size="xl" style={{ position: 'absolute', top: '10px', right: '10px', color: isFavorite ? 'red' : 'black' }} onClick={toggleFavorite} />
                 <hr style={{ margin: 0 }} />
                 <Card.Body>

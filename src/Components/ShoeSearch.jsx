@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react'
 import ProductCard from './ProductCard';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductList from '../data/Products.json'
 import VerticalFilterBar from './VerticalFilterBar';
-import './ShoeSearch.css'; // Import the CSS file
 
 function ShoeSearch() {
   const [selectedBrands, setSelectedBrands] = useState([]);
@@ -29,24 +27,23 @@ function ShoeSearch() {
   console.log(filteredProducts);
 
   return (
-      <div className="app-container">
-        <VerticalFilterBar
-          className={`filter`}
-          style={{ height: '100%' }}
-          selectedBrands={selectedBrands}
-          setSelectedBrands={setSelectedBrands}
-          selectedPrices={selectedPrices}
-          setSelectedPrices={setSelectedPrices}
-          selectedSizes={selectedSizes}
-          setSelectedSizes={setSelectedSizes}
-        />
-          <div className={`product-list`} style={{ height: '100%' }}>
-            {filteredProducts.map(product => (
-              <ProductCard product={product} favorites={favorites} setFavorites={setFavorites}/>
-            ))}
-          </div>
-          {/* other routes... */}
+    <div style={{ display: 'grid', gridTemplateColumns: '200px auto', height: '100%', alignItems: 'start' }}>
+      <VerticalFilterBar
+        className={`filter`}
+        selectedBrands={selectedBrands}
+        setSelectedBrands={setSelectedBrands}
+        selectedPrices={selectedPrices}
+        setSelectedPrices={setSelectedPrices}
+        selectedSizes={selectedSizes}
+        setSelectedSizes={setSelectedSizes}
+      />
+      <div className={`product-list`} style={{ height: '100%', padding: '0', margin: '0', boxSizing: 'border-box' }}>
+        {filteredProducts.map(product => (
+          <ProductCard product={product} favorites={favorites} setFavorites={setFavorites}/>
+        ))}
       </div>
+      {/* other routes... */}
+    </div>
   )
 }
 
