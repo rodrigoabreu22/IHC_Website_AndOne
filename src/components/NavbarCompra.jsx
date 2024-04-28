@@ -12,24 +12,24 @@ function NavbarCompra({ currentStep }) {
                 <Navbar.Brand ><img src="src/assets/And_ONE.png" style={{ height: 100 }}/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Container className="justify-content-center">
+                    <Container className="justify-content-center" style={{width: '100%'}}>
                         <Row className="justify-content-center">
-                            <Col className="text-center g-0">
-                                <Nav.Link href="/home"><h5>Entrega</h5></Nav.Link>
+                            <Col className="text-center g-0" style={{paddingRight: '10px'}}>
+                                <h5 style = {{userSelect: 'none'}}>Entrega</h5>
                                 <div style={{ height: '1px', backgroundColor: 'black', margin: '0' }} />
                                 {currentStep === "Entrega" && (
                                     <div style={{ height: '4px', backgroundColor: 'black', margin: '0' }} />
                                 )}
                             </Col>
-                            <Col className="text-center g-0">
-                                <Nav.Link><h5>Pagamento</h5></Nav.Link>
+                            <Col className="text-center g-0" style={{paddingRight: '10px'}}> 
+                                <h5 style = {{userSelect: 'none'}}>Pagamento</h5>
                                 <div className="h-px bottom-0"  style={{ height: '1px', backgroundColor: 'black', margin: '0' }} />
                                 {currentStep === "Pagamento" && (
                                     <div style={{ height: '4px', backgroundColor: 'black', margin: '0' }} />
                                 )}
                             </Col>
-                            <Col className="text-center g-0">
-                                <Nav.Link><h5>Confirmação</h5></Nav.Link>
+                            <Col className="text-center g-0" style={{paddingRight: '10px'}}>
+                                <h5 style = {{userSelect: 'none'}}>Confirmação</h5>
                                 <div style={{ height: '1px', backgroundColor: 'black', margin: '0' }} />
                                 {currentStep === "Confirmação" && (
                                     <div style={{ height: '4px', backgroundColor: 'black', margin: '0' }} />
