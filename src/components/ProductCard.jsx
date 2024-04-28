@@ -20,7 +20,6 @@ const ProductCard = ({product, favorites, setFavorites, toggleModal }) => {
         let newFavorites;
         if (isFavorite) {
           if (toggleModal) {
-            console.log("showing modal");
             setShowModal(true);
           } else {
             removeFavorite();
@@ -42,7 +41,7 @@ const ProductCard = ({product, favorites, setFavorites, toggleModal }) => {
     return (
         <>
             <Card className="ProductCard" style={{ height: '400px' }}>
-                <Card.Img variant="top" src={product.image_links[0]} style={{ height: '60%', objectFit: 'cover', userSelect: 'none' }} />
+                <Card.Img variant="top" src={product.image_links[0]} style={{ height: '60%', objectFit: 'scale-down', userSelect: 'none' }} />
                 <FontAwesomeIcon icon={isFavorite ? fasHeart : farHeart} size="xl" style={{ position: 'absolute', top: '10px', right: '10px', color: isFavorite ? 'red' : 'black' }} onClick={toggleFavorite} />
                 <hr style={{ margin: 0 }} />
                 <Card.Body>
@@ -59,18 +58,18 @@ const ProductCard = ({product, favorites, setFavorites, toggleModal }) => {
                     </Link>
                 </Card.Body>
             </Card>
-            {showRemoveFavoriteModal && (
+            {toggleModal && (
                 <Modal show={showModal} onHide={() => setShowModal(false)}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Remove Favorite</Modal.Title>
+                    <Modal.Title>Remover produto dos favoritos</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Are you sure you want to remove this product from your favorites?</Modal.Body>
+                <Modal.Body>Tem a certeza que pretende remover este produto dos favoritos?</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => setShowModal(false)}>
-                    Cancel
+                    Cancelar
                     </Button>
                     <Button variant="primary" onClick={removeFavorite}>
-                    Remove
+                    Remover
                     </Button>
                 </Modal.Footer>
                 </Modal>

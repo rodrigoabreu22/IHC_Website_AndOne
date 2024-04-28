@@ -11,6 +11,8 @@ import PerfilPage from './pages/PerfilPage'
 import FavoritosPage from './pages/FavoritosPage'
 import CarrinhoPage from './pages/CarrinhoPage'
 import ProductPage from './pages/ProductPage'
+import PagamentoPage from './pages/PagamentoPage'
+import EntregaPage from './pages/EntregaPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,6 +32,8 @@ function App() {
           <Route path="/favoritos" Component={FavoritosPage} />
           <Route path="/carrinho" Component={CarrinhoPage} />
           <Route path="/produtoDetalhado/:id" Component={ProductPage} />
+          <Route path="/checkout" Component={EntregaPage} />
+          <Route path="/pagamento" Component={PagamentoPage} />
         </Routes>
       </BrowserRouter>
     </>

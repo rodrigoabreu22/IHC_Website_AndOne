@@ -24,11 +24,10 @@
         "brand": "Nike",
         "price": 170.00,
         "size": [41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47, 47.5, 48],
-        "image_links": ["https://cdn.shopify.com/s/files/1/0062/4024/8491/products/554724-069_03-06_3000x.jpg?v=1606353635",
-                        "https://cdn.shopify.com/s/files/1/0062/4024/8491/products/554724-069_01-06_3000x.jpg?v=1606353635",
-                        "https://cdn.shopify.com/s/files/1/0062/4024/8491/products/554724-069_02-06_3000x.jpg?v=1606353635",
-                        "https://cdn.shopify.com/s/files/1/0062/4024/8491/products/554724-069_05-06_3000x.jpg?v=1606353635",
-                        "https://cdn.shopify.com/s/files/1/0062/4024/8491/products/554724-069_04-06_3000x.jpg?v=1606353635"],
+        "image_links": ["https://hypedfam.com/cdn/shop/files/air-jordan-1-retro-high-black-gym-red-black-868470.png",
+                        "https://hypedfam.com/cdn/shop/files/air-jordan-1-retro-high-black-gym-red-black-922459.png",
+                        "https://hypedfam.com/cdn/shop/files/air-jordan-1-retro-high-black-gym-red-black-195771.png",
+                        "https://hypedfam.com/cdn/shop/files/air-jordan-1-retro-high-black-gym-red-black-480902.png"],
         "short_description": "The Air Jordan 1 Retro High OG 'Bred' 2016 brings back the original 'Bred' colorway of the iconic silhouette. The high-top features a black and Varsity Red leather upper with a white midsole and red outsole. Nike Air branding on the tongue completes the classic look.",
         "big_description": "The Air Jordan 1 Retro High OG 'Bred' 2016 brings back the original 'Bred' colorway of the iconic silhouette. The high-top features a black and Varsity Red leather upper with a white midsole and red outsole. Nike Air branding on the tongue completes the classic look.\n\nMore benefits\n- Full-grain leather upper for durability\n- PU midsole with Air-Sole unit in heel for cushioning\n- Rubber outsole with deep flex grooves for traction and flexibility\n- Colour Shown: Black/Varsity Red/White\n- Style: 555088-001"
       },
@@ -38,11 +37,10 @@
         "brand": "Adidas",
         "price": 180.00,
         "size": [40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47],
-        "image_links": ["https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/2b8d5cf0d77547cfba6baa610131c15c_9366/Ultraboost_21_Shoes_Black_GY4917_01_standard.jpg",
-                        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/8d0702a0fd25425485d1aa610131c221_9366/Ultraboost_21_Shoes_Black_GY4917_02_standard.jpg",
-                        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/6b0a25f4254f4c71a1ffaa610131c232_9366/Ultraboost_21_Shoes_Black_GY4917_03_standard.jpg",
-                        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/09f317f4d6514858a214aa610131c2a8_9366/Ultraboost_21_Shoes_Black_GY4917_04_standard.jpg",
-                        "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/e51b7d9fc13a44ac9f29aa610131c2b0_9366/Ultraboost_21_Shoes_Black_GY4917_05_standard.jpg"],
+        "image_links": ["https://cdn-images.farfetch-contents.com/16/99/25/07/16992507_34064513_1000.jpg",
+                        "https://cdn-images.farfetch-contents.com/16/99/25/07/16992507_34066222_1000.jpg",
+                        "https://cdn-images.farfetch-contents.com/16/99/25/07/16992507_34065435_1000.jpg",
+                        "https://cdn-images.farfetch-contents.com/16/99/25/07/16992507_34066226_1000.jpg"],
         "short_description": "The Adidas Ultraboost 21 in 'Core Black/Signal Green' features a sleek design and responsive cushioning. The Primeknit upper provides a snug, supportive fit, while Boost cushioning delivers energy return with every step. A Continental™ rubber outsole offers durable traction on a variety of surfaces.",
         "big_description": "The Adidas Ultraboost 21 in 'Core Black/Signal Green' features a sleek design and responsive cushioning. The Primeknit upper provides a snug, supportive fit, while Boost cushioning delivers energy return with every step. A Continental™ rubber outsole offers durable traction on a variety of surfaces.\n\nMore benefits\n- Primeknit upper wraps the foot in adaptive support and ultralight comfort\n- Boost cushioning delivers responsive energy return\n- Stretchweb outsole flexes naturally for an energized ride\n- Continental™ Rubber gives you superior traction\n- Colour Shown: Core Black/Signal Green\n- Style: GY4917"
       },
@@ -52,11 +50,14 @@
         "brand": "Nike",
         "price": 110.00,
         "size": [40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47],
-        "image_links": ["https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/w7zi1xqqpvbgdz6i7wmq/air-force-1-07-lv8-shoe-fJqBpN.jpg",
-                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/denf8ac1rhil3mwrnoxi/air-force-1-07-lv8-shoe-fJqBpN.jpg",
-                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/dwxd9o1lbu1hhaezf8t9/air-force-1-07-lv8-shoe-fJqBpN.jpg",
-                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ohegctmhphlsrdxjpchd/air-force-1-07-lv8-shoe-fJqBpN.jpg",
-                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/umlxrqvzudbkbkfcwd8s/air-force-1-07-lv8-shoe-fJqBpN.jpg"],
+        "image_links": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3ec6a07c-c8c1-4997-9014-1ccf1b975df1/air-force-1-lv8-older-shoes-4rVWkp.png",
+                        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6ba4cc09-9b7f-41e6-939a-dafab0f5e434/air-force-1-lv8-older-shoes-4rVWkp.png",
+                        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5c280ea5-c325-411c-b242-7688f359c1de/air-force-1-lv8-older-shoes-4rVWkp.png",
+                        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/103c4d9f-f3c7-4f58-8c45-ae0b4f5ddb90/air-force-1-lv8-older-shoes-4rVWkp.png",
+                        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/84b2da74-3665-493c-bfff-24c06ab3ef1d/air-force-1-lv8-older-shoes-4rVWkp.png",
+                        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/45292f4e-c553-4ec0-abb7-9872a96a63de/air-force-1-lv8-older-shoes-4rVWkp.png",
+                        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/dcc4c68f-92f7-4e07-9f74-5c26f4dd39ab/air-force-1-lv8-older-shoes-4rVWkp.png",
+                        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/97be6371-62b4-4a8b-91d4-10ae486c3abb/air-force-1-lv8-older-shoes-4rVWkp.png"],
         "short_description": "The Nike Air Force 1 '07 LV8 'White/Black' puts a fresh spin on the classic hoops silhouette. The leather upper features stitched overlays for added durability and support, while Air-Sole cushioning provides all-day comfort. A rubber outsole delivers traction and durability.",
         "big_description": "The Nike Air Force 1 '07 LV8 'White/Black' puts a fresh spin on the classic hoops silhouette. The leather upper features stitched overlays for added durability and support, while Air-Sole cushioning provides all-day comfort. A rubber outsole delivers traction and durability.\n\nMore benefits\n- Leather upper for premium comfort and durability\n- Perforations enhance ventilation\n- Air-Sole unit in heel provides cushioning and impact protection\n- Rubber outsole for durability and traction\n- Colour Shown: White/Black\n- Style: CT2299-100"
       },
@@ -66,11 +67,15 @@
         "brand": "Adidas",
         "price": 80.00,
         "size": [38, 38.5, 39, 40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45],
-        "image_links": ["https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/f1f88b4404ec4905aa20ab9e00aa075d_9366/Stan_Smith_Shoes_White_M20605_01_standard.jpg",
-                        "https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/c5b1fb3ab14041f6bb65ab9e00aa07b5_9366/Stan_Smith_Shoes_White_M20605_02_standard.jpg",
-                        "https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/cd77e2b32f704d8aaac7ab9e00aa07e1_9366/Stan_Smith_Shoes_White_M20605_03_standard.jpg",
-                        "https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/26151bba1dc046a2b482ab9e00aa081d_9366/Stan_Smith_Shoes_White_M20605_04_standard.jpg",
-                        "https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/98e7d5f86cdd4a24b482ab9e00aa0853_9366/Stan_Smith_Shoes_White_M20605_HM1.jpg"]
+        "image_links": ["https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/68ae7ea7849b43eca70aac1e00f5146d_9366/Sapatilhas_Stan_Smith_Branco_FX5502_01_standard.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ac706d8555244a6e8ea7ac1e00f521d1_9366/Sapatilhas_Stan_Smith_Branco_FX5502_02_standard_hover.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/72a38538fd684788b5d9ac1e00f52860_9366/Sapatilhas_Stan_Smith_Branco_FX5502_03_standard.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f86168171d2a4644a8eeac1e00f52f85_9366/Sapatilhas_Stan_Smith_Branco_FX5502_04_standard.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/79e5a7b748c54cbf8c57ac1e00f53669_9366/Sapatilhas_Stan_Smith_Branco_FX5502_05_standard.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4bc9628836bf42a181f1ac1e00f51b22_9366/Sapatilhas_Stan_Smith_Branco_FX5502_06_standard.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e111d2c7b44442e0b16cac1e01048b6d_9366/Sapatilhas_Stan_Smith_Branco_FX5502_09_standard.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d5afac8099674bfea559ac1e00f53d7c_9366/Sapatilhas_Stan_Smith_Branco_FX5502_41_detail.jpg",
+                        "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e53b9a57b0a745be924bac1e00f54427_9366/Sapatilhas_Stan_Smith_Branco_FX5502_42_detail.jpg"]
       },
       {
         "id": 6,
@@ -78,45 +83,84 @@
         "brand": "Nike",
         "price": 150.00,
         "size": [40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5, 46, 47],
-        "image_links": ["https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/80e8b52a-bc49-47e8-981b-989fc9ee17b2/air-max-270-shoe-fGgvgT.jpg",
-                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/25ec4e05-7322-4031-b254-5b9b49d0a4da/air-max-270-shoe-fGgvgT.jpg",
-                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/161145b3-80d5-4396-aeed-1cc6d8d4dbf7/air-max-270-shoe-fGgvgT.jpg",
-                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/2e795032-e7eb-4e68-89ab-07f05f61962a/air-max-270-shoe-fGgvgT.jpg",
-                        "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/4c225e4f-d94f-4b83-8653-62a300a897b1/air-max-270-shoe-fGgvgT.jpg"]
+        "image_links": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/skwgyqrbfzhu6uyeh0gg/air-max-270-shoes-Kqzbp7.png",
+                        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ekooqxmzujps9pj0vlak/air-max-270-shoes-Kqzbp7.png",
+                        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/njyetqigdbjwfgul5ssx/air-max-270-shoes-Kqzbp7.png",
+                        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/teknzwtqlkelexo5okx0/air-max-270-shoes-Kqzbp7.png"]
       },
       {
         "id": 7,
-        "name": "Converse Chuck Taylor All Star Low 'Black'",
+        "name": "Converse All Star BB Prototype CX Mid",
         "brand": "Converse",
-        "price": 55.00,
-        "size": [35, 36, 36.5, 37, 37.5, 38, 39, 39.5, 40, 41, 42, 42.5],
-        "image_links": ["https://www.converse.com/dw/image/v2/ABAW_PRD/on/demandware.static/-/Sites-ConverseMaster/default/dw5b0043d6/images/a_107/167041C_A_107X1.jpg?sw=758&sh=758&sm=fit",
-                        "https://www.converse.com/dw/image/v2/ABAW_PRD/on/demandware.static/-/Sites-ConverseMaster/default/dw7fc43e7e/images/a_107/167041C_A_107X1.jpg?sw=758&sh=758&sm=fit",
-                        "https://www.converse.com/dw/image/v2/ABAW_PRD/on/demandware.static/-/Sites-ConverseMaster/default/dw3c79873e/images/a_107/167041C_A_107X1.jpg?sw=758&sh=758&sm=fit",
-                        "https://www.converse.com/dw/image/v2/ABAW_PRD/on/demandware.static/-/Sites-ConverseMaster/default/dw7fc43e7e/images/a_107/167041C_A_107X1.jpg?sw=758&sh=758&sm=fit",
-                        "https://www.converse.com/dw/image/v2/ABAW_PRD/on/demandware.static/-/Sites-ConverseMaster/default/dw7fc43e7e/images/a_107/167041C_A_107X1.jpg?sw=758&sh=758&sm=fit"]
+        "price": 59.99,
+        "size": [40, 40.5, 41, 42, 42.5, 43, 44, 45, 46, 46.5],
+        "image_links": ["https://images.footlocker.com/is/image/FLEU/314520364804_01",
+                        "https://images.footlocker.com/is/image/FLEU/314520364804_02",
+                        "https://images.footlocker.com/is/image/FLEU/314520364804_03",
+                        "https://images.footlocker.com/is/image/FLEU/314520364804_04",
+                        "https://images.footlocker.com/is/image/FLEU/314520364804_05"]
       },
       {
         "id": 8,
-        "name": "Vans Old Skool 'Classic Black/White'",
-        "brand": "Vans",
-        "price": 60.00,
-        "size": [36, 36.5, 37, 38, 38.5, 39, 40, 41, 42, 42.5, 43, 44],
-        "image_links": ["https://images.vans.com/is/image/VansEU/8G1NRI-HERO",
-                        "https://images.vans.com/is/image/VansEU/8G1NRI-HERO",
-                        "https://images.vans.com/is/image/VansEU/8G1NRI-HERO",
-                        "https://images.vans.com/is/image/VansEU/8G1NRI-HERO",
-                        "https://images.vans.com/is/image/VansEU/8G1NRI-HERO"]
+        "name": "Reebok Shaq Attaq",
+        "brand": "Reebok",
+        "price": 179.99,
+        "size": [40, 40.5, 41, 42, 42.5, 43, 44, 44.5, 45.5],
+        "image_links": ["https://images.footlocker.com/is/image/FLEU/314102958304_01",
+                        "https://images.footlocker.com/is/image/FLEU/314102958304_02",
+                        "https://images.footlocker.com/is/image/FLEU/314102958304_03",
+                        "https://images.footlocker.com/is/image/FLEU/314102958304_04",
+                        "https://images.footlocker.com/is/image/FLEU/314102958304_05"]
+      },
+      {
+        "id": 9,
+        "name": "New Balance Hsl",
+        "brand": "New Balance",
+        "price": 119.99,
+        "size": [41.5, 42, 42.5, 43, 44, 45],
+        "image_links": ["https://images.footlocker.com/is/image/FLEU/314207610404_01",
+                        "https://images.footlocker.com/is/image/FLEU/314207610404_02",
+                        "https://images.footlocker.com/is/image/FLEU/314207610404_03",
+                        "https://images.footlocker.com/is/image/FLEU/314207610404_04",
+                        "https://images.footlocker.com/is/image/FLEU/314207610404_05"]
+      },
+      {
+        "id": 10,
+        "name": "Under Armour Curry 4 Low Flotro 'Curry Jam'",
+        "brand": "Under Armour",
+        "price": 150.00,
+        "size": [40, 40.5, 41, 42, 42.5, 43, 44, 44.5],
+        "image_links": ["https://i0.wp.com/xipastore.pt/wp-content/uploads/2024/02/under-armour-curry-4-low-flotro-curry-jam-3026620-400-01.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2024/02/under-armour-curry-4-low-flotro-curry-jam-3026620-400-02.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2024/02/under-armour-curry-4-low-flotro-curry-jam-3026620-400-03.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2024/02/under-armour-curry-4-low-flotro-curry-jam-3026620-400-04.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2024/02/under-armour-curry-4-low-flotro-curry-jam-3026620-400-05.jpg"]
+      },
+      {
+        "id": 11,
+        "name": "Under Armour Curry 11 'Champion Mindset'",
+        "brand": "Under Armour",
+        "price": 169.99,
+        "size": [40.5, 41, 42, 42.5, 43, 44, 44.5, 45, 45.5],
+        "image_links": ["https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/12/under-armour-curry-11-champion-mindset-3026617-300-01.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/12/under-armour-curry-11-champion-mindset-3026617-300-02.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/12/under-armour-curry-11-champion-mindset-3026617-300-03.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/12/under-armour-curry-11-champion-mindset-3026617-300-04.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/12/under-armour-curry-11-champion-mindset-3026617-300-05.jpg"]
+      },
+      {
+        "id": 12,
+        "name": "Adidas Trae 3 'Game Is Yours'",
+        "brand": "Adidas",
+        "price": 149.99,
+        "size": [38, 38.5, 39.5, 40, 40.5, 41.5, 42, 42.5, 43.5, 44, 44.5, 45.5, 46, 46.6, 47.5],
+        "image_links": ["https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-01.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-02.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-03.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-04.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-05.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-06.jpg",
+                        "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-07.jpg"]
       }
-      
-
-      
-      
-
-      
-      
-      
-      
-      
     ]
   }

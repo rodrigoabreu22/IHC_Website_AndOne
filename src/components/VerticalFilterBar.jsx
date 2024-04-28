@@ -2,18 +2,15 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import 'rc-slider/assets/index.css';
-import Slider from 'rc-slider';
 import './VerticalFilterBar.css';
 
-const VerticalFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, setSelectedPrices, selectedSizes, setSelectedSizes, isFilterActive, setIsFilterActive }) => {
+const VerticalFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, setSelectedPrices, selectedSizes, setSelectedSizes}) => {
     const [brandOpen, setBrandOpen] = useState(true); // Set initial state to true
     const [sizeOpen, setSizeOpen] = useState(true); // Set initial state to true
     const [priceOpen, setPriceOpen] = useState(true);
     
-    const brands = ['Nike', 'Puma', 'Rebook']; // Define your brands here
+    const brands = ['Nike', 'Adidas', 'Reebok', 'Converse', 'New Balance', 'Under Armour']; // Define your brands here
     const sizes = [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48];; // Define your sizes here
-    
-    const handleToggle = () => {setShow(!show); setIsFilterActive(!isFilterActive);};
     
     const handleBrandChange = (event) => {
         event.stopPropagation();
@@ -95,7 +92,7 @@ const VerticalFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, 
                     setSizeOpen(!sizeOpen);
                 }
                 }} className="accordion">
-                    <h3 className='unselectable'>Tamanho <FontAwesomeIcon icon={sizeOpen ? faChevronUp : faChevronDown} /></h3>
+                    <h3 className='unselectable'>Tamanhos <FontAwesomeIcon icon={sizeOpen ? faChevronUp : faChevronDown} /></h3>
                     {sizeOpen && (sizes || []).map(size => (
                         <div key={size}>
                         <input

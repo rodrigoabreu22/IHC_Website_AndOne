@@ -1,30 +1,18 @@
 .parent-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+  display: flex;
+  flex-direction: column;
+}
 
-  .navbar {
-    height: 120px;
-  }
+.navbar, .shoe-search {
+  flex-shrink: 0;
+}
 
-  
-  .shoe-search {
-    height: 1%;
-    padding-bottom: 130px;
-    padding-top: 15px;
-  }
+.shoe-search {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
 
-  .footer {
-    height: 120px;
-  }
-
-  .parent-container {
-    display: table;
-    width: 100%; 
-  }
-  
-  .parent-container > .footer {
-     display: table-row;
-  }
-  
+.footer {
+  margin-top: auto;
+}

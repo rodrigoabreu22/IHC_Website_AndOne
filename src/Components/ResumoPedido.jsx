@@ -1,0 +1,75 @@
+import React from "react";
+import { Col, Container, Row } from 'react-bootstrap';
+import ProductFullList from '../data/Products.json'
+
+// alterar para utilizar o array passado por props
+// talvez remover o container daqui para a pagina da entrega
+
+function ResumoPedido() {
+    /*
+        ex of ProductList: [
+            {
+                "id": 1,
+                "quantity": 4,
+                "size": 47
+            },
+            {
+                "id": 2,
+                "quantity": 2,
+                "size": 42.5
+            },
+            {
+                "id": 1,
+                "quantity": 1,
+                "size": 46
+            }
+        ]
+    */
+
+    const ProductList = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+    const numProducts = () => {
+        let numProducts = 0;
+        for (let i = 0; i < ProductList.length; i++) {
+        numProducts += ProductList[i].quantity;
+        }
+        return numProducts;
+    };
+
+    const getProductPriceByID = (id) => {
+        const product = ProductFullList.products.find((product) => product.id === id);
+        return product.price;
+    }
+
+    const total = () => {
+        let total = 0;
+        for (let i = 0; i < ProductList.length; i++) {
+        total += ProductList[i].quantity * getProductPriceByID(ProductList[i].id);
+        }
+        return total;
+    };
+    const iva = (total() * 0.23).toFixed(2);;
+
+    return (
+        <Container fluid className="d-flex justify-content-end p-3"> 
+            <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                <Row>
+                    <h3>Resumo do Pedido</h3>
+                </Row>
+                <Row>
+                    <Col><h5>{numProducts()} {numProducts()>1? "Produtos" : "Produto" }</h5></Col>
+                    <Col className="text-end"><h5>{total()} €</h5></Col>
+                </Row>
+                <Row>
+                    <Col><h5>Iva (23%)</h5></Col>
+                    <Col className="text-end"><h5>{iva} €</h5></Col>
+                </Row>
+                <Row>
+                    <Col><h4>TOTAL</h4></Col>
+                    <Col className="text-end"><h4>{total()} €</h4></Col>
+                </Row>
+            </div>
+        </Container>
+    );
+}
+
+export default ResumoPedido;
