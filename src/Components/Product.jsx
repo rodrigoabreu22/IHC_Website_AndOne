@@ -18,6 +18,11 @@ const Product=() => {
         localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart]);
 
+    useEffect(() => {
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    }, [favorites]);
+
+
     const addToCart = (id, quantity, size) => {
         console.log(id, quantity, size);
         const existingItem = cart.find((item) => item.id === id && item.size === size);
@@ -31,7 +36,7 @@ const Product=() => {
         }
     };
 
-    const favTest = (id) => {if (favorites.includes(id)) return "Adicionar aos favoritos"; else return "Remover dos favoritos";};
+    const favTest = (id) => {if (!favorites.includes(id)) return "Adicionar aos favoritos"; else return "Remover dos favoritos";};
     const product = ProductList.products[useParams().id - 1];
     console.log(product);
     console.log(useParams().id);
