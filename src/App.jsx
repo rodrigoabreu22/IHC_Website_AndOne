@@ -24,6 +24,7 @@ function App() {
           <Route path="/" Component={HomePage} />
           <Route path="/help" Component={HelpPage} />
           <Route path="/sapatilhas" Component={SapatilhasPage} />
+          <Route path="/sapatilhas/:searchTerm" Component={SapatilhasPage} />
           <Route path="/equipamentos" Component={EquipamentosPage} />
           <Route path="/acessorios" Component={AcessoriosPage} />
           <Route path="/conjuntos" Component={ConjuntosPage} />
