@@ -3,6 +3,7 @@
   position: sticky;
   top: 0;
   height: 100%;
+  width: 230px;
   margin: 0;
 }
 
@@ -11,7 +12,7 @@
   left: 0; /* start off the screen */
   top: 0px;
   height: 100%;
-  width: 200px; /* adjust as needed */
+  width: 250px; /* adjust as needed */
   background-color: #f0f0f0; /* adjust as needed */
   overflow: auto; /* add a scrollbar when the content is too large to fit */
   padding: 20px;

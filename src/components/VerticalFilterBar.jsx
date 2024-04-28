@@ -13,8 +13,6 @@ const VerticalFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, 
     const brands = ['Nike', 'Puma', 'Reebok']; // Define your brands here
     const sizes = [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48];; // Define your sizes here
     
-    const handleToggle = () => {setShow(!show); setIsFilterActive(!isFilterActive);};
-    
     const handleBrandChange = (event) => {
         event.stopPropagation();
       
