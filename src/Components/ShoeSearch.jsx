@@ -27,7 +27,7 @@ function ShoeSearch() {
   console.log(filteredProducts);
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '200px auto', height: '100%', alignItems: 'start' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'auto auto', height: '100%', alignItems: 'start' }}>
       <VerticalFilterBar
         className={`filter`}
         selectedBrands={selectedBrands}

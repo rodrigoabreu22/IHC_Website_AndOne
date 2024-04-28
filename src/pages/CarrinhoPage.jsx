@@ -14,6 +14,32 @@ const CarrinhoPage = () => {
         setCartProducts(cartProds);
     }, [cartProds]);
 
+    if (cartProds.length === 0) {
+        return (
+            <div>
+                <MyNavbar activeID={7} />
+                <h1>Carrinho de Compras</h1>
+                <h2>O carrinho está vazio.</h2>
+                <Link to="/sapatilhas">
+                    <button style={{marginRight: '10px'}}>Ver Sapatilhas</button>
+                </Link>
+                <Link to="/equipamentos">
+                    <button style={{marginRight: '10px'}}>Ver Equipamentos</button>
+                </Link>
+                <Link to="/acessorios">
+                    <button style={{marginRight: '10px'}}>Ver Acessórios</button>
+                </Link>
+                <Link to="/conjuntos">
+                    <button style={{marginRight: '10px'}}>Ver Conjuntos</button>
+                </Link>
+                <Link to="/material">
+                    <button style={{marginRight: '10px'}}>Ver Material</button>
+                </Link>
+                <MyFooter />
+            </div>
+        );
+    }
+
     return (
         <div>
             <MyNavbar activeID={7} />

@@ -12,21 +12,34 @@ const FavoritosPage = () => {
         localStorage.setItem('favorites', JSON.stringify(favoriteProds));
     }, [favoriteProds]);
 
+    if (favoriteProds.length === 0) {
+        return (
+            <div>
+                <MyNavbar activeID={7} />
+                <h1>Favorites</h1>
+                <h2>Não tem favoritos. Adicione produtos aos favoritos para eles aparecerem aqui.</h2>
+                <MyFooter />
+            </div>
+        );
+    }   
+
     return (
         <div>
             <MyNavbar activeID={7} />
             <h1>Favorites</h1>
-            <div className="favorite-products">
+            <div className="favorite-products" style={{ display: 'flex', flexWrap: 'wrap' }}>
                 {favoriteProds.map(productId => {
                     const product = ProductList.products.find(prod => prod.id === productId);
                     return (
-                        <ProductCard
-                            key={product.id}
-                            product={product}
-                            favorites={favoriteProds}
-                            setFavorites={setFavoriteProducts}
-                            toggleModal={true}
-                        />
+                        <div style={{ marginLeft: '10px', marginBottom: '10px' }}>
+                            <ProductCard
+                                key={product.id}
+                                product={product}
+                                favorites={favoriteProds}
+                                setFavorites={setFavoriteProducts}
+                                toggleModal={true}
+                            />
+                        </div>
                     );
                 })}
             </div>

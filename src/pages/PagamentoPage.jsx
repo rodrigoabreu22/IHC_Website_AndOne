@@ -28,7 +28,7 @@ function PagamentoPage() {
     const handleClick = (event) => {
         if (!checkIfChecked()) {
             event.preventDefault();
-            alert("Por favor, preencha todos os campos.\nCampos que faltam: \n" + (selectedPaying === '' ? "\t Método de pagamento" : "") + (phoneNumber === '' ? "\n\t Número de telefone" : ""));
+            alert("Por favor, preencha todos os campos.\nCampos que faltam:" + (selectedBilling === '' ? "\n\t Dados de faturação" : "") + (selectedPaying === '' ? "\n\t Método de pagamento" : ""));
         } else {
             navigate("/confirmacao");
         }
