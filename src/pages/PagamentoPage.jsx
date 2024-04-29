@@ -10,13 +10,11 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
-// adicionar o MyFooter na versão final
-
 function PagamentoPage() {
     const navigate = useNavigate();
-    const [selectedPaying, setSelectedPaying] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState(''); 
-    const [selectedBilling, setSelectedBilling] = useState('');
+    const [selectedPaying, setSelectedPaying] = useState(localStorage.getItem('temp') ? JSON.parse(localStorage.getItem('temp'))['pagamento'] : '');
+    const [phoneNumber, setPhoneNumber] = useState(localStorage.getItem('temp') ? JSON.parse(localStorage.getItem('temp'))['telefone'] : ''); 
+    const [selectedBilling, setSelectedBilling] = useState(localStorage.getItem('temp') ? JSON.parse(localStorage.getItem('temp'))['faturacao'] : '');
 
     const checkIfChecked = () => {
         console.log(selectedPaying !== '');
@@ -30,6 +28,11 @@ function PagamentoPage() {
             event.preventDefault();
             alert("Por favor, preencha todos os campos.\nCampos que faltam:" + (selectedBilling === '' ? "\n\t Dados de faturação" : "") + (selectedPaying === '' ? "\n\t Método de pagamento" : ""));
         } else {
+            const temp = (localStorage.getItem('temp') ? JSON.parse(localStorage.getItem('temp')) : {});
+            temp['pagamento'] = selectedPaying;
+            temp['telefone'] = phoneNumber;
+            temp['faturacao'] = selectedBilling;
+            localStorage.setItem('temp', JSON.stringify(temp));
             navigate("/confirmacao");
         }
     };

@@ -58,7 +58,7 @@ const CarrinhoPage = () => {
                 <h2 className="header-price">Preço</h2>
             </Row>
                 {cartProds.map(productCard => {
-                    const product = ProductList.products.find(prod => prod.id === productCard.id);
+                    const product = ProductList[productCard.category].find(prod => prod.id === productCard.id);
                     return (
                         <CartProductCard
                             key={`${productCard.id}-${productCard.size}`}
@@ -71,7 +71,7 @@ const CarrinhoPage = () => {
                 })}
             </div>
             <div className='checkout-div'>
-                    <h2>Total: {cartProds.reduce((total, prod) => total + ProductList.products.find(p => p.id === prod.id).price * prod.quantity, 0).toFixed(2)}€</h2>
+                    <h2>Total: {cartProds.reduce((total, prod) => total + ProductList[prod.category].find(p => p.id === prod.id).price * prod.quantity, 0).toFixed(2)}€</h2>
                 <Link to="/checkout">
                     <div className="checkout">
                         <button>Finalizar Compra</button>

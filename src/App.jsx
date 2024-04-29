@@ -13,6 +13,7 @@ import CarrinhoPage from './pages/CarrinhoPage'
 import ProductPage from './pages/ProductPage'
 import PagamentoPage from './pages/PagamentoPage'
 import EntregaPage from './pages/EntregaPage'
+import ConfirmacaoPage from './pages/ConfirmacaoPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,15 +27,20 @@ function App() {
           <Route path="/sapatilhas" Component={SapatilhasPage} />
           <Route path="/sapatilhas/:searchTerm" Component={SapatilhasPage} />
           <Route path="/equipamentos" Component={EquipamentosPage} />
+          <Route path="/equipamentos/:searchTerm" Component={EquipamentosPage} />
           <Route path="/acessorios" Component={AcessoriosPage} />
+          <Route path="/acessorios/:searchTerm" Component={AcessoriosPage} />
           <Route path="/conjuntos" Component={ConjuntosPage} />
+          <Route path="/conjuntos/:searchTerm" Component={ConjuntosPage} />
           <Route path="/material" Component={MaterialPage} />
+          <Route path="/material/:searchTerm" Component={MaterialPage} />
           <Route path="/perfil" Component={PerfilPage} />
           <Route path="/favoritos" Component={FavoritosPage} />
           <Route path="/carrinho" Component={CarrinhoPage} />
-          <Route path="/produtoDetalhado/:id" Component={ProductPage} />
+          <Route path="/produtoDetalhado/:category/:id" Component={ProductPage} />
           <Route path="/checkout" Component={EntregaPage} />
           <Route path="/pagamento" Component={PagamentoPage} />
+          <Route path="/confirmacao" Component={ConfirmacaoPage} />
         </Routes>
       </BrowserRouter>
     </>

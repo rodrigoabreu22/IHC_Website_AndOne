@@ -30,12 +30,13 @@ const FavoritosPage = () => {
             <MyNavbar activeID={7} />
             <h1>Favorites</h1>
             <div className="favorite-products" style={{ display: 'flex', flexWrap: 'wrap', minHeight: '55vh' }}>
-                {favoriteProds.map(productId => {
-                    const product = ProductList.products.find(prod => prod.id === productId);
+                {favoriteProds.map(favProd => {
+                    const product = ProductList[favProd.category].find(prod => prod.id === favProd.id);
                     return (
                         <div style={{ marginLeft: '10px', marginBottom: '10px' }}>
                             <ProductCard
                                 key={product.id}
+                                category={favProd.category}
                                 product={product}
                                 favorites={favoriteProds}
                                 setFavorites={setFavoriteProducts}

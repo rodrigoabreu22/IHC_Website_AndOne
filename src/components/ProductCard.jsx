@@ -9,18 +9,23 @@ import { Card, Modal, Button } from 'react-bootstrap';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
 
-const ProductCard = ({product, favorites, setFavorites, toggleModal }) => {
-    const [isFavorite, setIsFavorite] = useState(favorites.includes(product.id));
+const ProductCard = ({category, product, favorites, setFavorites, toggleModal }) => {
+    const [isFavorite, setIsFavorite] = useState(favorites.some(fav => fav.category === category && fav.id === product.id));
     const [showModal, setShowModal] = useState(false);
     const [showToast, setShowToast] = useState(false);
 
     useEffect(() => {
         localStorage.setItem('favorites', JSON.stringify(favorites));
-        setIsFavorite(favorites.includes(product.id));
+        setIsFavorite(favorites.some(fav => fav.category === category && fav.id === product.id));
     }, [favorites]);
 
     const toggleFavorite = (event) => {
         let newFavorites;
+        console.log('toggleFavorite');
+        console.log(isFavorite);
+        console.log(category);
+        console.log(product.id);
+        console.log(favorites);
         if (isFavorite) {
           if (toggleModal) {
             setShowModal(true);
@@ -29,7 +34,7 @@ const ProductCard = ({product, favorites, setFavorites, toggleModal }) => {
           }
         } else {
           console.log('adding favorite');
-          newFavorites = [...favorites, product.id];
+          newFavorites = [...favorites, {"category": category, "id": product.id}];
           setFavorites(newFavorites);
           toggleShowToast();
         }
@@ -37,7 +42,7 @@ const ProductCard = ({product, favorites, setFavorites, toggleModal }) => {
     
       const removeFavorite = () => {
         console.log('removing favorite');
-        const newFavorites = favorites.filter(favId => favId !== product.id);
+        const newFavorites = favorites.filter(fav => fav.category !== category || fav.id !== product.id);
         setFavorites(newFavorites);
         setShowModal(false);
       };
@@ -52,7 +57,7 @@ const ProductCard = ({product, favorites, setFavorites, toggleModal }) => {
                 <hr style={{ margin: 0 }} />
                 <Card.Body>
                     <Link to = {{
-                        pathname: `/produtoDetalhado/${product.id}`
+                        pathname: `/produtoDetalhado/${category}/${product.id}`
                     }} className="link-no-color">
                         <Card.Text style={{ textAlign: 'left', height: 80}}>
                             {product.brand} <br/>

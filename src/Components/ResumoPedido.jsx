@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Container, Row } from 'react-bootstrap';
 import ProductFullList from '../data/Products.json'
 
@@ -6,27 +6,8 @@ import ProductFullList from '../data/Products.json'
 // talvez remover o container daqui para a pagina da entrega
 
 function ResumoPedido() {
-    /*
-        ex of ProductList: [
-            {
-                "id": 1,
-                "quantity": 4,
-                "size": 47
-            },
-            {
-                "id": 2,
-                "quantity": 2,
-                "size": 42.5
-            },
-            {
-                "id": 1,
-                "quantity": 1,
-                "size": 46
-            }
-        ]
-    */
-
     const ProductList = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+
     const numProducts = () => {
         let numProducts = 0;
         for (let i = 0; i < ProductList.length; i++) {
@@ -35,19 +16,25 @@ function ResumoPedido() {
         return numProducts;
     };
 
-    const getProductPriceByID = (id) => {
-        const product = ProductFullList.products.find((product) => product.id === id);
+    const getProductPriceByID = (category, id) => {
+        const product = ProductFullList[category].find((product) => product.id === id);
         return product.price;
     }
 
     const total = () => {
         let total = 0;
         for (let i = 0; i < ProductList.length; i++) {
-        total += ProductList[i].quantity * getProductPriceByID(ProductList[i].id);
+        total += ProductList[i].quantity * getProductPriceByID(ProductList[i].category, ProductList[i].id);
         }
         return total;
     };
     const iva = (total() * 0.23).toFixed(2);;
+
+    useEffect(() => {
+        const temp = (localStorage.getItem('temp') ? JSON.parse(localStorage.getItem('temp')) : {});
+        temp['total'] = total();
+        localStorage.setItem('temp', JSON.stringify(temp));
+    }, [ProductList]);
 
     return (
         <Container fluid className="d-flex justify-content-end p-3"> 

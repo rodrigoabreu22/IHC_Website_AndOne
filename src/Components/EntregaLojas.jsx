@@ -27,8 +27,8 @@ function EntregaLojas(props) {
                                         type="radio"
                                         name="store"
                                         id="store1"
-                                        value="Loja1"
-                                        checked={props.selectedStore === 'Loja1'}
+                                        value="Loja Lisboa, Rua Augusta, 123, 1100-048"
+                                        checked={props.selectedStore === 'Loja Lisboa, Rua Augusta, 123, 1100-048'}
                                         onChange={handleRadioChange}
                                         style={{ height: '1.5rem', width: '1.5rem'}}
                                     />
@@ -47,8 +47,8 @@ function EntregaLojas(props) {
                                         type="radio"
                                         name="store"
                                         id="store2"
-                                        value="Loja2"
-                                        checked={props.selectedStore === 'Loja2'}
+                                        value="Loja Porto, Avenida da Boavista, 456, 4050-113"
+                                        checked={props.selectedStore === 'Loja Porto, Avenida da Boavista, 456, 4050-113'}
                                         onChange={handleRadioChange}
                                         style={{ height: '1.5rem', width: '1.5rem'}}
                                     />
@@ -73,8 +73,8 @@ function EntregaLojas(props) {
                                         type="radio"
                                         name="store"
                                         id="store3"
-                                        value="Loja3"
-                                        checked={props.selectedStore === 'Loja3'}
+                                        value="Loja Coimbra, Rua Ferreira Borges, 789, 3000-175"
+                                        checked={props.selectedStore === 'Loja Coimbra, Rua Ferreira Borges, 789, 3000-175'}
                                         onChange={handleRadioChange}
                                         style={{ height: '1.5rem', width: '1.5rem'}}
                                     />
@@ -93,8 +93,8 @@ function EntregaLojas(props) {
                                         type="radio"
                                         name="store"
                                         id="store4"
-                                        value="Loja4"
-                                        checked={props.selectedStore === 'Loja4'}
+                                        value="Loja Lisboa, Avenida de Roma, 101, 1700-343"
+                                        checked={props.selectedStore === 'Loja Lisboa, Avenida de Roma, 101, 1700-343'}
                                         onChange={handleRadioChange}
                                         style={{ height: '1.5rem', width: '1.5rem'}}
                                     />
@@ -119,8 +119,8 @@ function EntregaLojas(props) {
                                         type="radio"
                                         name="store"
                                         id="store5"
-                                        value="Loja5"
-                                        checked={props.selectedStore === 'Loja5'}
+                                        value="Loja Funchal, Rua 5 de Outubro, 202, 9000-075"
+                                        checked={props.selectedStore === 'Loja Funchal, Rua 5 de Outubro, 202, 9000-075'}
                                         onChange={handleRadioChange}
                                         style={{ height: '1.5rem', width: '1.5rem'}}
                                     />
@@ -139,8 +139,8 @@ function EntregaLojas(props) {
                                         type="radio"
                                         name="store"
                                         id="store6"
-                                        value="Loja6"
-                                        checked={props.selectedStore === 'Loja6'}
+                                        value="Loja Setúbal, Avenida Luísa Todi, 303, 2900-457"
+                                        checked={props.selectedStore === 'Loja Setúbal, Avenida Luísa Todi, 303, 2900-457'}
                                         onChange={handleRadioChange}
                                         style={{ height: '1.5rem', width: '1.5rem'}}
                                     />

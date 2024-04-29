@@ -33,8 +33,8 @@ function Pagamentos(props) {
                                 type="radio"
                                 name="billing"
                                 id="billing_default"
-                                value="FaturacaoDefault"
-                                checked={props.selectedBilling === 'FaturacaoDefault'}
+                                value="Utilizador, Rua teste n 1, 3830-111, PT, NIF: 123456789"
+                                checked={props.selectedBilling === 'Utilizador, Rua teste n 1, 3830-111, PT, NIF: 123456789'}
                                 onChange={handleBillingChange}
                                 style={{ height: '1.5rem', width: '1.5rem'}}
                             />
@@ -66,8 +66,8 @@ function Pagamentos(props) {
                                         type="radio"
                                         name="paying"
                                         id="pay1"
-                                        value="Pagamento1"
-                                        checked={props.selectedPaying === 'Pagamento1'}
+                                        value="Pagamento em Loja"
+                                        checked={props.selectedPaying === 'Pagamento em Loja'}
                                         onChange={handleRadioChange}
                                         style={{ height: '1.5rem', width: '1.5rem'}}
                                     />
@@ -90,8 +90,8 @@ function Pagamentos(props) {
                                         type="radio"
                                         name="paying"
                                         id="pay2"
-                                        value="Pagamento2"
-                                        checked={props.selectedPaying === 'Pagamento2'}
+                                        value="Multibanco"
+                                        checked={props.selectedPaying === 'Multibanco'}
                                         onChange={handleRadioChange}
                                         style={{ height: '1.5rem', width: '1.5rem'}}
                                     />
@@ -114,8 +114,8 @@ function Pagamentos(props) {
                                         type="radio"
                                         name="paying"
                                         id="pay3"
-                                        value="Pagamento3"
-                                        checked={props.selectedPaying === 'Pagamento3'}
+                                        value="MBWay"
+                                        checked={props.selectedPaying === 'MBWay'}
                                         onChange={handleRadioChange}
                                         style={{ height: '1.5rem', width: '1.5rem'}}
                                     />
@@ -124,7 +124,7 @@ function Pagamentos(props) {
                                 <h4>MBWay</h4>
                                 </Col>
                             </Row>
-                            {props.selectedPaying === 'Pagamento3' && (
+                            {props.selectedPaying === 'MBWay' && (
                                 <Row>
                                     <Col md={1}>
                                     </Col>
