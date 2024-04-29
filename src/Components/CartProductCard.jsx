@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button, Modal } from 'react-bootstrap';
+import '../CarrinhoProduct.css';
 
 
 function CartProductCard({ product, item, cart, setCart }) {
@@ -23,7 +24,7 @@ function CartProductCard({ product, item, cart, setCart }) {
     };
   
     const removeFromCart = () => {
-      const newCart = cart.filter(cartProduct => cartProduct.id !== product.id);
+      const newCart = cart.filter(cartProduct => (cartProduct.id !== product.id || cartProduct.size !== item.size));
       setCart(newCart);
     };
   
@@ -44,19 +45,21 @@ function CartProductCard({ product, item, cart, setCart }) {
       };
 
         return (
-            <div>
+            <div className="cart-products-table">
                 <Card className="product-card">
-                    <Card.Img variant="left" src={product.image} />
                     <Card.Body>
-                        <Card.Title>{product.brand} - {product.name}</Card.Title>
-                        <Card.Text className="price">€{product.price}</Card.Text>
-                        <div className="quantity-buttons">
-                            <span>Quantidade: </span>
-                            <Button variant="dark" size="sm" onClick={decrementQuantity}>-</Button>
-                            <span>{item.quantity}</span>
-                            <Button variant="dark" size="sm" onClick={incrementQuantity}>+</Button>
-                        </div>
-                        <Button variant="danger" size="sm" onClick={toggleModal}>Remove from Cart</Button>
+                        <Card.Text className="product-cart-info">
+                                <img src={product.image_links[0]}></img>
+                                <div className="product-cart-name">{product.brand} - {product.name}</div>
+                                <div className="product-cart-size">{curItem["size"]}</div>
+                                <div className="product-cart-quantity-buttons">
+                                        <Button className='quantity-button' variant="secondary" size="sm" onClick={decrementQuantity}>-</Button>
+                                            <span>{item.quantity}</span>
+                                        <Button className='quantity-button' variant="secondary" size="sm" onClick={incrementQuantity}>+</Button>
+                                </div>
+                                <div className="product-cart-price">{product.price} €</div>
+                                <Button variant="danger" size="sm" onClick={toggleModal}>X</Button>
+                        </Card.Text>
                     </Card.Body>
                 </Card>
                 {toggleModal && (
@@ -69,7 +72,7 @@ function CartProductCard({ product, item, cart, setCart }) {
                         <Button variant="secondary" onClick={() => setShowModal(false)}>
                         Cancelar
                         </Button>
-                        <Button variant="primary" onClick={removeFromCart}>
+                        <Button variant="danger" onClick={removeFromCart}>
                         Remover
                         </Button>
                     </Modal.Footer>

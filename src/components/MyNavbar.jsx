@@ -4,14 +4,26 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import React from 'react';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 
 function MyNavbar({ activeID }) {
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const searchProducts = (event) => {
+    event.preventDefault();
+    navigate(`/sapatilhas/${searchTerm}`);
+  }
+
   return (
     <header style={{ paddingTop: 125 }}>
       <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
@@ -34,14 +46,16 @@ function MyNavbar({ activeID }) {
                   <Nav.Link as={ Link } to="/perfil" className={activeID === 6? 'active' : ''}><FontAwesomeIcon icon={faUser} size="2xl" /></Nav.Link>
                   <Nav.Link as={ Link } to="/favoritos" className={activeID === 7? 'active' : ''}><FontAwesomeIcon icon={faHeart} size="2xl" /></Nav.Link>
                   <Nav.Link as={ Link } to="/carrinho" className={activeID === 8? 'active' : ''}><FontAwesomeIcon icon={faCartShopping} size="2xl" /></Nav.Link>
-                  <Form className="d-flex" >
+                  <Form className="d-flex" onSubmit={searchProducts}>
                       <Form.Control
                       type="search"
                       placeholder="Procurar"
                       className="me-2"
                       aria-label="Search"
+                      value={searchTerm}
+                      onChange={handleSearchChange}
                       />
-                      <Button variant="outline-success"><FontAwesomeIcon icon={faMagnifyingGlass} size="xl"/></Button>
+                      <Button variant="outline-success"><FontAwesomeIcon icon={faMagnifyingGlass} onClick={searchProducts} size="xl"/></Button>
                   </Form>
               </Nav>  
           </Navbar.Collapse>

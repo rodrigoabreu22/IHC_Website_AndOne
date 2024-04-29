@@ -5,6 +5,9 @@ import CartProductCard from '../components/CartProductCard';
 import ProductList from '../data/Products.json';
 import { Link } from 'react-router-dom';
 import '../AppTestRicardo.css'; // Import the CSS file
+import '../CarrinhoPage.css'; // Import the CSS file
+import Row from 'react-bootstrap/Row';
+
 
 const CarrinhoPage = () => {
     const [cartProds, setCartProducts] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []);
@@ -18,7 +21,7 @@ const CarrinhoPage = () => {
         return (
             <div>
                 <MyNavbar activeID={7} />
-                <h1>Carrinho de Compras</h1>
+                <h1 className="page-title">Carrinho de Compras</h1>
                 <h2>O carrinho está vazio.</h2>
                 <Link to="/sapatilhas">
                     <button style={{marginRight: '10px'}}>Ver Sapatilhas</button>
@@ -43,13 +46,20 @@ const CarrinhoPage = () => {
     return (
         <div>
             <MyNavbar activeID={7} />
-            <h1>Carrinho de Compras</h1>
+            <h1 className="page-title">Carrinho de Compras</h1>
+            
             <div className="cart-products">
+                <Row className="header">
+                <h2 className="header-name">Produto</h2>
+                <h2 className="header-size">Tamanho</h2>
+                <h2 className="header-quantity">Quantidade</h2>
+                <h2 className="header-price">Preço</h2>
+            </Row>
                 {cartProds.map(productCard => {
                     const product = ProductList.products.find(prod => prod.id === productCard.id);
                     return (
                         <CartProductCard
-                            key={product.id}
+                            key={`${productCard.id}-${productCard.size}`}
                             product={product}
                             item={productCard}
                             cart={cartProds}
@@ -58,14 +68,14 @@ const CarrinhoPage = () => {
                     );
                 })}
             </div>
-            <div className="total-price">
-                <h2>Total: €{cartProds.reduce((total, prod) => total + ProductList.products.find(p => p.id === prod.id).price * prod.quantity, 0).toFixed(2)}</h2>
+            <div className='checkout-div'>
+                    <h2>Total: {cartProds.reduce((total, prod) => total + ProductList.products.find(p => p.id === prod.id).price * prod.quantity, 0).toFixed(2)}€</h2>
+                <Link to="/checkout">
+                    <div className="checkout">
+                        <button>Finalizar Compra</button>
+                    </div>
+                </Link>
             </div>
-            <Link to="/checkout">
-                <div className="checkout">
-                    <button>Finalizar Compra</button>
-                </div>
-            </Link>
             <MyFooter />
         </div>
     );
