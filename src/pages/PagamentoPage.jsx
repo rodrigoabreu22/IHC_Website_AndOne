@@ -57,7 +57,8 @@ function PagamentoPage() {
                     <ResumoPedido />
                     <DetalhesPedido />
                 </Col>
-            </Row>   
+            </Row>  
+            <MyFooter /> 
         </>
     );
 }

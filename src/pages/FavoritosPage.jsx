@@ -16,8 +16,10 @@ const FavoritosPage = () => {
         return (
             <div>
                 <MyNavbar activeID={7} />
-                <h1>Favorites</h1>
-                <h2>Não tem favoritos. Adicione produtos aos favoritos para eles aparecerem aqui.</h2>
+                <div style={{ minHeight: '55vh' }}>
+                    <h1>Favorites</h1>
+                    <h2>Não tem favoritos. Adicione produtos aos favoritos para eles aparecerem aqui.</h2>
+                </div>
                 <MyFooter />
             </div>
         );
@@ -27,7 +29,7 @@ const FavoritosPage = () => {
         <div>
             <MyNavbar activeID={7} />
             <h1>Favorites</h1>
-            <div className="favorite-products" style={{ display: 'flex', flexWrap: 'wrap' }}>
+            <div className="favorite-products" style={{ display: 'flex', flexWrap: 'wrap', minHeight: '55vh' }}>
                 {favoriteProds.map(productId => {
                     const product = ProductList.products.find(prod => prod.id === productId);
                     return (

@@ -46,7 +46,8 @@ function EntregaPage() {
                     <ResumoPedido />
                     <DetalhesPedido />
                 </Col>
-            </Row>   
+            </Row> 
+            <MyFooter />  
         </>
     );
 }

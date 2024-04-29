@@ -11,17 +11,19 @@ function PerfilPage() {
     return (
         <>
             <MyNavbar activeID={6} />
-            <Row className="d-flex justify-content-begin">
-                <Col md={3}>
-                    <h3 className="p-3 pb-0">Olá Utilizador</h3>
-                </Col>
-                <Col md={9}>
-                    {dados && <Col><h3 className="p-3 pb-0">Dados Pessoais</h3></Col>}
-                    {encomendas && <Col><h3 className="p-3 pb-0">Minhas encomendas/faturas</h3></Col>}
-                </Col>
-            </Row>
-            <PainelConta dados={dados} setDados={setDados} 
-                         encomendas={encomendas} setEncomendas={setEncomendas} />
+            <div style={{ minHeight: '55vh' }}>
+                <Row className="d-flex justify-content-begin">
+                    <Col md={3}>
+                        <h3 className="p-3 pb-0">Olá Utilizador</h3>
+                    </Col>
+                    <Col md={9}>
+                        {dados && <Col><h3 className="p-3 pb-0">Dados Pessoais</h3></Col>}
+                        {encomendas && <Col><h3 className="p-3 pb-0">Minhas encomendas/faturas</h3></Col>}
+                    </Col>
+                </Row>
+                <PainelConta dados={dados} setDados={setDados} 
+                            encomendas={encomendas} setEncomendas={setEncomendas} />
+            </div>
             <MyFooter />
         </>
     );
