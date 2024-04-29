@@ -6,7 +6,7 @@ function AcessoriosPage() {
     return (
         <>
         <MyNavbar activeID={3} />
-        <h1>Acessorios</h1>
+        <h1 style={{ minHeight: '55vh' }}>Acessorios</h1>
         <MyFooter />
         </>
     );

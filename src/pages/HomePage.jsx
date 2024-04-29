@@ -7,7 +7,9 @@ function HomePage() {
     return (
         <>
             <MyNavbar />
-            <HomeCarousel />
+            <div style={{ minHeight: '55vh' }}>
+                <HomeCarousel />
+            </div>
             <MyFooter />
         </>
     )

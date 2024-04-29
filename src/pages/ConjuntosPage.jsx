@@ -6,7 +6,7 @@ function ConjuntosPage() {
     return (
         <>
         <MyNavbar activeID={4} />
-        <h1>Conjuntos</h1>
+        <h1 style={{ minHeight: '55vh' }}>Conjuntos</h1>
         <MyFooter />
         </>
     );

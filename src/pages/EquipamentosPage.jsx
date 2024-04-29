@@ -11,7 +11,7 @@ function EquipamentosPage() {
                 <div className="navbar">
                     <Navbar activeID={1}/>
                 </div>
-                <div className="equipamentos-search">
+                <div className="equipamentos-search" style={{ minHeight: '55vh' }}>
                     <EquipamentosSearch />
                 </div>
                 <div className="footer">

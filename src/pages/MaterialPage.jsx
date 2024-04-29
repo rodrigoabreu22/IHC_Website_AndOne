@@ -6,7 +6,7 @@ function MaterialPage() {
     return (
         <>
         <MyNavbar activeID={5} />
-        <h1>Material</h1>
+        <h1 style={{ minHeight: '55vh' }}>Material</h1>
         <MyFooter />
         </>
     );

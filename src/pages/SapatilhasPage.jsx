@@ -11,7 +11,7 @@ function SapatilhasPage() {
                 <div className="navbar">
                     <Navbar activeID={1}/>
                 </div>
-                <div className="shoe-search">
+                <div className="shoe-search" style={{ minHeight: '55vh' }}>
                     <ShoeSearch />
                 </div>
                 <div className="footer">

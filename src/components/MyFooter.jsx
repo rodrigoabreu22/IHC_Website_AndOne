@@ -1,11 +1,10 @@
 import React from 'react';
-import { Container, Row, Col, Nav } from 'react-bootstrap';
+import { Row, Col, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function MyFooter() {
   return (
     <footer className="bg-body-tertiary text-dark py-4" style={{width: '100%'}}>
-      <Container style={{width: '200%'}} >
         <Row className="justify-content-center" style={{ width: '100%' }}>
           <Col className="text-center" md={4}>
             <h5>Contactos</h5>
@@ -29,7 +28,6 @@ function MyFooter() {
             </Nav>
           </Col>
         </Row>
-      </Container>
     </footer>
   );
 }
