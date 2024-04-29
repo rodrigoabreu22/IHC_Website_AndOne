@@ -37,32 +37,48 @@ const Product = () => {
 
     const toggleShowToast = () => setShowToast(!showToast);
 
-    const addToCart = (id, quantity, size) => {
-        console.log(id, quantity, size);
-        const existingItem = cart.find((item) => item.id === id && item.size === size);
+    const addToCart = (category, id, quantity, size) => {
+        console.log(category, id, quantity, size);
+        const existingItem = cart.find((item) => item.category === category && item.id === id && item.size === size);
         
         if (existingItem) {
           // If the item with the same id and size already exists in the cart, update its quantity
-          setCart(cart.map((item) => item === existingItem ? { ...item, quantity: item.quantity + quantity } : item));
+          setCart(cart.map((item) => item === existingItem ? { ...category, item, quantity: item.quantity + quantity } : item));
         } else {
           // If the item does not exist in the cart, add it
-          setCart([...cart, { id, quantity, size }]);
+          setCart([...cart, { category, id, quantity, size }]);
         }
 
         toggleShowToast();
     };
 
-    const favTest = (id) => {if (!favorites.includes(id)) return "Adicionar aos favoritos"; else return "Remover dos favoritos";};
-    const product = ProductList.products[useParams().id - 1];
+    const favTest = (id) => {
+      const favoriteExists = favorites.some(fav => fav.category === category && fav.id === id);
+      return favoriteExists ? "Remover dos favoritos" : "Adicionar aos favoritos";
+    };
+    const category = useParams().category;
+    const product = ProductList[category][useParams().id - 1];
+    if (!product) {
+      return (
+        <>
+          <h1>Oops! Parece que chegou aos confins desta página!</h1>
+          <p>Se chegou aqui <u>sem manipulação direta do URL</u> por favor contacte um dos admins do website com os passos tomados para chegar a esta página</p>
+        </>
+      );
+    }
     console.log(product);
     console.log(useParams().id);
 
-    const handleFavorites = (id) => {
-      if (favorites.includes(id)) {
-        setFavorites(favorites.filter((favorite) => favorite !== id));
+    const handleFavorites = (category, id) => {
+      const favorite = { category, id };
+      const favoriteExists = favorites.some(fav => fav.category === category && fav.id === id);
+    
+      if (favoriteExists) {
+        setFavorites(favorites.filter(fav => !(fav.category === category && fav.id === id)));
       } else {
-        setFavorites([...favorites, id]);
+        setFavorites([...favorites, favorite]);
       }
+    
       localStorage.setItem('favorites', JSON.stringify(favorites));
     };
 
@@ -113,10 +129,10 @@ const Product = () => {
                   +
                 </button>
               </div>
-              <button disabled={sizeSelected()} onClick={() => { addToCart(product.id, quantity, currentSize)}}>
+              <button disabled={sizeSelected()} onClick={() => { addToCart(category, product.id, quantity, currentSize)}}>
                 Adicionar ao carrinho
               </button>
-              <button onClick={() => handleFavorites(product.id)}>{favTest(product.id)}</button>
+              <button onClick={() => handleFavorites(category, product.id)}>{favTest(product.id)}</button>
             </div>
           </div>
         </div>

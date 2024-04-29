@@ -32,7 +32,7 @@ function App() {
           <Route path="/perfil" Component={PerfilPage} />
           <Route path="/favoritos" Component={FavoritosPage} />
           <Route path="/carrinho" Component={CarrinhoPage} />
-          <Route path="/produtoDetalhado/:id" Component={ProductPage} />
+          <Route path="/produtoDetalhado/:category/:id" Component={ProductPage} />
           <Route path="/checkout" Component={EntregaPage} />
           <Route path="/pagamento" Component={PagamentoPage} />
         </Routes>

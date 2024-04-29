@@ -35,15 +35,15 @@ function ResumoPedido() {
         return numProducts;
     };
 
-    const getProductPriceByID = (id) => {
-        const product = ProductFullList.products.find((product) => product.id === id);
+    const getProductPriceByID = (category, id) => {
+        const product = ProductFullList[category].find((product) => product.id === id);
         return product.price;
     }
 
     const total = () => {
         let total = 0;
         for (let i = 0; i < ProductList.length; i++) {
-        total += ProductList[i].quantity * getProductPriceByID(ProductList[i].id);
+        total += ProductList[i].quantity * getProductPriceByID(ProductList[i].category, ProductList[i].id);
         }
         return total;
     };

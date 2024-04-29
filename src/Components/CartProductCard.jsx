@@ -14,7 +14,7 @@ function CartProductCard({ product, item, cart, setCart }) {
   
     const updateQuantity = (newQuantity) => {
       const newCart = cart.map((cartProduct) => {
-        if (cartProduct.id === product.id) {
+        if (cartProduct.category === product.category && cartProduct.id === product.id) {
           return { ...cartProduct, quantity: newQuantity };
         } else {
           return cartProduct;
@@ -24,7 +24,7 @@ function CartProductCard({ product, item, cart, setCart }) {
     };
   
     const removeFromCart = () => {
-      const newCart = cart.filter(cartProduct => (cartProduct.id !== product.id || cartProduct.size !== item.size));
+      const newCart = cart.filter(cartProduct => (cartProduct.category !== product.category || cartProduct.id !== product.id || cartProduct.size !== item.size));
       setCart(newCart);
     };
   

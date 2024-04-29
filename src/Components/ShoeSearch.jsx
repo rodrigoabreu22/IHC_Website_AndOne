@@ -23,7 +23,7 @@ function ShoeSearch() {
   }, [urlSearchTerm]);
   
   useEffect(() => {
-    const newFilteredProducts = ProductList.products.filter(product =>
+    const newFilteredProducts = ProductList.sapatilhas.filter(product =>
       (selectedBrands.length === 0 || selectedBrands.includes(product.brand)) &&
       product.price >= selectedPrices[0] && product.price <= selectedPrices[1] &&
       (selectedSizes.length === 0 || (product.size && selectedSizes.some(selectedSize => 
@@ -53,7 +53,7 @@ function ShoeSearch() {
       
       <div className={`product-list`} style={{ height: '100%', padding: '0', margin: '0', boxSizing: 'border-box' }}>
         {filteredProducts.map(product => (
-          <ProductCard product={product} favorites={favorites} setFavorites={setFavorites}/>
+          <ProductCard category={'sapatilhas'} product={product} favorites={favorites} setFavorites={setFavorites}/>
         ))}
       </div>
       {/* other routes... */}

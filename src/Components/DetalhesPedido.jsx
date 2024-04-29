@@ -7,8 +7,9 @@ import ProductList from '../data/Products.json';
 
 function DetalhesPedido(props) {
     const CartList = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []; 
-    const getProductByID = (id) => {
-        const product = ProductList.products.find((product) => product.id === id);
+    const getProductByID = (category, id) => {
+        console.log(category, id);
+        const product = ProductList[category].find((product) => product.id === id);
         return product;
     }  
     return (
@@ -20,7 +21,7 @@ function DetalhesPedido(props) {
                 <Row>
                     <ul style={{ paddingLeft: 2 }}>
                         {CartList.map(cartItem => {
-                            const product = getProductByID(cartItem.id);
+                            const product = getProductByID(cartItem.category, cartItem.id);
                             return (
                                 <li key={cartItem.id}>
                                     <Row  className="d-flex p-1">
