@@ -1,11 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavbarCompra from "../components/NavbarCompra";
 import MyFooter from "../components/MyFooter";
 import { Button, Col, Row } from "react-bootstrap";
 
 function ConfirmacaoPage() {
     const encomenda = JSON.parse(localStorage.getItem('temp'));
-    const [id, setId] = useState(Math.floor(Math.random() * 1000000));
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    const usedIds = orders.map(order => order.id);
+    let initialId;
+    while (true) {
+        initialId = localStorage.getItem("id") || Math.floor(Math.random() * 10000) + 1;
+        if (!usedIds.includes(initialId)) {
+            break;
+        }
+    }
+    const [id, setId] = useState(initialId);
+
+    useEffect(() => {
+        localStorage.setItem('id', id);
+    }, [id]);
 
     const handleClick = (event) => {
         localStorage.removeItem('cart');
