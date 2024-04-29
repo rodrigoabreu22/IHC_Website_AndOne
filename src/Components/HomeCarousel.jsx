@@ -9,7 +9,7 @@ function HomeCarousel() {
   return (
     <Carousel>
       <Carousel.Item as={ Link } to="/sapatilhas">
-        <img src="https://www.desktopbackground.org/download/1366x768/2015/12/12/1056485_basketball-shoes_1600x900_h.jpg" 
+        <img src="https://d3pnpe87i1fkwu.cloudfront.net/wp-content/uploads/2017/10/Wide-Basketball-Shoes.jpg" 
         className="d-block w-100 carousel-image"
         alt="Sapatilhas"
         />
@@ -25,7 +25,7 @@ function HomeCarousel() {
         />
         <Carousel.Caption>
           <h3 className="carousel-text">Equipamento</h3>
-          <h5 className="carousel-text">Clica aqui para ver os nosso equipamento! </h5>
+          <h5 className="carousel-text">Clica aqui para ver os nossos equipamentos! </h5>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item as={ Link } to="/acessorios">
