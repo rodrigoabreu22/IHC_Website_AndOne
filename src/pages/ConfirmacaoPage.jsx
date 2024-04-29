@@ -5,17 +5,23 @@ import { Button, Col, Row } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
 function ConfirmacaoPage() {
-    const encomenda = localStorage.getItem('temp') ? JSON.parse(localStorage.getItem('temp')) : {};
-    const [id, setId] = useState(Math.floor(Math.random() * 1000000));
+    const encomenda = JSON.parse(localStorage.getItem('temp'));
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    const usedIds = orders.map(order => order.id);
+    let initialId;
+    while (true) {
+        initialId = localStorage.getItem("id") || Math.floor(Math.random() * 10000) + 1;
+        if (!usedIds.includes(initialId)) {
+            break;
+        }
+    }
+    const [id, setId] = useState(initialId);
 
-    useEffect(()=> {
-        
-        purchaseCompleted();
-    },[])
+    useEffect(() => {
+        localStorage.setItem('id', id);
+    }, [id]);
 
-    const purchaseCompleted = () => {
-        encomenda['id']=id;
-        localStorage.setItem('temp', JSON.stringify(encomenda));
+    const handleClick = (event) => {
         localStorage.removeItem('cart');
     };
 
