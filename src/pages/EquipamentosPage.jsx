@@ -1,13 +1,23 @@
 import React from "react";
-import MyNavbar from "../components/MyNavbar";
+import Navbar from "../components/MyNavbar";
 import MyFooter from "../components/MyFooter";
+import EquipamentosSearch from "../components/EquipamentosSearch";
+
 
 function EquipamentosPage() {
     return (
         <>
-        <MyNavbar activeID={2} />
-        <h1>Equipamentos</h1>
-        <MyFooter />
+            <div className="parent-container">
+                <div className="navbar">
+                    <Navbar activeID={1}/>
+                </div>
+                <div className="equipamentos-search">
+                    <EquipamentosSearch />
+                </div>
+                <div className="footer">
+                    <MyFooter />
+                </div>
+            </div>
         </>
     );
 }

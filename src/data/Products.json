@@ -162,5 +162,34 @@
                         "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-06.jpg",
                         "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/10/adidas-trae-3-game-is-yours-if5592-07.jpg"]
       }
+    ],
+    "equipamentos": [
+      {"id": 1,
+      "name": "Mitchell & Ness NBA Swingman Jersey 'Chicago Bulls' Away 1997-98 Dennis Rodman #91",
+      "team": "Chicago Bulls",
+      "player": "Dennis Rodman",
+      "price": 114.99,
+      "size": ["S", "M", "L"],
+      "image_links": ["https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-away-1997-98-dennis-rodman-91-smjygs18154-cbuscar97drd-01.jpg",
+                      "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-away-1997-98-dennis-rodman-91-smjygs18154-cbuscar97drd-02.jpg",
+                      "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-away-1997-98-dennis-rodman-91-smjygs18154-cbuscar97drd-03.jpg",
+                      "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-away-1997-98-dennis-rodman-91-smjygs18154-cbuscar97drd-04.jpg",
+                      "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-away-1997-98-dennis-rodman-91-smjygs18154-cbuscar97drd-05.jpg"]
+      },
+      {"id": 2,
+      "name": "Mitchell & Ness NBA Swingman Jersey 'Chicago Bulls' Road 1995-96 Dennis Rodman #91",
+      "team": "Chicago Bulls",
+      "player": "Dennis Rodman",
+      "price": 114.99,
+      "size": ["M", "L", "XL"],
+      "image_links": ["https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-road-1995-96-dennis-rodman-91-smjygs18150-cbublck95drd-01.jpg",
+                      "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-road-1995-96-dennis-rodman-91-smjygs18150-cbuscar95drd-02.jpg",
+                      "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-road-1995-96-dennis-rodman-91-smjygs18150-cbuscar95drd-03.jpg",
+                      "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-road-1995-96-dennis-rodman-91-smjygs18150-cbuscar95drd-04.jpg",
+                      "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-road-1995-96-dennis-rodman-91-smjygs18150-cbuscar95drd-05.jpg",
+                      "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-road-1995-96-dennis-rodman-91-smjygs18150-cbuscar95drd-06.jpg",
+                      "https://i0.wp.com/xipastore.pt/wp-content/uploads/2023/09/mitchell-and-ness-nba-swingman-jersey-chicago-bulls-road-1995-96-dennis-rodman-91-smjygs18150-cbuscar95drd-07.jpg"]
+      }
+
     ]
   }

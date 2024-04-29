@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import ProductCard from './ProductCard';
 import ProductList from '../data/Products.json'
-import VerticalFilterBar from './VerticalFilterBar';
+import { ShoeFilterBar } from './VerticalFilterBar';
 import { useParams } from 'react-router-dom';
 
 function ShoeSearch() {
@@ -27,21 +27,21 @@ function ShoeSearch() {
       (selectedBrands.length === 0 || selectedBrands.includes(product.brand)) &&
       product.price >= selectedPrices[0] && product.price <= selectedPrices[1] &&
       (selectedSizes.length === 0 || (product.size && selectedSizes.some(selectedSize => 
-        product.size.map(size => Number(size)).includes(selectedSize)))) &&
+        product.size.includes(selectedSize)))) &&
       (!searchTerm || product.name.toLowerCase().includes(searchTerm.toLowerCase()))
     );
     setFilteredProducts(newFilteredProducts);
-  }, [searchTerm, selectedBrands, selectedPrices, selectedSizes]);
+}, [searchTerm, selectedBrands, selectedPrices, selectedSizes]);
   console.log(selectedSizes);
-  console.log(Math.abs(38 - 38.5) <= 0.5);
+
   console.log(filteredProducts);
 
   return (
     <>
     {searchTerm && <h2 style={{ fontSize: '2em', textAlign: "center" }}>Searching for: {searchTerm}</h2>}
-    <div style={{ display: 'grid', gridTemplateColumns: 'auto auto', height: '100%', alignItems: 'start' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 5fr', height: '100%', alignItems: 'start' }}>
 
-      <VerticalFilterBar
+      <ShoeFilterBar
         className={`filter`}
         selectedBrands={selectedBrands}
         setSelectedBrands={setSelectedBrands}

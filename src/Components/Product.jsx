@@ -43,7 +43,7 @@ const Product = () => {
         
         if (existingItem) {
           // If the item with the same id and size already exists in the cart, update its quantity
-          setCart(cart.map((item) => item === existingItem ? { ...category, item, quantity: item.quantity + quantity } : item));
+          setCart(cart.map((item) => item === existingItem ? { ...item, quantity: item.quantity + quantity } : item));
         } else {
           // If the item does not exist in the cart, add it
           setCart([...cart, { category, id, quantity, size }]);

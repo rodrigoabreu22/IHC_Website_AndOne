@@ -14,17 +14,22 @@ function CartProductCard({ product, item, cart, setCart }) {
   
     const updateQuantity = (newQuantity) => {
       const newCart = cart.map((cartProduct) => {
-        if (cartProduct.category === product.category && cartProduct.id === product.id) {
+        console.log(cartProduct);
+        console.log(product);
+        if (cartProduct.category === item.category && cartProduct.id === item.id && cartProduct.size === item.size) {
+          console.log("detected");
           return { ...cartProduct, quantity: newQuantity };
         } else {
+          console.log("not detected");
           return cartProduct;
         }
       });
       setCart(newCart);
     };
+    const prodSuper = (product.brand) ? product.brand + " -" : (product.team) ? "" : ""; 
   
     const removeFromCart = () => {
-      const newCart = cart.filter(cartProduct => (cartProduct.category !== product.category || cartProduct.id !== product.id || cartProduct.size !== item.size));
+      const newCart = cart.filter(cartProduct => (cartProduct.category !== item.category || cartProduct.id !== item.id || cartProduct.size !== item.size));
       setCart(newCart);
     };
   
@@ -40,6 +45,7 @@ function CartProductCard({ product, item, cart, setCart }) {
       };
 
       const incrementQuantity = () => {
+          console.log(curItem.quantity);
           setCurItem({ ...curItem, quantity: curItem.quantity + 1 });
           updateQuantity(curItem.quantity + 1);
       };
@@ -50,14 +56,14 @@ function CartProductCard({ product, item, cart, setCart }) {
                     <Card.Body>
                         <Card.Text className="product-cart-info">
                                 <img src={product.image_links[0]}></img>
-                                <div className="product-cart-name">{product.brand} - {product.name}</div>
+                                <div className="product-cart-name">{prodSuper} {product.name}</div>
                                 <div className="product-cart-size">{curItem["size"]}</div>
                                 <div className="product-cart-quantity-buttons">
                                         <Button className='quantity-button' variant="secondary" size="sm" onClick={decrementQuantity}>-</Button>
                                             <span>{item.quantity}</span>
                                         <Button className='quantity-button' variant="secondary" size="sm" onClick={incrementQuantity}>+</Button>
                                 </div>
-                                <div className="product-cart-price">{product.price} €</div>
+                                <div className="product-cart-price">{product.price}€</div>
                                 <Button variant="danger" size="sm" onClick={toggleModal}>X</Button>
                         </Card.Text>
                     </Card.Body>

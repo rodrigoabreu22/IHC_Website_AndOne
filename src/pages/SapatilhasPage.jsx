@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/MyNavbar";
 import MyFooter from "../components/MyFooter";
 import ShoeSearch from "../components/ShoeSearch";
-import './SapatilhasPage.css';
+
 
 function SapatilhasPage() {
     return (
