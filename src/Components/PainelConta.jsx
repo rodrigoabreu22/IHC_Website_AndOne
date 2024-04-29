@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import EncomendaPerfilCard from './EncomendaPerfilCard'; 
 
 function PainelConta(props) {
+
+    const [temp, setTemp] = useState([]); // State to store the temp array from local storage
+
+    // Function to generate EncomendaPerfilCard for each element in temp array
+    const generateEncomendaCards = () => {
+        return temp.map((item, index) => (
+            <EncomendaPerfilCard key={index} item={item} />
+        ));
+    };
+
     const handleDados = () => {
         props.setDados(true);
         props.setEncomendas(false);
@@ -11,6 +22,12 @@ function PainelConta(props) {
         props.setDados(false);
         props.setEncomendas(true);
     }
+
+    useEffect(() => {
+        // Load temp array from local storage on component mount
+        const tempData = JSON.parse(localStorage.getItem('temp')) || [];
+        setTemp(tempData);
+    }, []);
 
     return (
         <>
@@ -51,6 +68,7 @@ function PainelConta(props) {
                                 <Row>
                                     <h3>Minhas encomendas/faturas</h3>
                                 </Row>
+                                {generateEncomendaCards()}
                             </div>
                         </Container>
                     )}

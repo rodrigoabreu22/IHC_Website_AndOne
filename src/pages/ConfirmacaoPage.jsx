@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavbarCompra from "../components/NavbarCompra";
 import MyFooter from "../components/MyFooter";
 import { Button, Col, Row } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 function ConfirmacaoPage() {
-    const encomenda = JSON.parse(localStorage.getItem('temp'));
+    const encomenda = localStorage.getItem('temp') ? JSON.parse(localStorage.getItem('temp')) : {};
     const [id, setId] = useState(Math.floor(Math.random() * 1000000));
 
-    const handleClick = (event) => {
+    useEffect(()=> {
+        
+        purchaseCompleted();
+    },[])
+
+    const purchaseCompleted = () => {
+        encomenda['id']=id;
+        localStorage.setItem('temp', JSON.stringify(encomenda));
         localStorage.removeItem('cart');
     };
 
@@ -43,12 +51,17 @@ function ConfirmacaoPage() {
                                     </>)}
 
                                 <p><strong>Dados de faturação:</strong> {encomenda['faturacao']}</p>
+                                <p><strong>Data: </strong>{encomenda['data']}</p>
                             </Row>
                         </div>
                     </Col>
                     <Col md={3}></Col>
                 </Row>
-                <Button variant="success" size="lg" block="true">Voltar à página inicíal</Button>
+                <Link to="/">
+                    <Button variant="success" size="lg" block="true">
+                        Voltar à página inicíal
+                    </Button>
+                </Link>
             </div>
             <MyFooter />
         </>

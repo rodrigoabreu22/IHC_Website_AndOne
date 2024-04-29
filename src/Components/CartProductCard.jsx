@@ -50,6 +50,11 @@ function CartProductCard({ product, item, cart, setCart }) {
           updateQuantity(curItem.quantity + 1);
       };
 
+      const calculatePrice = () => {
+        const newPrice = (product.price* curItem.quantity);
+        return newPrice;
+      }
+
         return (
             <div className="cart-products-table">
                 <Card className="product-card">
@@ -63,7 +68,7 @@ function CartProductCard({ product, item, cart, setCart }) {
                                             <span>{item.quantity}</span>
                                         <Button className='quantity-button' variant="secondary" size="sm" onClick={incrementQuantity}>+</Button>
                                 </div>
-                                <div className="product-cart-price">{product.price}€</div>
+                                <div className="product-cart-price">{calculatePrice().toFixed(2)} €</div>
                                 <Button variant="danger" size="sm" onClick={toggleModal}>X</Button>
                         </Card.Text>
                     </Card.Body>

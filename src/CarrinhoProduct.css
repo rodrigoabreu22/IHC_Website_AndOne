@@ -26,7 +26,7 @@
   }
   
   .product-cart-name {
-    margin-right: 14%;
+    margin-right: 15%;
     font-size: 16px;
     width:160px;
   }
@@ -35,7 +35,7 @@
     font-size: 18px;
     width:40px;
     text-align:right;
-    margin-right: 23%; /* Espaçamento entre o tamanho e os botões de quantidade */
+    margin-right: 24%; /* Espaçamento entre o tamanho e os botões de quantidade */
   }
   
   .product-cart-quantity-buttons {

@@ -32,6 +32,8 @@ function PagamentoPage() {
             temp['pagamento'] = selectedPaying;
             temp['telefone'] = phoneNumber;
             temp['faturacao'] = selectedBilling;
+            temp['artigos'] = localStorage.getItem('cart');
+            temp['data'] = new Date().toLocaleDateString();
             localStorage.setItem('temp', JSON.stringify(temp));
             navigate("/confirmacao");
         }
