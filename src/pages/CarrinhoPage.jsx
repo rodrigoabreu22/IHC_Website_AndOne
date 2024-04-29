@@ -59,7 +59,7 @@ const CarrinhoPage = () => {
                     const product = ProductList.products.find(prod => prod.id === productCard.id);
                     return (
                         <CartProductCard
-                            key={product.id}
+                            key={`${productCard.id}-${productCard.size}`}
                             product={product}
                             item={productCard}
                             cart={cartProds}
