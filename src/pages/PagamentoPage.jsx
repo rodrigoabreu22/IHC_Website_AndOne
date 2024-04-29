@@ -16,17 +16,20 @@ function PagamentoPage() {
     const [phoneNumber, setPhoneNumber] = useState(localStorage.getItem('temp') ? JSON.parse(localStorage.getItem('temp'))['telefone'] : ''); 
     const [selectedBilling, setSelectedBilling] = useState(localStorage.getItem('temp') ? JSON.parse(localStorage.getItem('temp'))['faturacao'] : '');
 
-    const checkIfChecked = () => {
-        console.log(selectedPaying !== '');
-        console.log(phoneNumber) !== '';
-        console.log(selectedBilling !== '') ;
-        return selectedPaying !== '' && selectedBilling !== '';
+    const checkIfError = () => {
+        console.log(selectedPaying);
+        console.log(phoneNumber);
+        console.log(selectedBilling); 
+        console.log(selectedPaying == '');
+        console.log((selectedPaying === 'MBWay' || phoneNumber === ''));
+        console.log(selectedBilling == '') ;
+        return selectedPaying === undefined || selectedBilling === undefined || (selectedPaying === 'MBWay' || phoneNumber === undefined);
     }
 
     const handleClick = (event) => {
-        if (!checkIfChecked()) {
+        if (checkIfError()) {
             event.preventDefault();
-            alert("Por favor, preencha todos os campos.\nCampos que faltam:" + (selectedBilling === '' ? "\n\t Dados de faturação" : "") + (selectedPaying === '' ? "\n\t Método de pagamento" : ""));
+            alert("Por favor, preencha todos os campos.\nCampos que faltam:" + (selectedBilling === undefined ? "\n\t Dados de faturação" : "") + (selectedPaying === undefined ? "\n\t Método de pagamento" : "") + (selectedPaying === 'MBWay' && phoneNumber === undefined ? "\n\t Telefone" : ""));
         } else {
             const temp = (localStorage.getItem('temp') ? JSON.parse(localStorage.getItem('temp')) : {});
             temp['pagamento'] = selectedPaying;
