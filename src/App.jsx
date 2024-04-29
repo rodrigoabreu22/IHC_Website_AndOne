@@ -13,6 +13,7 @@ import CarrinhoPage from './pages/CarrinhoPage'
 import ProductPage from './pages/ProductPage'
 import PagamentoPage from './pages/PagamentoPage'
 import EntregaPage from './pages/EntregaPage'
+import ConfirmacaoPage from './pages/ConfirmacaoPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,6 +36,7 @@ function App() {
           <Route path="/produtoDetalhado/:id" Component={ProductPage} />
           <Route path="/checkout" Component={EntregaPage} />
           <Route path="/pagamento" Component={PagamentoPage} />
+          <Route path="/confirmacao" Component={ConfirmacaoPage} />
         </Routes>
       </BrowserRouter>
     </>
