@@ -64,7 +64,7 @@ function ConfirmacaoPage() {
                 </Row>
                 <Link to="/">
                     <Button variant="success" size="lg" block="true">
-                        Voltar à página inicíal
+                        Voltar à página inicial
                     </Button>
                 </Link>
             </div>

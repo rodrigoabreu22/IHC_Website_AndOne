@@ -59,9 +59,6 @@ function PainelConta(props) {
                     {props.encomendas && (
                         <Container fluid className="d-flex justify-content-end p-3"> 
                             <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
-                                <Row>
-                                    <h3>Minhas encomendas/faturas</h3>
-                                </Row>
                                 {generateEncomendaCards()}
                             </div>
                         </Container>

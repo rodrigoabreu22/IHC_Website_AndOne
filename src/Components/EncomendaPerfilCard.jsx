@@ -5,6 +5,7 @@ import '../CarrinhoProduct.css';
 import ProductList from '../data/Products.json';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
+import './EncomendaPerfilCard.css';
 
 function EncomendaPerfilCard({item}) {
     const [cart, setCart] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []);
@@ -64,9 +65,9 @@ function EncomendaPerfilCard({item}) {
             <Card className="product-card">
                 <Card.Body>
                     <Card.Text className="product-cart-info">
-                        <div className="order-id">{curItem["id"]}-</div>
-                        <div className="order-date">{curItem["data"]}</div>
-                        <div className="order-price">{curItem["price"]}</div>
+                        <div className="order-id"><strong>ID: </strong>{curItem["id"]}</div>
+                        <div className="order-date"><strong>Data: </strong>{curItem["data"]}</div>
+                        <div className="order-price"><strong>Preço: </strong>{curItem["total"]}€</div>
                         <button className='show-more-details-button' variant="primary" onClick={handleShowModal}>Ver detalhes</button>
                         <button className='show-products-button' variant="primary" onClick={handleShowProductsModal}>Ver produtos</button>
                         
