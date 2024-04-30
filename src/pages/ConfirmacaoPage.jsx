@@ -14,6 +14,7 @@ function ConfirmacaoPage() {
         if (!usedIds.includes(initialId)) {
             break;
         }
+        localStorage.removeItem("id");
     }
     const [id, setId] = useState(initialId);
 
