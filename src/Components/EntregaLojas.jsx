@@ -11,14 +11,14 @@ function EntregaLojas(props) {
     return (
         <>
             <Container fluid className="d-flex justify-content-begin p-3 pb-1"> 
-                <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                <div style={{ width: '100%', backgroundColor: '#333', color: 'white', padding: '1rem' }}>
                     <Row>
                         <h3 className="text-center">Escolha uma loja para levantar a encomenda</h3>
                     </Row>
                 </div>
             </Container>
             <Container fluid className="d-flex justify-content-begin p-3 pb-0"> 
-                <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                <div style={{ width: '100%', backgroundColor: 'white', color: 'black', padding: '1rem', border: '2px solid black'}}>
                     <Row>
                         <Col>
                             <Row>
@@ -64,7 +64,7 @@ function EntregaLojas(props) {
                 </div>
             </Container>
             <Container fluid className="d-flex justify-content-begin p-3 pb-0"> 
-                <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                <div style={{ width: '100%', backgroundColor: 'white', color: 'black', padding: '1rem', border: '2px solid black'}}>
                     <Row>
                         <Col>
                             <Row>
@@ -110,7 +110,7 @@ function EntregaLojas(props) {
                 </div>
             </Container>
             <Container fluid className="d-flex justify-content-begin p-3 pb-0"> 
-                <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                <div style={{ width: '100%', backgroundColor: 'white', color: 'black', padding: '1rem', border: '2px solid black'}}>
                     <Row>
                         <Col>
                             <Row>
