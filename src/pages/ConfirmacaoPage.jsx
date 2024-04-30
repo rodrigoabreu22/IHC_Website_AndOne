@@ -110,7 +110,7 @@ function ConfirmacaoPage() {
                                 <p><strong>Método de pagamento:</strong> {encomenda['pagamento']}</p>
 
                                 {encomenda['pagamento'] === 'Pagamento em Loja' &&
-                                    <p><strong>Montante:</strong> {encomenda['total']}</p>}
+                                    <p><strong>Montante:</strong> {encomenda['total']}€</p>}
 
                                 {encomenda['pagamento'] === 'MBWay' &&
                                     <>

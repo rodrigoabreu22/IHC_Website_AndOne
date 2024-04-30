@@ -26,7 +26,7 @@ function ResumoPedido() {
         for (let i = 0; i < ProductList.length; i++) {
         total += ProductList[i].quantity * getProductPriceByID(ProductList[i].category, ProductList[i].id);
         }
-        return total;
+        return total.toFixed(2);
     };
     const iva = (total() * 0.23).toFixed(2);;
 
