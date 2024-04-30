@@ -23,7 +23,7 @@ function PagamentoPage() {
         console.log(selectedPaying == '');
         console.log((selectedPaying === 'MBWay' || phoneNumber === ''));
         console.log(selectedBilling == '') ;
-        return selectedPaying === undefined || selectedBilling === undefined || (selectedPaying === 'MBWay' || phoneNumber === undefined);
+        return selectedPaying === undefined || selectedBilling === undefined || (selectedPaying === 'MBWay' && phoneNumber === undefined);
     }
 
     const handleClick = (event) => {
