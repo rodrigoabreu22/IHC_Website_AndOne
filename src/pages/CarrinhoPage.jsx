@@ -21,9 +21,9 @@ const CarrinhoPage = () => {
         return (
             <div>
                 <MyNavbar activeID={8} />
-                <div style={{ minHeight: '55vh' }}>
+                <div style={{ minHeight: '55vh', textAlign: 'center' }} >
                     <h1 className="page-title">Carrinho de Compras</h1>
-                    <h2>O carrinho está vazio.</h2>
+                    <h2 className="p-3">O carrinho está vazio.</h2>
                     <Link to="/sapatilhas">
                         <button style={{marginRight: '10px'}}>Ver Sapatilhas</button>
                     </Link>

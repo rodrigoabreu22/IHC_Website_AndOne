@@ -16,8 +16,8 @@ const FavoritosPage = () => {
         return (
             <div>
                 <MyNavbar activeID={7} />
-                <div style={{ minHeight: '55vh' }}>
-                    <h1>Favorites</h1>
+                <div style={{ minHeight: '55vh', textAlign: 'center' }}>
+                    <h1 className='favoritepage-title'>Favoritos</h1>
                     <h2>Não tem favoritos. Adicione produtos aos favoritos para eles aparecerem aqui.</h2>
                 </div>
                 <MyFooter />
