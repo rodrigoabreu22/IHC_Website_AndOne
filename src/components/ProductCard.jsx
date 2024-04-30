@@ -9,7 +9,7 @@ import { Card, Modal, Button } from 'react-bootstrap';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
 
-const ProductCard = ({category, product, favorites, setFavorites, toggleModal, moreDetails }) => {
+const ProductCard = ({category, product, favorites, setFavorites, toggleModal }) => {
     console.log('ProductCard');
     console.log(category);
     console.log(product);
@@ -67,7 +67,6 @@ const ProductCard = ({category, product, favorites, setFavorites, toggleModal, m
                         <Card.Text style={{ textAlign: 'left', height: 80}}>
                             {product.brand} <br/>
                             {product.name} <br/>
-                            {moreDetails ? moreDetails : ''}
                         </Card.Text>
                         <Card.Text style={{ textAlign: 'right' }}>
                             {product.price}€
