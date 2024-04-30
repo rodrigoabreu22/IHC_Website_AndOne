@@ -3,7 +3,7 @@ import MyNavbar from "../components/MyNavbar";
 import MyFooter from "../components/MyFooter";
 import ProductCard from '../components/ProductCard';
 import ProductList from '../data/Products.json';
-import '../AppTestRicardo.css'; // Import the CSS file
+import '../FavoritosPage.css';
 
 const FavoritosPage = () => {
     const [favoriteProds, setFavoriteProducts] = useState(localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')) : []);
@@ -28,12 +28,12 @@ const FavoritosPage = () => {
     return (
         <div>
             <MyNavbar activeID={7} />
-            <h1>Favorites</h1>
-            <div className="favorite-products" style={{ display: 'flex', flexWrap: 'wrap', minHeight: '55vh' }}>
+            <h1 className='favoritepage-title'>Favoritos</h1>
+            <div className="favorite-products" style={{ display: 'flex', flexWrap: 'wrap' }}>
                 {favoriteProds.map(favProd => {
                     const product = ProductList[favProd.category].find(prod => prod.id === favProd.id);
                     return (
-                        <div style={{ marginLeft: '10px', marginBottom: '10px' }}>
+                        <div style={{ marginLeft: '10px', marginBottom: '20px' }}>
                             <ProductCard
                                 key={product.id}
                                 category={favProd.category}
