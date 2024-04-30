@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
-import './ProductCard.css';
 import { Card, Modal, Button } from 'react-bootstrap';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
+import './ProductCard.css';
 
 const ProductCard = ({category, product, favorites, setFavorites, toggleModal }) => {
     console.log('ProductCard');
@@ -90,7 +90,7 @@ const ProductCard = ({category, product, favorites, setFavorites, toggleModal })
                 </Modal.Footer>
                 </Modal>
             )}
-            <ToastContainer className="p-3" position="top-center">
+            <ToastContainer className="toast-container" position="top-center">
                 <Toast show={showToast} delay={5000} autohide onClose={toggleShowToast}>
                   <Toast.Header>
                     <strong className="me-auto">Produto adicionado aos favoritos </strong>
