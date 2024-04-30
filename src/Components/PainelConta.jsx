@@ -4,13 +4,13 @@ import EncomendaPerfilCard from './EncomendaPerfilCard';
 
 function PainelConta(props) {
 
-    const [temp, setTemp] = useState([]); // State to store the temp array from local storage
+    const [orders, setOrders] = useState(JSON.parse(localStorage.getItem('orders')) || []);
 
     // Function to generate EncomendaPerfilCard for each element in temp array
     const generateEncomendaCards = () => {
-        return temp.map((item, index) => (
-            <EncomendaPerfilCard key={index} item={item} />
-        ));
+            return orders.map((item, index) => (
+                <EncomendaPerfilCard key={index} item={item} />
+            ));
     };
 
     const handleDados = () => {
@@ -22,12 +22,6 @@ function PainelConta(props) {
         props.setDados(false);
         props.setEncomendas(true);
     }
-
-    useEffect(() => {
-        // Load temp array from local storage on component mount
-        const tempData = JSON.parse(localStorage.getItem('temp')) || [];
-        setTemp(tempData);
-    }, []);
 
     return (
         <>

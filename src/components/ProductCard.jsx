@@ -9,7 +9,12 @@ import { Card, Modal, Button } from 'react-bootstrap';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
 
-const ProductCard = ({category, product, favorites, setFavorites, toggleModal }) => {
+const ProductCard = ({category, product, favorites, setFavorites, toggleModal, moreDetails }) => {
+    console.log('ProductCard');
+    console.log(category);
+    console.log(product);
+    console.log(favorites);
+    console.log(setFavorites);
     const [isFavorite, setIsFavorite] = useState(favorites.some(fav => fav.category === category && fav.id === product.id));
     const [showModal, setShowModal] = useState(false);
     const [showToast, setShowToast] = useState(false);
@@ -61,7 +66,8 @@ const ProductCard = ({category, product, favorites, setFavorites, toggleModal })
                     }} className="link-no-color">
                         <Card.Text style={{ textAlign: 'left', height: 80}}>
                             {product.brand} <br/>
-                            {product.name}
+                            {product.name} <br/>
+                            {moreDetails ? moreDetails : ''}
                         </Card.Text>
                         <Card.Text style={{ textAlign: 'right' }}>
                             {product.price}€
