@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +10,8 @@ import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
 
 const ProductCard = ({category, product, favorites, setFavorites, toggleModal }) => {
+    const navigate = useNavigate();
+
     console.log('ProductCard');
     console.log(category);
     console.log(product);
@@ -54,10 +56,14 @@ const ProductCard = ({category, product, favorites, setFavorites, toggleModal })
 
       const toggleShowToast = () => setShowToast(!showToast); // Moved up here
 
+      const handleClicked = () => {
+        navigate(`/produtoDetalhado/${category}/${product.id}`);  
+      }
+
     return (
         <>
             <Card className="ProductCard" style={{ height: '400px' }}>
-                <Card.Img variant="top" src={product.image_links[0]} style={{ height: '60%', objectFit: 'scale-down', userSelect: 'none' }} />
+                <Card.Img variant="top" src={product.image_links[0]} style={{ height: '60%', objectFit: 'scale-down', userSelect: 'none' }} onClick={handleClicked} />
                 <FontAwesomeIcon icon={isFavorite ? fasHeart : farHeart} size="xl" style={{ position: 'absolute', top: '10px', right: '10px', color: isFavorite ? 'red' : 'black' }} onClick={toggleFavorite} />
                 <hr style={{ margin: 0 }} />
                 <Card.Body>

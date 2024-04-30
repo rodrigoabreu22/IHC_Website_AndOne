@@ -22,7 +22,7 @@ function ConfirmacaoPage() {
         localStorage.setItem('id', id);
         localStorage.setItem('orders', JSON.stringify([...orders, { id: id, ...encomenda }]));
         localStorage.removeItem('cart');
-    }, [id]);
+    }, []);
 
     return (
         <>
