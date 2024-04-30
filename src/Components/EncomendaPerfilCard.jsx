@@ -64,7 +64,7 @@ function EncomendaPerfilCard({item}) {
             <Card className="product-card">
                 <Card.Body>
                     <Card.Text className="product-cart-info">
-                        <div className="order-id">{curItem["id"]}</div>
+                        <div className="order-id">{curItem["id"]}-</div>
                         <div className="order-date">{curItem["data"]}</div>
                         <div className="order-price">{curItem["price"]}</div>
                         <button className='show-more-details-button' variant="primary" onClick={handleShowModal}>Ver detalhes</button>
