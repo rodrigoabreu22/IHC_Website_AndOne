@@ -70,7 +70,7 @@ function ConfirmacaoPage() {
                 <Row className="p-5">
                     <Col md={3}></Col>
                     <Col md={6}>
-                        <div className="container p-3" style={{ backgroundColor: 'gray', width: '100%' }}> 
+                        <div className="container p-3" style={{ backgroundColor: 'white', color: 'black', border: '2px solid black', width: '100%' }}> 
                             <Row>
                                 <h2>Detalhes da encomenda</h2>
                                 <p><strong>Número da encomenda: {id}</strong></p>
@@ -95,7 +95,7 @@ function ConfirmacaoPage() {
 
                                 <p><strong>Dados de faturação:</strong> {encomenda['faturacao']}</p>
                                 <p><strong>Data: </strong>{encomenda['data']}</p>
-                                <div style={{textAlign: "center"}}><Button variant='danger' style={{width: "20%"}} onClick={generatePDF}>Download PDF</Button></div>
+                                <div style={{textAlign: "center"}}><Button variant='danger' style={{width: "25%"}} onClick={generatePDF}>Download PDF</Button></div>
                             </Row>
                         </div>
                     </Col>
