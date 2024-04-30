@@ -53,11 +53,11 @@ function PagamentoPage() {
                     <Row className="p-3">
                         <Col>
                             <Link to="/checkout">                       
-                                <Button variant="primary" size="lg" block="true"><FontAwesomeIcon icon={faArrowLeft} /> Retroceder</Button>
+                                <Button variant="danger" size="lg" block="true"><FontAwesomeIcon icon={faArrowLeft} /> Retroceder</Button>
                             </Link>
                         </Col>
                         <Col className="d-flex justify-content-end">
-                            <Button variant="success" size="lg" block="true" onClick={handleClick} >Pagar <FontAwesomeIcon icon={faArrowRight} /></Button>
+                            <Button variant="dark" size="lg" block="true" onClick={handleClick} >Pagar <FontAwesomeIcon icon={faArrowRight} /></Button>
                         </Col>
                     </Row>
                 </Col>

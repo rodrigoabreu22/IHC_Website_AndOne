@@ -35,11 +35,11 @@ function EntregaPage() {
                     <Row className="p-3">
                         <Col>
                             <Link to="/carrinho">
-                                <Button variant="primary" size="lg" block="true"><FontAwesomeIcon icon={faArrowLeft} /> Voltar ao carrinho</Button>
+                                <Button variant="danger" size="lg" block="true"><FontAwesomeIcon icon={faArrowLeft} /> Voltar ao carrinho</Button>
                             </Link>
                         </Col>
                         <Col className="d-flex justify-content-end">
-                                <Button variant="success" size="lg" block="true" onClick={handleClick}>Seguinte <FontAwesomeIcon icon={faArrowRight} /></Button>
+                                <Button variant="dark" size="lg" block="true" onClick={handleClick}>Seguinte <FontAwesomeIcon icon={faArrowRight} /></Button>
                         </Col>
                     </Row>
                 </Col>

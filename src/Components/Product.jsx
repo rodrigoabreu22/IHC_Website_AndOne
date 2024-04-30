@@ -120,7 +120,7 @@ const Product = () => {
             </div>
             <div className="buttons">
               <div className="quantity-buttons">
-                <span>Quantidade: </span>
+                <span><strong>Quantidade: </strong></span>
                 <button className="btn btn-sm btn-dark quantity-button" onClick={decrementQuantity}>
                   -
                 </button>
@@ -129,10 +129,12 @@ const Product = () => {
                   +
                 </button>
               </div>
-              <button disabled={sizeSelected()} onClick={() => { addToCart(category, product.id, quantity, currentSize)}}>
-                Adicionar ao carrinho
-              </button>
-              <button onClick={() => handleFavorites(category, product.id)}>{favTest(product.id)}</button>
+              <div className="cart-fav-buttons">
+                <button disabled={sizeSelected()} onClick={() => { addToCart(category, product.id, quantity, currentSize)}}>
+                  Adicionar ao carrinho
+                </button>
+                <button onClick={() => handleFavorites(category, product.id)}>{favTest(product.id)}</button>
+              </div>
             </div>
           </div>
         </div>
