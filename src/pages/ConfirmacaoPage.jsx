@@ -60,7 +60,7 @@ function ConfirmacaoPage() {
             doc.text(`Item ${item.category}: ${item.id}, Quantidade: ${item.quantity}`, 10, 70 + index * 10);
         });
     
-        doc.save('purchase.pdf');
+        doc.save('order_&1_' + id + '.pdf');
     };
     return (
         <>
