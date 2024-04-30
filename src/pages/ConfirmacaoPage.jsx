@@ -31,7 +31,8 @@ function ConfirmacaoPage() {
         localStorage.removeItem('id');
     };
 
-    const generatePDF = () => {
+    const generatePDF = (event) => {
+        event.preventDefault();
         const doc = new jsPDF();
     
         // Logo of the website (replace 'logoDataURL' with the Data URL of your image)
