@@ -115,20 +115,17 @@ function EncomendaPerfilCard({item}) {
                 </Modal.Body>
                 <Modal.Footer>
                 <button className='copy-cart-button' variant="primary" onClick={() => {copyCartFromOrder(); notify()}}>Copiar para carrinho</button>
-                    <Button variant="secondary" onClick={handleCloseProductsModal}>
-                        Close
-                    </Button>
                 </Modal.Footer>
             </Modal>
 
-        <ToastContainer className='p-3' position='top-center'>
-            <Toast onClose={() => setShowToast(false)} show={showToast} delay={3000} autohide>
-                <Toast.Header>
-                    <strong className="mr-auto">Notificação</strong>
-                </Toast.Header>
-                <Toast.Body>Carrinho copiado!</Toast.Body>
-            </Toast>
-        </ToastContainer>
+            <ToastContainer className='carrinho-toast' position='top-center'>
+                <Toast onClose={() => setShowToast(false)} show={showToast} delay={3000} autohide>
+                    <Toast.Header>
+                        <strong className="me-auto">Notificação</strong>
+                    </Toast.Header>
+                    <Toast.Body style={{color:"black"}}>Produtos copiados para o carrinho. </Toast.Body>
+                </Toast>
+            </ToastContainer>
         </div>
     );
 }
