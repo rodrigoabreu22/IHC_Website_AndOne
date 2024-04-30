@@ -134,7 +134,7 @@ function ConfirmacaoPage() {
                     <Col md={3}></Col>
                 </Row>
                 <Link to="/">
-                    <Button variant="primary" size="lg" block="true" onClick={leavingPage} className="button">
+                    <Button variant="secondary" size="lg" block="true" onClick={leavingPage} className="button">
                         Voltar à página inicial
                     </Button>
                 </Link>
