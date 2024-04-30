@@ -49,7 +49,7 @@ function EquipamentosSearch() {
         setSelectedSizes={setSelectedSizes}
       />
       
-      <div className={`product-list`} style={{ height: '100%', padding: '0', margin: '0', boxSizing: 'border-box' }}>
+      <div className={`product-list`} style={{padding: '0', margin: '0', boxSizing: 'border-box' }}>
         {filteredProducts.map(product => (
           <ProductCard category={'equipamentos'} product={product} favorites={favorites} setFavorites={setFavorites}/>
         ))}

@@ -51,7 +51,7 @@ function ShoeSearch() {
         setSelectedSizes={setSelectedSizes}
       />
       
-      <div className={`product-list`} style={{ height: '100%', padding: '0', margin: '0', boxSizing: 'border-box' }}>
+      <div className={`product-list`} style={{padding: '0', margin: '0', boxSizing: 'border-box' }}>
         {filteredProducts.map(product => (
           <ProductCard category={'sapatilhas'} product={product} favorites={favorites} setFavorites={setFavorites}/>
         ))}
