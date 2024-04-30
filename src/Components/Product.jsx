@@ -137,22 +137,22 @@ const Product = () => {
           </div>
         </div>
         <div className="Exaustive-details">
-          <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
-            <Tab eventKey="Full-description" title="Detalhes">
+          <Tabs className="tab-title" defaultActiveKey="profile">
+            <Tab className="tab-text" eventKey="Full-description" title="Detalhes">
               <div className="Description-text">
                 <p>{product.big_description}</p>
               </div>
             </Tab>
             <Tab eventKey="Ratings" title="Avaliações">
-            <EvaluationCard name={"João"} rating={5} comment={"Adorei este produto! Superou as minhas expectativas e estou muito satisfeito com a minha compra."} />
-<EvaluationCard name={"Maria"} rating={4} comment={"Bom produto no geral. Atendeu às minhas necessidades, mas há espaço para algumas melhorias."} />
-<EvaluationCard name={"José"} rating={3} comment={"O produto é ok. Funciona conforme descrito, mas não me impressionou."} />
-<EvaluationCard name={"Ana"} rating={2} comment={"Não estou feliz com este produto. Não atendeu às minhas expectativas e tem vários problemas."} />
-<EvaluationCard name={"Miguel"} rating={1} comment={"Estou muito desapontado com este produto. Tem muitos problemas e eu não o recomendaria."} />
+              <EvaluationCard name={"João"} rating={5} comment={"Adorei este produto! Superou as minhas expectativas e estou muito satisfeito com a minha compra."} />
+              <EvaluationCard name={"Maria"} rating={4} comment={"Bom produto no geral. Atendeu às minhas necessidades, mas há espaço para algumas melhorias."} />
+              <EvaluationCard name={"José"} rating={3} comment={"O produto é ok. Funciona conforme descrito, mas não me impressionou."} />
+              <EvaluationCard name={"Ana"} rating={2} comment={"Não estou feliz com este produto. Não atendeu às minhas expectativas e tem vários problemas."} />
+              <EvaluationCard name={"Miguel"} rating={1} comment={"Estou muito desapontado com este produto. Tem muitos problemas e eu não o recomendaria."} />
             </Tab>
           </Tabs>
         </div>
-        <ToastContainer className="p-3" position="top-center">
+        <ToastContainer className="product-toast" position="top-center">
           <Toast show={showToast} delay={5000} autohide onClose={toggleShowToast}>
             <Toast.Header>
               <strong className="me-auto">Produto adicionado ao carrinho</strong>

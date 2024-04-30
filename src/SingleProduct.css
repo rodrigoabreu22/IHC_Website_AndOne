@@ -3,7 +3,7 @@
 .product {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 2%;
     border: 1px solid #ccc;
     margin-bottom: 20px;
   }
@@ -30,65 +30,85 @@
     margin-bottom: 10px;
     font-size:large;
   }
-
-
-
   
-  button {
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: #000000;
-    border: solid 1px black;
-    cursor: pointer;
-  }
+button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border: solid 1px black;
+  cursor: pointer;
+}
+button:disabled {
+  background-color: #d2d2d2;
+  color: #666666;
+  cursor: not-allowed;
+}
+button.selected {
+  background-color: #000000;
+  color: #ffffff;
+}
+button:disabled:hover {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
 
-  button:disabled {
-    background-color: #d2d2d2;
-    color: #666666;
-    cursor: not-allowed;
-  }
+button:hover {
+  background-color: #000000;
+  color:white;
+}
+span {
+  font-weight: bold;
+  font-size: large;
+}
+.sizes {
+  margin: 10px;
+  justify-content: left;
+}
+.sizes button {
+  margin:2px;
+  box-shadow:#000000;
+}
+.quantity-buttons button {
+  margin: 5px;
+  border-radius: 10%;
+}
 
-  button.selected {
-    background-color: #000000;
-    color: #ffffff;
-  }
+.quantity-buttons span {
+  font-weight: normal;
+}
 
-  button:disabled:hover {
-    background-color: #cccccc;
-    color: #666666;
-    cursor: not-allowed;
-  }
-  
-  button:hover {
-    background-color: #000000;
-    color:white;
-  }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
 
-  span {
-    font-weight: bold;
-    font-size: large;
-  }
+.Exaustive-details {
+  margin-left: 1%;
+  margin-right: 1%;
+}
 
-  .sizes {
-    margin: 10px;
-    justify-content: left;
-  }
+.tab-title .nav-link {
+  padding: 10px 50px;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+} 
 
-  .sizes button {
-    margin:2px;
-    box-shadow:#000000;
-  }
+.tab-title .nav-link.active {
+  border: solid 1px black;
+}
 
-  .quantity-buttons button {
-    margin: 5px;
-    border-radius: 10%;
-  }
-  
-  .quantity-buttons span {
-    font-weight: normal;
-  }
+.tab-title .nav-link:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
 
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    filter: invert(100%);
+.Description-text {
+  margin-top:1%;
+  padding-left:10px;
+  padding-top:5px;
+  font-size:18;
+  border-radius: 5px;;
+  margin-bottom: 5%;
 }
