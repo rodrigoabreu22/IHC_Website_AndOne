@@ -28,13 +28,13 @@ function PainelConta(props) {
             <Row>
                 <Col md={3}>
                     <Container fluid className="d-flex justify-content-begin p-3"> 
-                        <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                        <div style={{ width: '100%', backgroundColor: '#333', color: 'white', padding: '1rem' }}>
                             <Row>
                                 <h3>Painel de conta</h3>
                             </Row>
                             <Row>
-                                <Button style={{ backgroundColor: 'gray', border: 0 }} size="lg" className="d-flex justify-content-begin" onClick={handleDados}>Dados Pessoais</Button>
-                                <Button style={{ backgroundColor: 'gray', border: 0 }} size="lg" className="d-flex justify-content-begin" onClick={handleEncomendas}>Minhas encomendas/faturas</Button>
+                                <Button style={{ backgroundColor: '#333', border: 0 }} size="lg" className="d-flex justify-content-begin" onClick={handleDados}>Dados Pessoais</Button>
+                                <Button style={{ backgroundColor: '#333', border: 0 }} size="lg" className="d-flex justify-content-begin" onClick={handleEncomendas}>Minhas encomendas/faturas</Button>
                             </Row>
                         </div>
                     </Container>
@@ -42,7 +42,7 @@ function PainelConta(props) {
                 <Col md={9}>
                     {props.dados && (
                         <Container fluid className="d-flex justify-content-end p-3"> 
-                            <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                            <div style={{ width: '100%', backgroundColor: '#333', color: 'white', padding: '1rem' }}>
                                 <Row>
                                     <Col>
                                         <p>Nome: Utilizador</p>
@@ -58,7 +58,7 @@ function PainelConta(props) {
                     )}
                     {props.encomendas && (
                         <Container fluid className="d-flex justify-content-end p-3"> 
-                            <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                            <div style={{ width: '100%', backgroundColor: '#333', color: 'white', padding: '1rem' }}>
                                 {generateEncomendaCards()}
                             </div>
                         </Container>
