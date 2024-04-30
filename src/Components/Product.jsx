@@ -137,18 +137,18 @@ const Product = () => {
           </div>
         </div>
         <div className="Exaustive-details">
-          <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
-            <Tab eventKey="Full-description" title="Detalhes">
+          <Tabs className="tab-title" defaultActiveKey="profile">
+            <Tab className="tab-text" eventKey="Full-description" title="Detalhes">
               <div className="Description-text">
                 <p>{product.big_description}</p>
               </div>
             </Tab>
-            <Tab eventKey="Ratings" title="Avaliações">
+            <Tab className="tab-text" eventKey="Ratings" title="Avaliações">
               <p>Este produto não possui avaliações</p>
             </Tab>
           </Tabs>
         </div>
-        <ToastContainer className="p-3" position="top-center">
+        <ToastContainer className="product-toast" position="top-center">
           <Toast show={showToast} delay={5000} autohide onClose={toggleShowToast}>
             <Toast.Header>
               <strong className="me-auto">Produto adicionado ao carrinho</strong>
