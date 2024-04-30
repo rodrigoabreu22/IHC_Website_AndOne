@@ -7,6 +7,7 @@ import jsPDF from "jspdf";
 import logoDataURL from "../config";
 import autoTable from 'jspdf-autotable';
 import ProductList from '../data/Products.json';
+import '../SingleProduct.css';
 
 function ConfirmacaoPage() {
     const encomenda = JSON.parse(localStorage.getItem('temp'));
@@ -101,7 +102,7 @@ function ConfirmacaoPage() {
                 <Row className="p-5">
                     <Col md={3}></Col>
                     <Col md={6}>
-                        <div className="container p-3" style={{ backgroundColor: 'gray', width: '100%' }}> 
+                        <div className="container p-3" style={{ backgroundColor: 'white', color: 'black', border: '2px solid black', width: '100%' }}> 
                             <Row>
                                 <h2>Detalhes da encomenda</h2>
                                 <p><strong>Número da encomenda: {id}</strong></p>
@@ -126,18 +127,16 @@ function ConfirmacaoPage() {
 
                                 <p><strong>Dados de faturação:</strong> {encomenda['faturacao']}</p>
                                 <p><strong>Data: </strong>{encomenda['data']}</p>
-                                <div style={{textAlign: "center"}}><Button variant='danger' style={{width: "20%"}} onClick={generatePDF}>Download PDF</Button></div>
+                                <div style={{textAlign: "center"}}><Button variant='danger' style={{width: "25%"}} onClick={generatePDF}>Download PDF</Button></div>
                             </Row>
                         </div>
                     </Col>
                     <Col md={3}></Col>
                 </Row>
                 <Link to="/">
-                    <Button variant="success" size="lg" block="true" onClick={leavingPage}>
+                    <Button variant="primary" size="lg" block="true" onClick={leavingPage} className="button">
                         Voltar à página inicial
                     </Button>
-
-                    
                 </Link>
             </div>
             <MyFooter />
