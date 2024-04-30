@@ -162,7 +162,7 @@ const EquipamentosFilterBar = ({ selectedTeams, setSelectedTeams, selectedPrices
             "Panathinaikos",
             "Other"
     ];
-    const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL', 'A tua mãe']; // Define your sizes here
+    const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL']; // Define your sizes here
     
     const handleTeamChange = (event) => {
         event.stopPropagation();
