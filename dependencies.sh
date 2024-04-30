@@ -9,3 +9,4 @@ npm install --save @fortawesome/react-fontawesome
 npm install react-bootstrap-range-slider
 npm install rc-slider
 npm install jspdf
+npm install jspdf-autotable

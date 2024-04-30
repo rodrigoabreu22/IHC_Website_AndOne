@@ -5,10 +5,13 @@ import { Button, Col, Row } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import jsPDF from "jspdf";
 import logoDataURL from "../config";
+import autoTable from 'jspdf-autotable';
+import ProductList from '../data/Products.json';
 
 function ConfirmacaoPage() {
     const encomenda = JSON.parse(localStorage.getItem('temp'));
     const [id, setId] = useState(-1);
+    const [cartProds, setCartProducts] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []);
     
     useEffect(() => {
         let initialId = localStorage.getItem("id");
@@ -31,7 +34,13 @@ function ConfirmacaoPage() {
         localStorage.removeItem('id');
     };
 
-    const generatePDF = (event) => {
+    const getProductByIdAndCategory = (id, category) => {
+        const product = ProductList[category].find(product => product.id === id);
+        console.log("product in function", product);
+        return product;
+    };
+
+    const generatePDF = async (event) => {
         event.preventDefault();
         const doc = new jsPDF();
     
@@ -56,10 +65,32 @@ function ConfirmacaoPage() {
     
         // Items in the order
         const artigosArray = JSON.parse(encomenda["artigos"]);
-        artigosArray.forEach((item, index) => {
-            doc.text(`Item ${item.category}: ${item.id}, Quantidade: ${item.quantity}`, 10, 70 + index * 10);
+
+        // Prepare the data for the table
+        const data = artigosArray.map(item => {
+            const product = getProductByIdAndCategory(item.id, item.category);
+            return {
+                product: product.name,
+                size: item.size,
+                quantity: item.quantity,
+                price: product.price,
+                total: product.price * item.quantity
+            };
         });
-    
+
+        // Calculate the total price
+        const totalPrice = data.reduce((total, item) => total + item.total, 0);
+
+        // Add the table to the PDF
+        doc.autoTable({
+            head: [['Product', 'Size', 'Quantity', 'Price', 'Total']],
+            body: [
+                ...data.map(item => [item.product, item.size, item.quantity, item.price, item.total]),
+                ['Total', '', '', '', totalPrice]
+            ],
+            startY: 70
+        });
+
         doc.save('order_&1_' + id + '.pdf');
     };
     return (
