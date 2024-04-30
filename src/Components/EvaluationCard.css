@@ -1,0 +1,19 @@
+.evaluation-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+}
+
+.star {
+    color: #ccc; /* Color of unfilled stars */
+}
+
+.star.filled {
+    color: gold; /* Color of filled stars */
+}

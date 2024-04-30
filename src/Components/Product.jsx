@@ -144,7 +144,11 @@ const Product = () => {
               </div>
             </Tab>
             <Tab eventKey="Ratings" title="Avaliações">
-              <p>Este produto não possui avaliações</p>
+            <EvaluationCard name={"João"} rating={5} comment={"Adorei este produto! Superou as minhas expectativas e estou muito satisfeito com a minha compra."} />
+<EvaluationCard name={"Maria"} rating={4} comment={"Bom produto no geral. Atendeu às minhas necessidades, mas há espaço para algumas melhorias."} />
+<EvaluationCard name={"José"} rating={3} comment={"O produto é ok. Funciona conforme descrito, mas não me impressionou."} />
+<EvaluationCard name={"Ana"} rating={2} comment={"Não estou feliz com este produto. Não atendeu às minhas expectativas e tem vários problemas."} />
+<EvaluationCard name={"Miguel"} rating={1} comment={"Estou muito desapontado com este produto. Tem muitos problemas e eu não o recomendaria."} />
             </Tab>
           </Tabs>
         </div>
@@ -166,6 +170,7 @@ const Product = () => {
 };
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import EvaluationCard from './EvaluationCard.jsx';
 export default Product;
 
 
