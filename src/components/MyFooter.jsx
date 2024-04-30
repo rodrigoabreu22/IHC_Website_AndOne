@@ -17,9 +17,7 @@ function MyFooter() {
           <Col className="text-center" md={4}>
             <h5>Redes Sociais</h5>
             <Nav className="flex-column">
-              <p>Link 4</p>
-              <p>Link 5</p>
-              <p>Link 6</p>
+              <p>@And&One_Store</p>
             </Nav>
           </Col>
           <Col className="text-center" md={4}>

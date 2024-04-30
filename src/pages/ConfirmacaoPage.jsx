@@ -5,6 +5,7 @@ import { Button, Col, Row } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import jsPDF from "jspdf";
 import logoDataURL from "../config";
+import '../SingleProduct.css';
 
 function ConfirmacaoPage() {
     const encomenda = JSON.parse(localStorage.getItem('temp'));
@@ -102,11 +103,9 @@ function ConfirmacaoPage() {
                     <Col md={3}></Col>
                 </Row>
                 <Link to="/">
-                    <Button variant="success" size="lg" block="true" onClick={leavingPage}>
+                    <Button variant="primary" size="lg" block="true" onClick={leavingPage} className="button">
                         Voltar à página inicial
                     </Button>
-
-                    
                 </Link>
             </div>
             <MyFooter />
