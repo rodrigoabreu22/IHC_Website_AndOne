@@ -19,14 +19,14 @@ function Pagamentos(props) {
     return (
         <>
             <Container fluid className="d-flex justify-content-begin p-3 pb-1"> 
-                <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                <div style={{ width: '100%', backgroundColor: '#333', color: 'white', padding: '1rem' }}>
                     <Row>
                         <h3 className="text-center">Escolha os dados de faturação</h3>
                     </Row>
                 </div>
             </Container>
             <Container fluid className="d-flex justify-content-begin p-3 pb-5"> 
-                <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                <div style={{ width: '100%', backgroundColor: 'white', color: 'black', padding: '1rem', border: '2px solid black'}}>
                 <Row>
                         <Col className="d-flex justify-content-center align-items-center" md={1}>
                             <input
@@ -50,14 +50,14 @@ function Pagamentos(props) {
                 </div>
             </Container>
             <Container fluid className="d-flex justify-content-begin p-3 pb-1"> 
-                <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                <div style={{ width: '100%', backgroundColor: '#333', color: 'white', padding: '1rem' }}>
                     <Row>
                         <h3 className="text-center">Escolha um método de pagamento</h3>
                     </Row>
                 </div>
             </Container>
             <Container fluid className="d-flex justify-content-begin p-3 pb-0"> 
-                <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                <div style={{ width: '100%', backgroundColor: 'white', color: 'black', padding: '1rem', border: '2px solid black'}}>
                     <Row>
                         <Col>
                             <Row>
@@ -81,7 +81,7 @@ function Pagamentos(props) {
                 </div>
             </Container>
             <Container fluid className="d-flex justify-content-begin p-3 pb-0"> 
-                <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                <div style={{ width: '100%', backgroundColor: 'white', color: 'black', padding: '1rem', border: '2px solid black'}}>
                     <Row>
                         <Col>
                             <Row>
@@ -105,7 +105,7 @@ function Pagamentos(props) {
                 </div>
             </Container>
             <Container fluid className="d-flex justify-content-begin p-3 pb-0"> 
-                <div style={{ width: '100%', backgroundColor: 'gray', color: 'white', padding: '1rem' }}>
+                <div style={{ width: '100%', backgroundColor: 'white', color: 'black', padding: '1rem', border: '2px solid black'}}>
                     <Row>
                         <Col>
                             <Row>

@@ -95,6 +95,7 @@ function ConfirmacaoPage() {
 
                                 <p><strong>Dados de faturação:</strong> {encomenda['faturacao']}</p>
                                 <p><strong>Data: </strong>{encomenda['data']}</p>
+                                <div style={{textAlign: "center"}}><Button variant='danger' style={{width: "20%"}} onClick={generatePDF}>Download PDF</Button></div>
                             </Row>
                         </div>
                     </Col>
@@ -105,7 +106,7 @@ function ConfirmacaoPage() {
                         Voltar à página inicial
                     </Button>
 
-                    <Button onClick={generatePDF}>Download PDF</Button>
+                    
                 </Link>
             </div>
             <MyFooter />
