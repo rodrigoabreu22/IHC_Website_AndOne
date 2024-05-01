@@ -21,7 +21,7 @@ function MyNavbar({ activeID }) {
 
   const searchProducts = (event) => {
     event.preventDefault();
-    navigate(`/sapatilhas/${searchTerm}`);
+    navigate(`/search/${searchTerm}`);
   }
 
   return (

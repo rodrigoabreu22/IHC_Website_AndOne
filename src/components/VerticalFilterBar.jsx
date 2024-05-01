@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import 'rc-slider/assets/index.css';
 import './VerticalFilterBar.css';
+import ProductList from '../data/Products.json';
 
 const ShoeFilterBar = ({ selectedBrands, setSelectedBrands, selectedPrices, setSelectedPrices, selectedSizes, setSelectedSizes}) => {
     const [brandOpen, setBrandOpen] = useState(true); // Set initial state to true
@@ -265,4 +266,85 @@ const EquipamentosFilterBar = ({ selectedTeams, setSelectedTeams, selectedPrices
     );
 }
 
-export {ShoeFilterBar, EquipamentosFilterBar};
+const SearchFilterBar = ({ selectedBrands, setSelectedBrands, selectedCategories, setSelectedCategories, selectedPrices, setSelectedPrices }) => {
+    console.log(typeof selectedBrands);
+    console.log(selectedBrands);
+    console.log(selectedCategories);
+    console.log(selectedPrices);
+    // Extract all unique brands, categories, and price ranges from the ProductList
+    const brands = [...new Set(Object.values(ProductList).flat().map(product => product.brand))];
+    const categories = Object.keys(ProductList);
+    const prices = Object.values(ProductList).flat().map(product => product.price);
+    const minPrice = Math.min(...prices);
+    const maxPrice = Math.max(...prices);
+
+    // Create a function to handle changes in the selected brands, categories, and price range
+    const handleFilterChange = (filter, setFilter) => event => {
+        const value = event.target.value;
+        setFilter(filter.includes(value) ? filter.filter(f => f !== value) : [...filter, value]);
+    };
+
+    // Render the filter bar and the filtered products
+    return (
+        <div>
+            {/* Render the filter bar */}
+            <div className="filter-bar">
+                <div className="filter-section">
+                    <h3>Brands</h3>
+                    {brands.map(brand => (
+                        <div key={brand}>
+                            <label>
+                                <input 
+                                    type="checkbox" 
+                                    value={brand} 
+                                    checked={selectedBrands.includes(brand)} 
+                                    onChange={handleFilterChange(selectedBrands, setSelectedBrands)}
+                                />
+                                {brand}
+                            </label>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="filter-section">
+                    <h3>Categories</h3>
+                    {categories.map(category => (
+                        <div key={category}>
+                            <label style={{ textTransform: 'capitalize' }}>
+                                <input 
+                                    type="checkbox" 
+                                    value={category} 
+                                    checked={selectedCategories.includes(category)} 
+                                    onChange={handleFilterChange(selectedCategories, setSelectedCategories)}
+                                />
+                                {category}
+                            </label>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="filter-section">
+                    <h3>Price</h3>
+                    <label>
+                        Min:
+                        <input 
+                            type="number" 
+                            value={selectedPrices[0]} 
+                            onChange={event => setSelectedPrices([event.target.value, selectedPrices[1]])}
+                        />
+                    </label>
+                    <label>
+                        Max:
+                        <input 
+                            type="number" 
+                            value={selectedPrices[1]} 
+                            onChange={event => setSelectedPrices([selectedPrices[0], event.target.value])}
+                        />
+                    </label>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export {ShoeFilterBar, EquipamentosFilterBar, SearchFilterBar};
