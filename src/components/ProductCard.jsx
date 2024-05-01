@@ -11,12 +11,6 @@ import './ProductCard.css';
 
 const ProductCard = ({category, product, favorites, setFavorites, toggleModal }) => {
     const navigate = useNavigate();
-
-    console.log('ProductCard');
-    console.log(category);
-    console.log(product);
-    console.log(favorites);
-    console.log(setFavorites);
     const [isFavorite, setIsFavorite] = useState(favorites.some(fav => fav.category === category && fav.id === product.id));
     const [showModal, setShowModal] = useState(false);
     const [showToast, setShowToast] = useState(false);
@@ -28,11 +22,7 @@ const ProductCard = ({category, product, favorites, setFavorites, toggleModal })
 
     const toggleFavorite = (event) => {
         let newFavorites;
-        console.log('toggleFavorite');
-        console.log(isFavorite);
-        console.log(category);
-        console.log(product.id);
-        console.log(favorites);
+    
         if (isFavorite) {
           if (toggleModal) {
             setShowModal(true);
@@ -40,7 +30,6 @@ const ProductCard = ({category, product, favorites, setFavorites, toggleModal })
             removeFavorite();
           }
         } else {
-          console.log('adding favorite');
           newFavorites = [...favorites, {"category": category, "id": product.id}];
           setFavorites(newFavorites);
           toggleShowToast();
@@ -48,7 +37,6 @@ const ProductCard = ({category, product, favorites, setFavorites, toggleModal })
       };
     
       const removeFavorite = () => {
-        console.log('removing favorite');
         const newFavorites = favorites.filter(fav => fav.category !== category || fav.id !== product.id);
         setFavorites(newFavorites);
         setShowModal(false);

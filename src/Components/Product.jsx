@@ -22,8 +22,6 @@ const Product = () => {
     const [showToast, setShowToast] = useState(false);
 
     const sizeSelected = () => {
-      console.log(currentSize);
-      console.log(currentSize === null);
       return currentSize === null;
     };
 
@@ -38,7 +36,6 @@ const Product = () => {
     const toggleShowToast = () => setShowToast(!showToast);
 
     const addToCart = (category, id, quantity, size) => {
-        console.log(category, id, quantity, size);
         const existingItem = cart.find((item) => item.category === category && item.id === id && item.size === size);
         
         if (existingItem) {
@@ -66,8 +63,6 @@ const Product = () => {
         </>
       );
     }
-    console.log(product);
-    console.log(useParams().id);
 
     const handleFavorites = (category, id) => {
       const favorite = { category, id };

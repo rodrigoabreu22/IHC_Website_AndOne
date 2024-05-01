@@ -67,7 +67,7 @@ function EncomendaPerfilCard({item}) {
                     <Card.Text className="product-cart-info">
                         <div className="order-id" style={{width: '20%'}}><strong>ID: </strong>{curItem["id"]}</div>
                         <div className="order-date" style={{width: '20%'}}><strong>Data: </strong>{curItem["data"]}</div>
-                        <div className="order-price" style={{width: '20%'}}><strong>Preço: </strong>{curItem["total"].toFixed(2)}€</div>
+                        <div className="order-price" style={{width: '20%'}}><strong>Preço: </strong>{parseFloat(curItem["total"]).toFixed(2)}€</div>
                         <button className='show-more-details-button' variant="primary" onClick={handleShowModal} style={{width: '20%'}}>Ver detalhes</button>
                         <button className='show-products-button' variant="primary" onClick={handleShowProductsModal} style={{width: '20%'}}>Ver produtos</button>
                     </Card.Text>
